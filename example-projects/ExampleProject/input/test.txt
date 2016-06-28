@@ -1,0 +1,9 @@
+aca no hay ningun tipo 
+char x;
+public int prueba()
+{
+	int a;
+	float b;
+	return a+b;
+	1999
+}
