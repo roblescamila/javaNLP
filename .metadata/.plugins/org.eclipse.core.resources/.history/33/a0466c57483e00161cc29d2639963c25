@@ -1,0 +1,8 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+DECLARE PackageEnd,Package;
+W{REGEXP("package", true)-> MARK(Package)};
+
+Document{-STARTSWITH(Package),ENDSWITH(SEMICOLON) -> MARK (Package)};

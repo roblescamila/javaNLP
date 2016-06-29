@@ -7,12 +7,17 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.Packages.PackageEnd</name>
+            <name>uima.ruta.example.Packages.StartPackage</name>
             <description>Type defined in uima.ruta.example.Packages</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
             <name>uima.ruta.example.Packages.Package</name>
+            <description>Type defined in uima.ruta.example.Packages</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Packages.EndPackage</name>
             <description>Type defined in uima.ruta.example.Packages</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>

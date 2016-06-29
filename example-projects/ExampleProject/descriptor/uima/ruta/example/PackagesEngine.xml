@@ -331,12 +331,14 @@
             </capability>
             <capability>
                 <inputs>
-                    <type>uima.ruta.example.Packages.PackageEnd</type>
                     <type>uima.ruta.example.Packages.Package</type>
+                    <type>uima.ruta.example.Packages.StartPackage</type>
+                    <type>uima.ruta.example.Packages.EndPackage</type>
                 </inputs>
                 <outputs>
-                    <type>uima.ruta.example.Packages.PackageEnd</type>
                     <type>uima.ruta.example.Packages.Package</type>
+                    <type>uima.ruta.example.Packages.StartPackage</type>
+                    <type>uima.ruta.example.Packages.EndPackage</type>
                 </outputs>
                 <languagesSupported/>
             </capability>
