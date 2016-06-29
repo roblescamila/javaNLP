@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.AuthorEngine</name>
+        <name>uima.ruta.example.PackagesEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Author</string>
+                    <string>uima.ruta.example.Packages</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -312,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="AuthorTypeSystem.xml"/>
+                <import location="PackagesTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>
@@ -331,18 +331,12 @@
             </capability>
             <capability>
                 <inputs>
-                    <type>uima.ruta.example.Author.FirstName</type>
-                    <type>uima.ruta.example.Author.FirstNameInitial</type>
-                    <type>uima.ruta.example.Author.Name</type>
-                    <type>uima.ruta.example.Author.NameListPart</type>
-                    <type>uima.ruta.example.Author.NameLinker</type>
+                    <type>uima.ruta.example.Packages.PackageEnd</type>
+                    <type>uima.ruta.example.Packages.Package</type>
                 </inputs>
                 <outputs>
-                    <type>uima.ruta.example.Author.FirstName</type>
-                    <type>uima.ruta.example.Author.FirstNameInitial</type>
-                    <type>uima.ruta.example.Author.Name</type>
-                    <type>uima.ruta.example.Author.NameListPart</type>
-                    <type>uima.ruta.example.Author.NameLinker</type>
+                    <type>uima.ruta.example.Packages.PackageEnd</type>
+                    <type>uima.ruta.example.Packages.Package</type>
                 </outputs>
                 <languagesSupported/>
             </capability>

@@ -240,7 +240,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/GermanNovels/script</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -248,8 +248,8 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/GermanNovels/descriptor</string>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/GermanNovels/bin</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/descriptor</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/bin</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -257,8 +257,8 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/GermanNovels/resources</string>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/GermanNovels/bin</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/bin</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/resources</string>
                     </array>
                 </value>
             </nameValuePair>

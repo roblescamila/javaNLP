@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.MainEngine</name>
+        <name>BasicEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -233,14 +233,14 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Main</string>
+                    <string>Main</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/work/ws/ws-uima-ruta-plain/ruta-trunk/example-projects/GermanNovels/script</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -248,8 +248,8 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/work/ws/ws-uima-ruta-plain/ruta-trunk/example-projects/GermanNovels/descriptor</string>
-                        <string>C:/work/ws/ws-uima-ruta-plain/ruta-trunk/example-projects/GermanNovels/target/classes</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/descriptor</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/bin</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -257,17 +257,15 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/work/ws/ws-uima-ruta-plain/ruta-trunk/example-projects/GermanNovels/target/classes</string>
-                        <string>C:/work/ws/ws-uima-ruta-plain/ruta-trunk/example-projects/GermanNovels/resources</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/bin</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/GermanNovels/resources</string>
                     </array>
                 </value>
             </nameValuePair>
             <nameValuePair>
                 <name>additionalScripts</name>
                 <value>
-                    <array>
-                        <string>uima.ruta.example.Name</string>
-                    </array>
+                    <array/>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -279,10 +277,7 @@
             <nameValuePair>
                 <name>additionalUimafitEngines</name>
                 <value>
-                    <array>
-                        <string>de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter</string>
-                        <string>de.tudarmstadt.ukp.dkpro.core.treetagger.TreeTaggerPosLemmaTT4J</string>
-                    </array>
+                    <array/>
                 </value>
             </nameValuePair>
             <nameValuePair>

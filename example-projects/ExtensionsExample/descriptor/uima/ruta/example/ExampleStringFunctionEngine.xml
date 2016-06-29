@@ -240,7 +240,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExtensionsExample/script</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -248,7 +248,7 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExtensionsExample/descriptor</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExtensionsExample/descriptor</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -256,7 +256,7 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExtensionsExample/resources</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExtensionsExample/resources</string>
                     </array>
                 </value>
             </nameValuePair>

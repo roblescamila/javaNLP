@@ -252,7 +252,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExampleProject/script</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -260,8 +260,8 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExampleProject/descriptor</string>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExampleProject/desc</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/descriptor</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/desc</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -269,7 +269,7 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk/example-projects/ExampleProject/resources</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/resources</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -281,6 +281,7 @@
                         <string>uima.ruta.example.Year</string>
                         <string>uima.ruta.example.Author</string>
                         <string>uima.ruta.example.Types</string>
+                        <string>uima.ruta.example.Packages</string>
                     </array>
                 </value>
             </nameValuePair>

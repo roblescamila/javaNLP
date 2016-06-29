@@ -8,5 +8,6 @@
         <import location="YearTypeSystem.xml"/>
         <import location="AuthorTypeSystem.xml"/>
         <import location="TypesTypeSystem.xml"/>
+        <import location="PackagesTypeSystem.xml"/>
     </imports>
 </typeSystemDescription>

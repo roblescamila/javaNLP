@@ -44,6 +44,11 @@
           <rangeTypeName>uima.ruta.example.Title</rangeTypeName>
         </featureDescription>
         <featureDescription>
+          <name>packages</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Packages</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
           <name>year</name>
           <description/>
           <rangeTypeName>uima.ruta.example.Year</rangeTypeName>
@@ -55,13 +60,18 @@
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
-	  <typeDescription>
+	<typeDescription>
       <name>uima.ruta.example.Types</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
       <name>uima.ruta.example.Year</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.Packages</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
