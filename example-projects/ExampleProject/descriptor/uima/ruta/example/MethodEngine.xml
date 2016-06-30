@@ -335,12 +335,14 @@
                     <type>uima.ruta.example.Method.MethodName</type>
                     <type>uima.ruta.example.Method.Parameters</type>
                     <type>uima.ruta.example.Method.EndMethod</type>
+                    <type>uima.ruta.example.Method.BeginParameters</type>
                 </inputs>
                 <outputs>
                     <type>uima.ruta.example.Method.AccessModifiers</type>
                     <type>uima.ruta.example.Method.MethodName</type>
                     <type>uima.ruta.example.Method.Parameters</type>
                     <type>uima.ruta.example.Method.EndMethod</type>
+                    <type>uima.ruta.example.Method.BeginParameters</type>
                 </outputs>
                 <languagesSupported/>
             </capability>

@@ -7,11 +7,6 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.Packages.initPackage</name>
-            <description>Type defined in uima.ruta.example.Packages</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
             <name>uima.ruta.example.Packages.Package</name>
             <description>Type defined in uima.ruta.example.Packages</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>

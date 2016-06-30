@@ -1,0 +1,5 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+W{REGEXP("import") -> MARK(Import)} PM? ANY+?{-> MARK(Import)} SEMICOLON;

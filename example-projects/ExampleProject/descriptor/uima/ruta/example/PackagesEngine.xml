@@ -331,11 +331,9 @@
             </capability>
             <capability>
                 <inputs>
-                    <type>uima.ruta.example.Packages.initPackage</type>
                     <type>uima.ruta.example.Packages.Package</type>
                 </inputs>
                 <outputs>
-                    <type>uima.ruta.example.Packages.initPackage</type>
                     <type>uima.ruta.example.Packages.Package</type>
                 </outputs>
                 <languagesSupported/>

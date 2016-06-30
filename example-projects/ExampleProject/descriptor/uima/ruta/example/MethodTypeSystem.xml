@@ -17,6 +17,11 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
+            <name>uima.ruta.example.Method.BeginParameters</name>
+            <description>Type defined in uima.ruta.example.Method</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
             <name>uima.ruta.example.Method.MethodName</name>
             <description>Type defined in uima.ruta.example.Method</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>

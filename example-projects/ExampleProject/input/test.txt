@@ -10,5 +10,12 @@ public int prueba(int a, int b){
 	int a;
 	float b;
 	return a+b;
-	1999
+	1999;
+}
+
+public int prueba(int a, int b){
+	int a;
+	float b;
+	return a+b;
+	1999;
 }

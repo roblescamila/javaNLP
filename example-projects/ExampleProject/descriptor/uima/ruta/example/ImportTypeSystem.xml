@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
-    <name>uima.ruta.example.TypesTypeSystem</name>
+    <name>uima.ruta.example.ImportTypeSystem</name>
     <imports>
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/BibtexTypeSystem.xml"/>

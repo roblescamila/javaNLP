@@ -58,6 +58,11 @@
           <description/>
           <rangeTypeName>uima.ruta.example.Method</rangeTypeName>
         </featureDescription>
+         <featureDescription>
+          <name>import</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Import</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
@@ -87,6 +92,11 @@
     </typeDescription>
     <typeDescription>
       <name>uima.ruta.example.Method</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.Import</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
