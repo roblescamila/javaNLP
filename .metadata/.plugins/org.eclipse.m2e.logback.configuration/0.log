@@ -23,3 +23,7 @@
 2016-06-30 17:36:36,362 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\GermanNovels\src\main\resources
 2016-06-30 17:36:36,365 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-30 17:36:36,377 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\GermanNovels\src\test\resources
+2016-06-30 18:15:09,464 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-30 18:15:09,494 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\GermanNovels\src\main\resources
+2016-06-30 18:15:09,498 [Worker-99] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-30 18:15:09,533 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\GermanNovels\src\test\resources

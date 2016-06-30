@@ -1,9 +1,0 @@
-PACKAGE uima.ruta.example;
-
-TYPESYSTEM types.BibtexTypeSystem;
-
-DECLARE Method;
-
-
-
-W{REGEXP("package") -> MARK(Package)} PM? ANY+?{-> MARK(Package)} SEMICOLON;

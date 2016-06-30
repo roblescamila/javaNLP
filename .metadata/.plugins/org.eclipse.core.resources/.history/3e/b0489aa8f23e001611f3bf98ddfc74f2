@@ -1,7 +1,0 @@
-PACKAGE uima.ruta.example;
-
-TYPESYSTEM types.BibtexTypeSystem;
-
-DECLARE PackageEnd, Package;
-
-NUM (W{REGEXP("package") -> MARK(Package)}}));
