@@ -1,0 +1,6 @@
+PACKAGE uima.ruta.example;
+TYPESYSTEM types.BibtexTypeSystem;
+
+WORDLIST TypeList = 'Tipos.txt';
+DECLARE tipo;
+Document{-> MARKFAST(tipo, TypeList)};
