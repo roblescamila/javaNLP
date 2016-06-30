@@ -4,7 +4,4 @@ TYPESYSTEM types.BibtexTypeSystem;
 
 DECLARE initPackage, Package;
 
-W{REGEXP("package") -> MARK(initPackage)};
-initPackage PM? ANY+?{-> MARK(Package)} SEMICOLON;
-
-
+W{REGEXP("package") -> MARK(Package)} PM? ANY+?{-> MARK(Package)} SEMICOLON;

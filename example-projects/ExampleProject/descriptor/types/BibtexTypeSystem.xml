@@ -53,6 +53,11 @@
           <description/>
           <rangeTypeName>uima.ruta.example.Year</rangeTypeName>
         </featureDescription>
+         <featureDescription>
+          <name>method</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Method</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
@@ -77,6 +82,11 @@
     </typeDescription>
     <typeDescription>
       <name>uima.ruta.example.Title</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.Method</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

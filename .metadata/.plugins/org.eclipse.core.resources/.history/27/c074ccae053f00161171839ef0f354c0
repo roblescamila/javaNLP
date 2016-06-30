@@ -1,0 +1,11 @@
+PACKAGE uima.ruta.example;
+TYPESYSTEM types.BibtexTypeSystem;
+
+WORDLIST AccessModifiersList = 'AccessModifiers.txt';
+DECLARE Method, AccessModifiers, MethodName, Parameters, EndMethod;
+
+Document{-> MARKFAST(AccessModifiers, AccessModifiersList)};
+W{REGEXP("pepe") -> MARK(EndMethod)};
+AccessModifiers ANY+?EndMethod {-> MARK(Method)};
+
+//W{REGEXP("package") -> MARK(Package)} PM? ANY+?{-> MARK(Package)} SEMICOLON;

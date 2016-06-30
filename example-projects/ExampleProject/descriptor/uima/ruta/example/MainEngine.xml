@@ -280,6 +280,7 @@
                         <string>uima.ruta.example.Title</string>
                         <string>uima.ruta.example.Year</string>
                         <string>uima.ruta.example.Author</string>
+                        <string>uima.ruta.example.Method</string>
                         <string>uima.ruta.example.Types</string>
                         <string>uima.ruta.example.Packages</string>
                     </array>
