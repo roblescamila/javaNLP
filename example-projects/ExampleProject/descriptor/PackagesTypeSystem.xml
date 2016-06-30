@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>uima.ruta.example.PackagesTypeSystem</name>
+    <imports>
+        <import location="BasicTypeSystem.xml"/>
+        <import location="types/BibtexTypeSystem.xml"/>
+    </imports>
+    <types>
+        <typeDescription>
+            <name>uima.ruta.example.Packages.PackageEnd</name>
+            <description>Type defined in uima.ruta.example.Packages</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Packages.Package</name>
+            <description>Type defined in uima.ruta.example.Packages</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+    </types>
+</typeSystemDescription>

@@ -2,7 +2,9 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-DECLARE PackageEnd,Package;
-W{REGEXP("package", true)-> MARK(Package)};
+DECLARE initPackage, Package;
 
-Document{-STARTSWITH(Package) -> SEMICOLON};
+W{REGEXP("package") -> MARK(initPackage)};
+initPackage PM? ANY+?{-> MARK(Package)} SEMICOLON;
+
+

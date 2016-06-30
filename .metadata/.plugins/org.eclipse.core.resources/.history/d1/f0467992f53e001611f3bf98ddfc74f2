@@ -1,0 +1,6 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+DECLARE initPackage, Package;
+

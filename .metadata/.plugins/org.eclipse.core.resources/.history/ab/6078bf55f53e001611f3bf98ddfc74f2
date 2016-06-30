@@ -1,0 +1,9 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+DECLARE initPackage, Package;
+
+W SEMI("package") SPACE {-> MARK(initPackage)};
+
+initPackage  W SEMICOLON {-> MARK(Package)};

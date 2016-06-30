@@ -1,0 +1,7 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+DECLARE initPackage, PackageEnd, Package;
+
+W{REGEXP("package")} SPACE W PM Package{ENDSWITH(SW)};
