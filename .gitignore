@@ -30,3 +30,6 @@ local.properties
 .metadata/.plugins/org.eclipse.dltk.core/cache/index
 *.index
 .metadata/.plugins/org.eclipse.core.resources/.projects/ExampleProject/.indexes/35/28/f0/96/history.index
+.metadata/.plugins/org.eclipse.dltk.core/cache/index
+*.ini
+.metadata/.plugins/org.eclipse.dltk.core/cache/index
