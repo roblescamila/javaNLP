@@ -5,7 +5,7 @@ WORDLIST AccessModifiersList = 'AccessModifiers.txt';
 DECLARE AccessModifiers, MethodName, Parameters, EndMethod, BeginParameters;
 
 Document{-> MARKFAST(AccessModifiers, AccessModifiersList)};
-"}" -> EndMethod;
+SPECIAL{REGEXP("\\}") -> MARK(EndMethod)};
 //"(" -> BeginParameters;
 //Types PM? ANY+? {-> MARK(MethodName)} BeginParameters;
 AccessModifiers PM? ANY+? {-> MARK(Method)} EndMethod;
