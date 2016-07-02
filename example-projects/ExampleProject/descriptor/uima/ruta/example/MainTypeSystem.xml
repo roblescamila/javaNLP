@@ -4,11 +4,14 @@
     <imports>
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/BibtexTypeSystem.xml"/>
+        <import location="JavaReservedWordsTypeSystem.xml"/>
         <import location="BlockTypeSystem.xml"/>
         <import location="PackageTypeSystem.xml"/>
+        <import location="NameTypeSystem.xml"/>
         <import location="ClassNameTypeSystem.xml"/>
         <import location="MethodTypeSystem.xml"/>
         <import location="ImportTypeSystem.xml"/>
+        <import location="SingleLineCommentTypeSystem.xml"/>
         <import location="TypesTypeSystem.xml"/>
         <import location="ImplementationTypeSystem.xml"/>
         <import location="InheritanceTypeSystem.xml"/>

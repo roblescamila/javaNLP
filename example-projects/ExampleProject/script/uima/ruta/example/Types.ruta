@@ -2,6 +2,6 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-WORDLIST TypeList = 'Types';
+WORDLIST TypeList = 'Types.txt';
 
 Document{-> MARKFAST(Types, TypeList)};

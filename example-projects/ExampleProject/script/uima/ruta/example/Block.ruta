@@ -1,5 +1,10 @@
 PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
+DECLARE SubBlock;
 
-SPECIAL{REGEXP("\\{")} ANY*? {-> MARK(Block)} SPECIAL{REGEXP("\\}")};
+//Document{-> FILTERTYPE(SubBlock)};
+
+SPECIAL{REGEXP("\\{")} ANY*? SPECIAL{REGEXP("\\{")} ANY*? {-> MARK(SubBlock)}  SPECIAL{REGEXP("\\}")} ANY*?  SPECIAL{REGEXP("\\}")};
+
+SPECIAL{REGEXP("\\{*?")} ANY*?  {-> MARK(Block)}  SPECIAL{REGEXP("\\}*?")};

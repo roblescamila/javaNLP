@@ -11,6 +11,9 @@ SCRIPT uima.ruta.example.AccessModifier;
 SCRIPT uima.ruta.example.ClassName;
 SCRIPT uima.ruta.example.Inheritance;
 SCRIPT uima.ruta.example.Implementation;
+SCRIPT uima.ruta.example.SingleLineComment;
+SCRIPT uima.ruta.example.Name;
+SCRIPT uima.ruta.example.JavaReservedWords;
 
 Document{-> CALL(Package)};
 Document{-> CALL(Import)};
@@ -21,6 +24,10 @@ Document{-> CALL(AccessModifier)};
 Document{-> CALL(ClassName)};
 Document{-> CALL(Inheritance)};
 Document{-> CALL(Implementation)};
+Document{-> CALL(SingleLineComment)};
+Document{-> CALL(Name)};
+Document{-> CALL(JavaReservedWords)};
+
 
 // create bibtex annotation
 Document{-> CREATE(Bibtex, "types" = Types, 
@@ -31,4 +38,7 @@ Document{-> CREATE(Bibtex, "types" = Types,
                            "classname" = ClassName,
                            "inheritance" = Inheritance,
                            "implementation" = Implementation,
+                           "singlelinecomment" = SingleLineComment,
+                           "name" = Name,
+                           "javareservedwords" = JavaReservedWords,
                            "accessmodifier" = AccessModifier)};

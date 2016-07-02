@@ -11,6 +11,16 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
+          <name>javareservedwords</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.JavaReservedWords</rangeTypeName>
+        </featureDescription>
+         <featureDescription>
+          <name>name</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Name</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
           <name>author</name>
           <description/>
           <rangeTypeName>uima.ruta.example.Author</rangeTypeName>
@@ -69,6 +79,11 @@
           <name>implementation</name>
           <description/>
           <rangeTypeName>uima.ruta.example.Implementation</rangeTypeName>
+        </featureDescription>
+         <featureDescription>
+          <name>singlelinecomment</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.SingleLineComment</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -129,6 +144,21 @@
     </typeDescription>
      <typeDescription>
       <name>uima.ruta.example.Implementation</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+         <typeDescription>
+      <name>uima.ruta.example.SingleLineComment</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.Name</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.JavaReservedWords</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

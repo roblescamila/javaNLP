@@ -277,11 +277,14 @@
                 <name>additionalScripts</name>
                 <value>
                     <array>
+                        <string>uima.ruta.example.JavaReservedWords</string>
                         <string>uima.ruta.example.Block</string>
                         <string>uima.ruta.example.Package</string>
+                        <string>uima.ruta.example.Name</string>
                         <string>uima.ruta.example.ClassName</string>
                         <string>uima.ruta.example.Method</string>
                         <string>uima.ruta.example.Import</string>
+                        <string>uima.ruta.example.SingleLineComment</string>
                         <string>uima.ruta.example.Types</string>
                         <string>uima.ruta.example.Implementation</string>
                         <string>uima.ruta.example.Inheritance</string>

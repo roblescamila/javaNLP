@@ -1,0 +1,10 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+SW{-CONTAINS(JavaReservedWords)-> MARK(Name)};
+
+//Name{-CONTAINS(JavaReservedWords)};
+//
+//
+//Document{-CONTAINS(Pattern)->CONFIGURE(XMIWriter, "Output" = "../without/"), EXEC(XMIWriter)};
