@@ -1,14 +1,14 @@
 PACKAGE uima.ruta.example;
+
 TYPESYSTEM types.BibtexTypeSystem;
 
 WORDLIST AccessModifiersList = 'AccessModifiers.txt';
+
 DECLARE AccessModifiers, MethodName, Parameters, EndMethod, BeginParameters;
 
 Document{-> MARKFAST(AccessModifiers, AccessModifiersList)};
+
 SPECIAL{REGEXP("\\}") -> MARK(EndMethod)};
-//"(" -> BeginParameters;
-//Types PM? ANY+? {-> MARK(MethodName)} BeginParameters;
+
 AccessModifiers PM? ANY+? {-> MARK(Method)} EndMethod;
 
-
-//W{REGEXP("package") -> MARK(Package)} PM? ANY+?{-> MARK(Package)} SEMICOLON;

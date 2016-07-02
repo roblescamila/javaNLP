@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.PackagesEngine</name>
+        <name>uima.ruta.example.PackageEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,13 +245,15 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Packages</string>
+                    <string>uima.ruta.example.Package</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
                 <name>scriptPaths</name>
                 <value>
-                    <array/>
+                    <array>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/script</string>
+                    </array>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -310,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="PackagesTypeSystem.xml"/>
+                <import location="PackageTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>
@@ -325,17 +327,6 @@
             <capability>
                 <inputs/>
                 <outputs/>
-                <languagesSupported/>
-            </capability>
-            <capability>
-                <inputs>
-                    <type>uima.ruta.example.Packages.PackageEnd</type>
-                    <type>uima.ruta.example.Packages.Package</type>
-                </inputs>
-                <outputs>
-                    <type>uima.ruta.example.Packages.PackageEnd</type>
-                    <type>uima.ruta.example.Packages.Package</type>
-                </outputs>
                 <languagesSupported/>
             </capability>
         </capabilities>
