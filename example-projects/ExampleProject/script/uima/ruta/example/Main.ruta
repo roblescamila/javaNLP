@@ -28,7 +28,6 @@ Document{-> CALL(SingleLineComment)};
 Document{-> CALL(Name)};
 Document{-> CALL(JavaReservedWords)};
 
-
 // create bibtex annotation
 Document{-> CREATE(Bibtex, "types" = Types, 
                            "package" = Package, 

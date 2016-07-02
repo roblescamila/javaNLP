@@ -2,9 +2,12 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-SW{-CONTAINS(JavaReservedWords)-> MARK(Name)};
+WORDLIST ReservedWordList = 'JavaReservedWords.txt';
 
-//Name{-CONTAINS(JavaReservedWords)};
-//
-//
-//Document{-CONTAINS(Pattern)->CONFIGURE(XMIWriter, "Output" = "../without/"), EXEC(XMIWriter)};
+DECLARE ReservedWords;
+
+Document{-> MARKFAST(ReservedWords, ReservedWordList)};
+
+SW{-> MARK(Name)};
+
+Name{->UNMARK(ReservedWords)};
