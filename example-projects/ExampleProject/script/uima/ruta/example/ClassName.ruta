@@ -1,0 +1,5 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+W{REGEXP("class")} CW* {->MARK(ClassName)};

@@ -4,18 +4,20 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-aca no hay ningun tipo 
-char x;
-public int prueba(int a, int b){
-	int a;
-	float b;
-	return a+b;
-	1999;
-}
+//cometario 1
+public class MountainBike extends Bicycle implements AlgunaClase {
+        
+    // the MountainBike subclass has one field
+    public int seatHeight;
 
-public int prueba(int a, int b){
-	int a;
-	float b;
-	return a+b;
-	1999;
+    public MountainBike(int startHeight, int startCadence) {
+        super(startCadence, startSpeed);
+        seatHeight = startHeight;
+    }   
+
+/* comentario 
+2*/
+    public void setHeight(int newValue, char c) {
+        seatHeight = newValue;
+    }   
 }

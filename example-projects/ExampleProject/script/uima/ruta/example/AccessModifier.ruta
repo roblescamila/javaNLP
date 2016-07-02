@@ -1,0 +1,7 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+WORDLIST AccessModifiersList = 'AccessModifiers';
+
+Document{-> MARKFAST(AccessModifier, AccessModifiersList)};

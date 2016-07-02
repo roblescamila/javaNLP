@@ -1,5 +1,6 @@
 int
 float
 char
-string
+String
 double
+boolean

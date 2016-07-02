@@ -1,35 +1,34 @@
 PACKAGE uima.ruta.example;
 
-// import the types of this type system 
-// (located in the descriptor folder -> uima.textmarker.example folder)
 TYPESYSTEM types.BibtexTypeSystem;
-
-SCRIPT uima.ruta.example.Author;
-SCRIPT uima.ruta.example.Title;
-SCRIPT uima.ruta.example.Year;
 
 SCRIPT uima.ruta.example.Types;
 SCRIPT uima.ruta.example.Package;
 SCRIPT uima.ruta.example.Method;
 SCRIPT uima.ruta.example.Import;
 SCRIPT uima.ruta.example.Block;
+SCRIPT uima.ruta.example.AccessModifier;
+SCRIPT uima.ruta.example.ClassName;
+SCRIPT uima.ruta.example.Inheritance;
+SCRIPT uima.ruta.example.Implementation;
 
-Document{-> CALL(Year)};
-Document{-> CALL(Author)};
-Document{-> CALL(Title)};
-
-Document{-> CALL(Types)};
 Document{-> CALL(Package)};
-Document{-> CALL(Method)};
 Document{-> CALL(Import)};
+Document{-> CALL(Types)};
+Document{-> CALL(Method)};
 Document{-> CALL(Block)};
+Document{-> CALL(AccessModifier)};
+Document{-> CALL(ClassName)};
+Document{-> CALL(Inheritance)};
+Document{-> CALL(Implementation)};
 
 // create bibtex annotation
-Document{-> CREATE(Bibtex, "author" = Author, 
-                           "types" = Types, 
-                           "title" = Title, 
+Document{-> CREATE(Bibtex, "types" = Types, 
                            "package" = Package, 
-                           "year" = Year, 
                            "method" = Method, 
                            "import" = Import,
-                           "block" = Block)};
+                           "block" = Block,
+                           "classname" = ClassName,
+                           "inheritance" = Inheritance,
+                           "implementation" = Implementation,
+                           "accessmodifier" = AccessModifier)};

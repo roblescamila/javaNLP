@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.MethodEngine</name>
+        <name>uima.ruta.example.ImplementationEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Method</string>
+                    <string>uima.ruta.example.Implementation</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -312,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="MethodTypeSystem.xml"/>
+                <import location="ImplementationTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>

@@ -50,6 +50,26 @@
           <description/>
           <rangeTypeName>uima.ruta.example.Block</rangeTypeName>
         </featureDescription>
+        <featureDescription>
+          <name>accessmodifier</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.AccessModifier</rangeTypeName>
+        </featureDescription>
+      	<featureDescription>
+          <name>classname</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.ClassName</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>inheritance</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Inheritance</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>implementation</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Implementation</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
@@ -89,6 +109,26 @@
     </typeDescription>
     <typeDescription>
       <name>uima.ruta.example.Block</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+        <typeDescription>
+      <name>uima.ruta.example.AccessModifier</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.ClassName</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>uima.ruta.example.Inheritance</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+     <typeDescription>
+      <name>uima.ruta.example.Implementation</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

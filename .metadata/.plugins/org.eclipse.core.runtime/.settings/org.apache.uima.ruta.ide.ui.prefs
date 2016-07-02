@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+editor.matching_brackets_color=0,0,255
+formatter.tabulation.char=mixed
 sourceHoverBackgroundColor=255,255,225
 sourceHoverBackgroundColor.SystemDefault=true
 useAnnotationsPrefPage=true

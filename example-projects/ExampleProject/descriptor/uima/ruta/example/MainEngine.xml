@@ -277,14 +277,15 @@
                 <name>additionalScripts</name>
                 <value>
                     <array>
-                        <string>uima.ruta.example.Title</string>
                         <string>uima.ruta.example.Block</string>
                         <string>uima.ruta.example.Package</string>
-                        <string>uima.ruta.example.Year</string>
-                        <string>uima.ruta.example.Author</string>
+                        <string>uima.ruta.example.ClassName</string>
                         <string>uima.ruta.example.Method</string>
                         <string>uima.ruta.example.Import</string>
                         <string>uima.ruta.example.Types</string>
+                        <string>uima.ruta.example.Implementation</string>
+                        <string>uima.ruta.example.Inheritance</string>
+                        <string>uima.ruta.example.AccessModifier</string>
                     </array>
                 </value>
             </nameValuePair>

@@ -4,13 +4,14 @@
     <imports>
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/BibtexTypeSystem.xml"/>
-        <import location="TitleTypeSystem.xml"/>
         <import location="BlockTypeSystem.xml"/>
         <import location="PackageTypeSystem.xml"/>
-        <import location="YearTypeSystem.xml"/>
-        <import location="AuthorTypeSystem.xml"/>
+        <import location="ClassNameTypeSystem.xml"/>
         <import location="MethodTypeSystem.xml"/>
         <import location="ImportTypeSystem.xml"/>
         <import location="TypesTypeSystem.xml"/>
+        <import location="ImplementationTypeSystem.xml"/>
+        <import location="InheritanceTypeSystem.xml"/>
+        <import location="AccessModifierTypeSystem.xml"/>
     </imports>
 </typeSystemDescription>
