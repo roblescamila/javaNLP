@@ -20,3 +20,4 @@ local.properties
 *.gen
 .metadata/version.ini
 *.ini
+*.log

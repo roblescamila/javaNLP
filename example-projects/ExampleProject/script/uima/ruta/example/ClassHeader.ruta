@@ -1,0 +1,5 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+AccessModifier SPACE*? W{REGEXP("class")} SPACE*? ClassName SPACE*? {-> MARK(ClassHeader)} SPACE*? SPECIAL{REGEXP("\\{")};

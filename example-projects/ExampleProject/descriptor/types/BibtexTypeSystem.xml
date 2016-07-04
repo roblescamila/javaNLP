@@ -16,6 +16,11 @@
           <rangeTypeName>uima.ruta.example.JavaReservedWords</rangeTypeName>
         </featureDescription>
          <featureDescription>
+          <name>classheader</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.ClassHeader</rangeTypeName>
+        </featureDescription>
+         <featureDescription>
           <name>name</name>
           <description/>
           <rangeTypeName>uima.ruta.example.Name</rangeTypeName>
@@ -159,6 +164,11 @@
     </typeDescription>
     <typeDescription>
       <name>uima.ruta.example.JavaReservedWords</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+        <typeDescription>
+      <name>uima.ruta.example.ClassHeader</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

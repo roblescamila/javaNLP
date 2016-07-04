@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.MainEngine</name>
+        <name>uima.ruta.example.ClassHeaderEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Main</string>
+                    <string>uima.ruta.example.ClassHeader</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -276,21 +276,7 @@
             <nameValuePair>
                 <name>additionalScripts</name>
                 <value>
-                    <array>
-                        <string>uima.ruta.example.JavaReservedWords</string>
-                        <string>uima.ruta.example.Package</string>
-                        <string>uima.ruta.example.Name</string>
-                        <string>uima.ruta.example.Method</string>
-                        <string>uima.ruta.example.SingleLineComment</string>
-                        <string>uima.ruta.example.Block</string>
-                        <string>uima.ruta.example.ClassName</string>
-                        <string>uima.ruta.example.ClassHeader</string>
-                        <string>uima.ruta.example.Import</string>
-                        <string>uima.ruta.example.Types</string>
-                        <string>uima.ruta.example.Implementation</string>
-                        <string>uima.ruta.example.Inheritance</string>
-                        <string>uima.ruta.example.AccessModifier</string>
-                    </array>
+                    <array/>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -326,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="MainTypeSystem.xml"/>
+                <import location="ClassHeaderTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>
