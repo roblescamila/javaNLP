@@ -1,0 +1,13 @@
+PACKAGE uima.ruta.example;
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+DECLARE VarList;
+
+(AccessModifier Types Name) {->MARK(Declaration)};
+
+(Types Name) {->MARK(Declaration)};
+
+//(Declaration COMMA)+{-> MARK(VarList)} Name;
+
+

@@ -8,6 +8,8 @@ DECLARE ReservedWords;
 
 Document{-> MARKFAST(ReservedWords, ReservedWordList)};
 
-SW{-> MARK(Name)};
+(SW CW){-> MARK(Name)};
+
+Name{CONTAINS(SPACE)->UNMARK(Name)}
 
 Name{->UNMARK(ReservedWords)};

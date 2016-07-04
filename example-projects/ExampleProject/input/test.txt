@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 public class MountainBike extends Bicycle implements AlgunaClase {
         
     // the MountainBike subclass has one field
-    public int seatHeight;
+    public int seatHeight,camiRobles,matiPrado;
 
     public MountainBike(int startHeight, int startCadence) {
         super(startCadence, startSpeed);

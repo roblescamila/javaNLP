@@ -1,87 +1,89 @@
 <?xml version="1.0" encoding="ASCII"?>
-<cache:CacheIndex xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cache="http://eclipse.org/dltk/cache_model" lastIndex="168" environment="org.eclipse.dltk.core.environment.localEnvironment">
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example/ExampleTypeFunction.ruta" timestamp="1465910538000" lastAccessTime="1467482077374">
-    <attributes name="indexed" location="2838196607/755877386/23.idx"/>
-  </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example" timestamp="1467161507871" lastAccessTime="1467482077474">
+<cache:CacheIndex xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cache="http://eclipse.org/dltk/cache_model" lastIndex="198" environment="org.eclipse.dltk.core.environment.localEnvironment">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example" timestamp="1467161507871" lastAccessTime="1467663607863">
     <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/3093494629/3.idx"/>
-  </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example/ExampleStringFunction.ruta" timestamp="1465910538000" lastAccessTime="1467482077457">
-    <attributes name="indexed" location="2838196607/755877386/27.idx"/>
   </entries>
   <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example" timestamp="1467161508277" lastAccessTime="1467482077654">
     <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/3323337820/5.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example/DirectSpeech.ruta" timestamp="1465910538000" lastAccessTime="1467482077538">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example/DirectSpeech.ruta" timestamp="1465910538000" lastAccessTime="1467663608055">
     <attributes name="indexed" location="2838196607/2816018364/31.idx"/>
   </entries>
   <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example" timestamp="1467161508591" lastAccessTime="1467482077841">
     <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/3959948815/7.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/TraBaL.ruta" timestamp="1465910538000" lastAccessTime="1467482077909">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/TraBaL.ruta" timestamp="1465910538000" lastAccessTime="1467663608083">
     <attributes name="indexed" location="2838196607/2478641730/45.idx"/>
   </entries>
   <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example" timestamp="1467161511479" lastAccessTime="1467482078082">
     <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/2236102219/9.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/Whisk.ruta" timestamp="1465910538000" lastAccessTime="1467482077909">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/Whisk.ruta" timestamp="1465910538000" lastAccessTime="1467663608078">
     <attributes name="indexed" location="2838196607/2478641730/41.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/LP2.ruta" timestamp="1465910538000" lastAccessTime="1467482077909">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/LP2.ruta" timestamp="1465910538000" lastAccessTime="1467663608082">
     <attributes name="indexed" location="2838196607/2478641730/43.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/KEP.ruta" timestamp="1465910538000" lastAccessTime="1467482077909">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/KEP.ruta" timestamp="1465910538000" lastAccessTime="1467663608085">
     <attributes name="indexed" location="2838196607/2478641730/47.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example/ExampleNumberFunction.ruta" timestamp="1465910538000" lastAccessTime="1467482077463">
-    <attributes name="indexed" location="2838196607/755877386/125.idx"/>
-  </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example/Main.ruta" timestamp="1467222229687" lastAccessTime="1467482077540">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example/Main.ruta" timestamp="1467222229687" lastAccessTime="1467663607968">
     <attributes name="indexed" location="2838196607/2816018364/127.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example/Name.ruta" timestamp="1467222228429" lastAccessTime="1467482077654">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/GermanNovels/script/uima/ruta/example/Name.ruta" timestamp="1467222228429" lastAccessTime="1467663608057">
     <attributes name="indexed" location="2838196607/2816018364/129.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example/TEIConverter.ruta" timestamp="1465910538000" lastAccessTime="1467482077777">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example/TEIConverter.ruta" timestamp="1465910538000" lastAccessTime="1467663608062">
     <attributes name="indexed" location="2838196607/225666135/131.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example/HtmlConverter.ruta" timestamp="1465910538000" lastAccessTime="1467482077841">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example/HtmlConverter.ruta" timestamp="1465910538000" lastAccessTime="1467663608076">
     <attributes name="indexed" location="2838196607/225666135/135.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example/Sorter.ruta" timestamp="1465910538000" lastAccessTime="1467482077835">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/Misc/script/uima/ruta/example/Sorter.ruta" timestamp="1465910538000" lastAccessTime="1467663608065">
     <attributes name="indexed" location="2838196607/225666135/133.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/Base.ruta" timestamp="1465910538000" lastAccessTime="1467482077912">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/Base.ruta" timestamp="1465910538000" lastAccessTime="1467663608087">
     <attributes name="indexed" location="2838196607/2478641730/137.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/Features.ruta" timestamp="1465910538000" lastAccessTime="1467482078082">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/TextRulerExample/script/uima/ruta/example/Features.ruta" timestamp="1465910538000" lastAccessTime="1467663608089">
     <attributes name="indexed" location="2838196607/2478641730/139.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/SingleLineComment.ruta" timestamp="1467476881215" lastAccessTime="1467482078138">
-    <attributes name="indexed" location="2838196607/4058813597/141.idx"/>
-  </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/AccessModifier.ruta" timestamp="1467477677598" lastAccessTime="1467482078179">
-    <attributes name="indexed" location="2838196607/4058813597/165.idx"/>
-  </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Implementation.ruta" timestamp="1467473567188" lastAccessTime="1467482078159">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Implementation.ruta" timestamp="1467473567188" lastAccessTime="1467663608099">
     <attributes name="indexed" location="2838196607/4058813597/151.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Import.ruta" timestamp="1467472949111" lastAccessTime="1467482078173">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Import.ruta" timestamp="1467472949111" lastAccessTime="1467663608103">
     <attributes name="indexed" location="2838196607/4058813597/159.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Inheritance.ruta" timestamp="1467473464156" lastAccessTime="1467482078156">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Inheritance.ruta" timestamp="1467473464156" lastAccessTime="1467663608214">
     <attributes name="indexed" location="2838196607/4058813597/149.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/JavaReservedWords.ruta" timestamp="1467477665441" lastAccessTime="1467482078148">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/JavaReservedWords.ruta" timestamp="1467477665441" lastAccessTime="1467663608098">
     <attributes name="indexed" location="2838196607/4058813597/145.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Method.ruta" timestamp="1467471409581" lastAccessTime="1467482078171">
-    <attributes name="indexed" location="2838196607/4058813597/157.idx"/>
-  </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Package.ruta" timestamp="1467469054188" lastAccessTime="1467482078161">
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Package.ruta" timestamp="1467469054188" lastAccessTime="1467663608098">
     <attributes name="indexed" location="2838196607/4058813597/153.idx"/>
   </entries>
-  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example" timestamp="1467482113426" lastAccessTime="1467482777397">
-    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/4288249395/167.idx"/>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Types.ruta" timestamp="1467479626104" lastAccessTime="1467663608100">
+    <attributes name="indexed" location="2838196607/4058813597/171.idx"/>
   </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example/ExampleTypeFunction.ruta" timestamp="1465910538000" lastAccessTime="1467663607736">
+    <attributes name="indexed" location="2838196607/755877386/181.idx"/>
+  </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example/ExampleNumberFunction.ruta" timestamp="1465910538000" lastAccessTime="1467663607844">
+    <attributes name="indexed" location="2838196607/755877386/183.idx"/>
+  </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExtensionsExample/script/uima/ruta/example/ExampleStringFunction.ruta" timestamp="1465910538000" lastAccessTime="1467663607863">
+    <attributes name="indexed" location="2838196607/755877386/185.idx"/>
+  </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/ClassHeader.ruta" timestamp="1467482776862" lastAccessTime="1467663608278">
+    <attributes name="indexed" location="2838196607/4058813597/193.idx"/>
+  </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/ClassName.ruta" timestamp="1467473259288" lastAccessTime="1467663608276">
+    <attributes name="indexed" location="2838196607/4058813597/191.idx"/>
+  </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/SingleLineComment.ruta" timestamp="1467673807051" lastAccessTime="1467673807571"/>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example" timestamp="1467673944581" lastAccessTime="1467675890330">
+    <attributes name=".dltk.core.archive.cache.lastaccess" location="2838196607/4288249395/197.idx"/>
+  </entries>
+  <entries path="C:/Users/Cami/Documents/Faca/Materias/4to/Dise&#xf1;o de Sistemas de Software/javanlp/example-projects/ExampleProject/script/uima/ruta/example/Main.ruta" timestamp="1467673993774" lastAccessTime="1467673994331"/>
 </cache:CacheIndex>

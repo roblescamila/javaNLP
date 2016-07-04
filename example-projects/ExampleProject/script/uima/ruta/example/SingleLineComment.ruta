@@ -2,4 +2,4 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-ANY{REGEXP("\\/")} ANY*? {-> MARK(SingleLineComment)} BREAK;
+SPECIAL{REGEXP("\\/*?")} ANY*? {-> MARK(SingleLineComment)};

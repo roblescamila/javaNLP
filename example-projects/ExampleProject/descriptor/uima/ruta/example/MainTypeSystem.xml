@@ -13,6 +13,7 @@
         <import location="ClassNameTypeSystem.xml"/>
         <import location="ClassHeaderTypeSystem.xml"/>
         <import location="ImportTypeSystem.xml"/>
+        <import location="DeclarationTypeSystem.xml"/>
         <import location="TypesTypeSystem.xml"/>
         <import location="ImplementationTypeSystem.xml"/>
         <import location="InheritanceTypeSystem.xml"/>
