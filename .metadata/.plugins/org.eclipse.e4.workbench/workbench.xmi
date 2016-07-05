@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_uW70MEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_uW70MUJCEeaKBJ_rNzvKjQ" bindingContexts="_uW9qf0JCEeaKBJ_rNzvKjQ">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Declaration.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Declaration.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Declaration.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.caseditor.editor&quot; name=&quot;test.txt.xmi&quot; tooltip=&quot;javaNLP/output/test.txt.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/output/test.txt.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;test.txt&quot; tooltip=&quot;javaNLP/input/test.txt&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/input/test.txt&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Main.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Main.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Main.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;AccessModifier.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/AccessModifier.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/AccessModifier.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Block.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Block.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Block.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;SingleLineComment.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/SingleLineComment.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/SingleLineComment.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Method.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Method.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Method.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Name.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Name.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Name.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ExampleStringFunction.ruta&quot; tooltip=&quot;ExtensionsExample/script/uima/ruta/example/ExampleStringFunction.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ExtensionsExample/script/uima/ruta/example/ExampleStringFunction.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ExampleTypeFunction.ruta&quot; tooltip=&quot;ExtensionsExample/script/uima/ruta/example/ExampleTypeFunction.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ExtensionsExample/script/uima/ruta/example/ExampleTypeFunction.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ExampleNumberFunction.ruta&quot; tooltip=&quot;ExtensionsExample/script/uima/ruta/example/ExampleNumberFunction.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ExtensionsExample/script/uima/ruta/example/ExampleNumberFunction.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ClassName.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/ClassName.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/ClassName.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ClassHeader.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/ClassHeader.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/ClassHeader.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Types.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Types.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Types.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.caseditor.editor&quot; name=&quot;test.txt.xmi&quot; tooltip=&quot;javaNLP/output/test.txt.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/output/test.txt.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Declaration.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Declaration.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Declaration.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;test.txt&quot; tooltip=&quot;javaNLP/input/test.txt&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/input/test.txt&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Main.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Main.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Main.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;AccessModifier.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/AccessModifier.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/AccessModifier.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Block.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Block.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Block.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;SingleLineComment.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/SingleLineComment.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/SingleLineComment.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Method.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Method.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Method.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Name.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Name.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Name.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ExampleStringFunction.ruta&quot; tooltip=&quot;ExtensionsExample/script/uima/ruta/example/ExampleStringFunction.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ExtensionsExample/script/uima/ruta/example/ExampleStringFunction.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ExampleTypeFunction.ruta&quot; tooltip=&quot;ExtensionsExample/script/uima/ruta/example/ExampleTypeFunction.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ExtensionsExample/script/uima/ruta/example/ExampleTypeFunction.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ExampleNumberFunction.ruta&quot; tooltip=&quot;ExtensionsExample/script/uima/ruta/example/ExampleNumberFunction.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/ExtensionsExample/script/uima/ruta/example/ExampleNumberFunction.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ClassName.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/ClassName.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/ClassName.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;ClassHeader.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/ClassHeader.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/ClassHeader.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Types.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Types.ruta&quot;>&#xD;&#xA;&lt;persistable path=&quot;/javaNLP/script/uima/ruta/example/Types.ruta&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_uW70MUJCEeaKBJ_rNzvKjQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_uW70MkJCEeaKBJ_rNzvKjQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
@@ -186,69 +186,17 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_uW8bn0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.editorss" selectedElement="_uW8boEJCEeaKBJ_rNzvKjQ">
-      <children xsi:type="basic:PartStack" xmi:id="_uW8boEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_uW8bqEJCEeaKBJ_rNzvKjQ">
+      <children xsi:type="basic:PartStack" xmi:id="_uW8boEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_uG4sYEJKEea2NduxzLUV3Q">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <tags>noFocus</tags>
-        <children xsi:type="basic:Part" xmi:id="_uW8boUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="BibtexTypeSystem.xml" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/xmldoc.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart&quot; name=&quot;BibtexTypeSystem.xml&quot; partName=&quot;BibtexTypeSystem.xml&quot; title=&quot;BibtexTypeSystem.xml&quot; tooltip=&quot;javaNLP/descriptor/types/BibtexTypeSystem.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/javaNLP/descriptor/types/BibtexTypeSystem.xml&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4414&quot; selectionTopPixel=&quot;1886&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_uG4sYEJKEea2NduxzLUV3Q" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="test.txt.xmi" iconURI="platform:/plugin/org.apache.uima.caseditor/icons/svgicons/document.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.apache.uima.caseditor.editor&quot; name=&quot;test.txt.xmi&quot; partName=&quot;test.txt.xmi&quot; title=&quot;test.txt.xmi&quot; tooltip=&quot;javaNLP/output/test.txt.xmi (javaNLP/descriptor/uima/ruta/example/MainTypeSystem.xml)&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/javaNLP/output/test.txt.xmi&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;165&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
-          <tags>org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bokJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.wst.xml.ui.editor">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.wst.xml.ui.editor</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bo0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.core.runtime.xml.source.EditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.core.runtime.xml.source.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bpEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.core.runtime.xml.source.RulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.core.runtime.xml.source.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bpUJCEeaKBJ_rNzvKjQ" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bpkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.core.runtime.xml.source.EditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.core.runtime.xml.source.EditorContext</tags>
-            <tags>popup:org.eclipse.core.runtime.xml.source.source.EditorContext</tags>
-            <tags>popup:org.eclipse.wst.sse.ui.StructuredTextEditor.EditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bp0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.core.runtime.xml.source.RulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:org.eclipse.core.runtime.xml.source.RulerContext</tags>
-            <tags>popup:org.eclipse.core.runtime.xml.source.source.RulerContext</tags>
-            <tags>popup:org.eclipse.wst.sse.ui.StructuredTextEditor.RulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_uW8bqEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Main.ruta" iconURI="platform:/plugin/org.apache.uima.ruta.ide.ui/icons/ruta_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Main.ruta&quot; partName=&quot;Main.ruta&quot; title=&quot;Main.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/example/Main.ruta&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/javaNLP/script/uima/ruta/example/Main.ruta&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1172&quot; selectionTopPixel=&quot;538&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.apache.uima.ruta.ide.ui.editor.RutaEditor</tags>
+          <tags>org.apache.uima.caseditor.editor</tags>
           <tags>removeOnHide</tags>
           <tags>active</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bqUJCEeaKBJ_rNzvKjQ" elementId="#RutaEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#RutaEditorContext</tags>
-            <tags>popup:org.apache.uima.ruta.ide.ui.editor.RutaEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bqkJCEeaKBJ_rNzvKjQ" elementId="#RutaRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#RutaRulerContext</tags>
-            <tags>popup:org.apache.uima.ruta.ide.ui.editor.RutaEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_uW8bq0JCEeaKBJ_rNzvKjQ" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -366,7 +314,7 @@
       <toolbar xmi:id="_uW8cFkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.dltk.ui.ScriptExplorer"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_uW8cHUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors (5 items)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_uW8cHkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.views.ProblemView">
@@ -446,98 +394,23 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW8cPUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW8cPkJCEeaKBJ_rNzvKjQ" elementId="new.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW8cP0JCEeaKBJ_rNzvKjQ" elementId="newWizardDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CUEJCEeaKBJ_rNzvKjQ" elementId="new.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CUUJCEeaKBJ_rNzvKjQ" elementId="save.group" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CUkJCEeaKBJ_rNzvKjQ" elementId="save">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CU0JCEeaKBJ_rNzvKjQ" elementId="saveAll">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CVEJCEeaKBJ_rNzvKjQ" elementId="save.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_uW9CVUJCEeaKBJ_rNzvKjQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uXBTxEJCEeaKBJ_rNzvKjQ"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CVkJCEeaKBJ_rNzvKjQ" elementId="print.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CV0JCEeaKBJ_rNzvKjQ" elementId="build.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CWEJCEeaKBJ_rNzvKjQ" elementId="build.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CWUJCEeaKBJ_rNzvKjQ" elementId="additions">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CWkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.wb.core.wizards.actions.NewDesignerTypeDropDownAction">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_E8bWMEJKEea2NduxzLUV3Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uXBTxEJCEeaKBJ_rNzvKjQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9CW0JCEeaKBJ_rNzvKjQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_uW9CXEJCEeaKBJ_rNzvKjQ" elementId="additions" toBeRendered="false"/>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_uW9ChkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
+      <children xsi:type="menu:ToolBar" xmi:id="_uW9ChkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9Ch0JCEeaKBJ_rNzvKjQ" elementId="Presentation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CiEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CiUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CikJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly" visible="false">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9Ci0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CjEJCEeaKBJ_rNzvKjQ" elementId="debug">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CjUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CjkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9Cj0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9CkEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.net4j.examples.actionSet" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CkUJCEeaKBJ_rNzvKjQ" elementId="sampleGroup">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CkkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.net4j.examples.transfer.TransferClientAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9Ck0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9ClEJCEeaKBJ_rNzvKjQ" elementId="Search">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9ClUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.mylyn.tasks.ui.openTask">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9ClkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.search.OpenSearchDialogPage">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9Cl0JCEeaKBJ_rNzvKjQ" elementId="group.nav" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -545,36 +418,9 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9CmUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CmkJCEeaKBJ_rNzvKjQ" elementId="history.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9Cm0JCEeaKBJ_rNzvKjQ" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CnEJCEeaKBJ_rNzvKjQ" elementId="backardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CnUJCEeaKBJ_rNzvKjQ" elementId="forwardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CnkJCEeaKBJ_rNzvKjQ" elementId="pin.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_uW9Cn0JCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uXAua0JCEeaKBJ_rNzvKjQ"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CoEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CoUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CokJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_E8g1wEJKEea2NduxzLUV3Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uXAua0JCEeaKBJ_rNzvKjQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9Co0JCEeaKBJ_rNzvKjQ" elementId="org.apache.uima.ruta.ide.ui.editor.RutaEditor" visible="false">
-        <tags>Draggable</tags>
-      </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_uW9CpEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9CpUJCEeaKBJ_rNzvKjQ" elementId="group.editor" toBeRendered="false">
@@ -587,12 +433,6 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uW9CqUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9CqkJCEeaKBJ_rNzvKjQ" elementId="group.help">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_uW9Cq0JCEeaKBJ_rNzvKjQ" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_uW9CrEJCEeaKBJ_rNzvKjQ" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
@@ -1648,6 +1488,23 @@
     <tags>View</tags>
     <tags>categoryTag:Checkstyle</tags>
   </descriptors>
+  <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
+    <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:PerspectiveSpacer</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_8tJPcF9tEeO-yojH_y4TJA" elementId="SearchField" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.quickaccess.SearchField">
+      <tags>move_after:Spacer Glue</tags>
+      <tags>HIDEABLE</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_9LgmcF9tEeO-yojH_y4TJA" elementId="Search-PS Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:SearchField</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+  </trimContributions>
   <commands xmi:id="_uXAGHEJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.jdt.ui.correction.inlineLocal.assist" commandName="Quick Assist - Inline local variable" description="Invokes quick assist and selects 'Inline local variable'" category="_uXB7uEJCEeaKBJ_rNzvKjQ"/>
   <commands xmi:id="_uXAGHUJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.dltk.ui.navigate.gototype" commandName="Go to Type" description="Go to Type" category="_uXB7pUJCEeaKBJ_rNzvKjQ"/>
   <commands xmi:id="_uXAGHkJCEeaKBJ_rNzvKjQ" elementId="org.eclipse.ui.edit.text.select.pageUp" commandName="Select Page Up" description="Select to the top of the page" category="_uXB7oUJCEeaKBJ_rNzvKjQ"/>

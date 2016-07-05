@@ -365,3 +365,4 @@
 2016-07-04 20:17:16,484 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\GermanNovels\src\main\resources
 2016-07-04 20:17:16,486 [Worker-69] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-07-04 20:17:16,513 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\GermanNovels\src\test\resources
+2016-07-04 21:52:14,797 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
