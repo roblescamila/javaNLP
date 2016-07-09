@@ -4,19 +4,23 @@
     <imports>
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/BibtexTypeSystem.xml"/>
-        <import location="JavaReservedWordsTypeSystem.xml"/>
-        <import location="PackageTypeSystem.xml"/>
-        <import location="NameTypeSystem.xml"/>
         <import location="MethodTypeSystem.xml"/>
-        <import location="SingleLineCommentTypeSystem.xml"/>
-        <import location="BlockTypeSystem.xml"/>
-        <import location="ClassNameTypeSystem.xml"/>
-        <import location="ClassHeaderTypeSystem.xml"/>
-        <import location="ImportTypeSystem.xml"/>
-        <import location="DeclarationTypeSystem.xml"/>
-        <import location="TypesTypeSystem.xml"/>
-        <import location="ImplementationTypeSystem.xml"/>
-        <import location="InheritanceTypeSystem.xml"/>
+        <import location="ClassTypeSystem.xml"/>
+        <import location="MultiLineCommentTypeSystem.xml"/>
         <import location="AccessModifierTypeSystem.xml"/>
+        <import location="ImplementationTypeSystem.xml"/>
+        <import location="ClassNameTypeSystem.xml"/>
+        <import location="DeclarationTypeSystem.xml"/>
+        <import location="ClassHeaderTypeSystem.xml"/>
+        <import location="SingleLineCommentTypeSystem.xml"/>
+        <import location="PackageTypeSystem.xml"/>
+        <import location="ParametersTypeSystem.xml"/>
+        <import location="NameTypeSystem.xml"/>
+        <import location="JavaReservedWordsTypeSystem.xml"/>
+        <import location="BlockTypeSystem.xml"/>
+        <import location="TypesTypeSystem.xml"/>
+        <import location="MethodHeaderTypeSystem.xml"/>
+        <import location="ImportTypeSystem.xml"/>
+        <import location="InheritanceTypeSystem.xml"/>
     </imports>
 </typeSystemDescription>

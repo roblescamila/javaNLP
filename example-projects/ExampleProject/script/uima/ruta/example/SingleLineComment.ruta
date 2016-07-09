@@ -1,5 +1,7 @@
 PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
-
-SPECIAL{REGEXP("\\/*?")} ANY*? {-> MARK(SingleLineComment)};
+DECLARE Barra;
+//SPECIAL{REGEXP("\\/")} ANY*? {-> MARK(Barra)} ;
+"/" -> Barra;
+Barra Barra  {-> MARK(SingleLineComment)}BREAK;

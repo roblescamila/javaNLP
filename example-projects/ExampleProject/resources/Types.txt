@@ -4,3 +4,4 @@ char
 String
 double
 boolean
+void

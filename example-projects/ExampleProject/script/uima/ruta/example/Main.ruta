@@ -16,6 +16,10 @@ SCRIPT uima.ruta.example.Name;
 SCRIPT uima.ruta.example.JavaReservedWords;
 SCRIPT uima.ruta.example.ClassHeader;
 SCRIPT uima.ruta.example.Declaration;
+SCRIPT uima.ruta.example.MultiLineComment;
+SCRIPT uima.ruta.example.Parameters;
+SCRIPT uima.ruta.example.Class;
+SCRIPT uima.ruta.example.MethodHeader;
 
 
 Document{-> CALL(Package)};
@@ -32,7 +36,10 @@ Document{-> CALL(Name)};
 Document{-> CALL(JavaReservedWords)};
 Document{-> CALL(ClassHeader)};
 Document{-> CALL(Declaration)};
-
+Document{-> CALL(MultiLineComment)};
+Document{-> CALL(Parameters)};
+Document{-> CALL(Class)};
+Document{-> CALL(MethodHeader)};
 // create bibtex annotation
 Document{-> CREATE(Bibtex, "types" = Types,
                            "declaration" = Declaration,  
@@ -47,4 +54,12 @@ Document{-> CREATE(Bibtex, "types" = Types,
                            "name" = Name,                           
                            "classheader" = ClassHeader,
                            "javareservedwords" = JavaReservedWords,
+                           "multilinecomment" = MultiLineComment,
+                           "parameters" = Parameters,
+                           "class" = Class,
+                            "methodheader" = MethodHeader,
                            "accessmodifier" = AccessModifier)};
+                           
+                           
+                           
+                           

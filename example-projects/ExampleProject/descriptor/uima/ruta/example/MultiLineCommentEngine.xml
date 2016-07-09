@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.InheritanceEngine</name>
+        <name>uima.ruta.example.MultiLineCommentEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Inheritance</string>
+                    <string>uima.ruta.example.MultiLineComment</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -312,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="InheritanceTypeSystem.xml"/>
+                <import location="MultiLineCommentTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>
@@ -327,6 +327,17 @@
             <capability>
                 <inputs/>
                 <outputs/>
+                <languagesSupported/>
+            </capability>
+            <capability>
+                <inputs>
+                    <type>uima.ruta.example.MultiLineComment.InicComment</type>
+                    <type>uima.ruta.example.MultiLineComment.Endcomment</type>
+                </inputs>
+                <outputs>
+                    <type>uima.ruta.example.MultiLineComment.InicComment</type>
+                    <type>uima.ruta.example.MultiLineComment.Endcomment</type>
+                </outputs>
                 <languagesSupported/>
             </capability>
         </capabilities>

@@ -1,0 +1,7 @@
+PACKAGE uima.ruta.example;
+
+
+TYPESYSTEM types.BibtexTypeSystem;
+
+
+AccessModifier ANY*? Types ANY*? Name ANY*? Parameters ANY*? {-> MARK(MethodHeader)} Block ;

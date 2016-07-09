@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.InheritanceEngine</name>
+        <name>uima.ruta.example.ParametersEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Inheritance</string>
+                    <string>uima.ruta.example.Parameters</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -312,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="InheritanceTypeSystem.xml"/>
+                <import location="ParametersTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>

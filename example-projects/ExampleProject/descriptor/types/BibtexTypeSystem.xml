@@ -10,10 +10,30 @@
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
+	  <featureDescription>
+          <name>parameters</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Parameters</rangeTypeName>
+        </featureDescription>
+		  <featureDescription>
+          <name>class</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.Class</rangeTypeName>
+        </featureDescription>
+		<featureDescription>
+          <name>methodheader</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.MethodHeader</rangeTypeName>
+        </featureDescription>
         <featureDescription>
           <name>javareservedwords</name>
           <description/>
           <rangeTypeName>uima.ruta.example.JavaReservedWords</rangeTypeName>
+        </featureDescription>
+		 <featureDescription>
+          <name>multilinecomment</name>
+          <description/>
+          <rangeTypeName>uima.ruta.example.MultiLineComment</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>declaration</name>
@@ -172,8 +192,28 @@
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
+	<typeDescription>
+      <name>uima.ruta.example.MultiLineComment</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
     <typeDescription>
       <name>uima.ruta.example.JavaReservedWords</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+	 <typeDescription>
+      <name>uima.ruta.example.Parameters</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+	 <typeDescription>
+      <name>uima.ruta.example.Class</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+	 <typeDescription>
+      <name>uima.ruta.example.MethodHeader</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

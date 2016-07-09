@@ -5,4 +5,11 @@
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/BibtexTypeSystem.xml"/>
     </imports>
+    <types>
+        <typeDescription>
+            <name>uima.ruta.example.SingleLineComment.Barra</name>
+            <description>Type defined in uima.ruta.example.SingleLineComment</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+    </types>
 </typeSystemDescription>

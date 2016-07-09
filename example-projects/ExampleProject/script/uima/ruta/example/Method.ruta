@@ -1,10 +1,7 @@
 PACKAGE uima.ruta.example;
 
+
 TYPESYSTEM types.BibtexTypeSystem;
 
-//DECLARE MethodName, Parameters, EndMethod, BeginParameters;
-//
-//SPECIAL{REGEXP("\\}") -> MARK(EndMethod)};
-//
-//AccessModifier PM? ANY+? {-> MARK(Method)} EndMethod;
 
+AccessModifier ANY*? Types ANY*? Name ANY*? Parameters ANY*? Block {-> MARK(Method)} ;

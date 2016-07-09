@@ -1,0 +1,9 @@
+PACKAGE uima.ruta.example;
+TYPESYSTEM types.BibtexTypeSystem;
+WORDLIST InicCommentList = 'InicComment.txt';
+WORDLIST EndcommentList ='Endcomment.txt';
+DECLARE InicComment, Endcomment;
+Document{-> MARKFAST(InicComment, InicCommentList)};
+Document{-> MARKFAST(Endcomment, EndcommentList)};
+
+InicComment ANY*? {-> MARK(MultiLineComment)}  Endcomment;
