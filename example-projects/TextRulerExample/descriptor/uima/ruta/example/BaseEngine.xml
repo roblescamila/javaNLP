@@ -240,7 +240,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/TextRulerExample/script</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/TextRulerExample/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -248,8 +248,8 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/TextRulerExample/descriptor</string>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/TextRulerExample/desc</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/TextRulerExample/descriptor</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/TextRulerExample/desc</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -257,7 +257,7 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/TextRulerExample/resources</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/TextRulerExample/resources</string>
                     </array>
                 </value>
             </nameValuePair>

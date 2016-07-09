@@ -5,6 +5,9 @@ DECLARE SubBlock;
 
 //Document{-> FILTERTYPE(SubBlock)};
 
-SPECIAL{REGEXP("\\{")} ANY*? SPECIAL{REGEXP("\\{")} ANY*? {-> MARK(SubBlock)}  SPECIAL{REGEXP("\\}")} ANY*?  SPECIAL{REGEXP("\\}")};
+//(SPECIAL{REGEXP("\\{")} ANY*? SPECIAL{REGEXP("\\{")} ANY*? SPECIAL{REGEXP("\\}")} ANY*?  SPECIAL{REGEXP("\\}")}){-> MARK(SubBlock)}  ;
 
-SPECIAL{REGEXP("\\{*?")} ANY*?  {-> MARK(Block)}  SPECIAL{REGEXP("\\}*?")};
+//SPECIAL{REGEXP("\\{*?")} ANY*?  {-> MARK(Block)}  SPECIAL{REGEXP("\\}*?")};
+
+(SPECIAL{REGEXP("\\{*?")} ANY*? SPECIAL{REGEXP("\\}*?")})  {-> MARK(Block)} ;
+

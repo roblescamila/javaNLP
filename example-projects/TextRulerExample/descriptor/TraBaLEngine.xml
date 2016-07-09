@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.FeaturesEngine</name>
+        <name>uima.ruta.example.TraBaLEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -233,15 +233,13 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Features</string>
+                    <string>uima.ruta.example.TraBaL</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
                 <name>scriptPaths</name>
                 <value>
-                    <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/TextRulerExample/script</string>
-                    </array>
+                    <array/>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -265,16 +263,14 @@
                 <name>additionalScripts</name>
                 <value>
                     <array>
-                        <string>uima.ruta.example.Base</string>
+                        <string>uima.ruta.example.Features</string>
                     </array>
                 </value>
             </nameValuePair>
             <nameValuePair>
                 <name>additionalEngines</name>
                 <value>
-                    <array>
-                        <string>utils.PlainTextAnnotator</string>
-                    </array>
+                    <array/>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -304,7 +300,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="FeaturesTypeSystem.xml"/>
+                <import location="TraBaLTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>
@@ -319,65 +315,6 @@
             <capability>
                 <inputs/>
                 <outputs/>
-                <languagesSupported/>
-            </capability>
-            <capability>
-                <inputs>
-                    <type>uima.ruta.example.Features.EditorMarker</type>
-                    <type>uima.ruta.example.Features.EnglishStopWord</type>
-                    <type>uima.ruta.example.Features.FirstName</type>
-                    <type>uima.ruta.example.Features.JournalVolumeMarker</type>
-                    <type>uima.ruta.example.Features.Month</type>
-                    <type>uima.ruta.example.Features.PagesMarker</type>
-                    <type>uima.ruta.example.Features.PublisherInd</type>
-                    <type>uima.ruta.example.Features.Reference</type>
-                    <type>uima.ruta.example.Features.LParen</type>
-                    <type>uima.ruta.example.Features.RParen</type>
-                    <type>uima.ruta.example.Features.YearInd</type>
-                    <type>uima.ruta.example.Features.NameLinker</type>
-                    <type>uima.ruta.example.Features.FirstNameInd</type>
-                    <type>uima.ruta.example.Features.FirstNameInitial</type>
-                    <type>uima.ruta.example.Features.SingleChar</type>
-                    <type>uima.ruta.example.Features.Quote</type>
-                    <type>uima.ruta.example.Features.QuotedStuff</type>
-                    <type>uima.ruta.example.Features.InInd</type>
-                    <type>uima.ruta.example.Features.FirstToken</type>
-                    <type>uima.ruta.example.Features.LastToken</type>
-                    <type>uima.ruta.example.Features.NumPeriod</type>
-                    <type>uima.ruta.example.Features.NumComma</type>
-                    <type>uima.ruta.example.Features.NumColon</type>
-                    <type>uima.ruta.example.Features.PeriodSep</type>
-                    <type>uima.ruta.example.Features.CommaSep</type>
-                    <type>uima.ruta.example.Features.ColonSep</type>
-                </inputs>
-                <outputs>
-                    <type>uima.ruta.example.Features.EditorMarker</type>
-                    <type>uima.ruta.example.Features.EnglishStopWord</type>
-                    <type>uima.ruta.example.Features.FirstName</type>
-                    <type>uima.ruta.example.Features.JournalVolumeMarker</type>
-                    <type>uima.ruta.example.Features.Month</type>
-                    <type>uima.ruta.example.Features.PagesMarker</type>
-                    <type>uima.ruta.example.Features.PublisherInd</type>
-                    <type>uima.ruta.example.Features.Reference</type>
-                    <type>uima.ruta.example.Features.LParen</type>
-                    <type>uima.ruta.example.Features.RParen</type>
-                    <type>uima.ruta.example.Features.YearInd</type>
-                    <type>uima.ruta.example.Features.NameLinker</type>
-                    <type>uima.ruta.example.Features.FirstNameInd</type>
-                    <type>uima.ruta.example.Features.FirstNameInitial</type>
-                    <type>uima.ruta.example.Features.SingleChar</type>
-                    <type>uima.ruta.example.Features.Quote</type>
-                    <type>uima.ruta.example.Features.QuotedStuff</type>
-                    <type>uima.ruta.example.Features.InInd</type>
-                    <type>uima.ruta.example.Features.FirstToken</type>
-                    <type>uima.ruta.example.Features.LastToken</type>
-                    <type>uima.ruta.example.Features.NumPeriod</type>
-                    <type>uima.ruta.example.Features.NumComma</type>
-                    <type>uima.ruta.example.Features.NumColon</type>
-                    <type>uima.ruta.example.Features.PeriodSep</type>
-                    <type>uima.ruta.example.Features.CommaSep</type>
-                    <type>uima.ruta.example.Features.ColonSep</type>
-                </outputs>
                 <languagesSupported/>
             </capability>
         </capabilities>

@@ -8,27 +8,7 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.Features.NumColon</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.FirstToken</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.EditorMarker</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.YearInd</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.JournalVolumeMarker</name>
+            <name>uima.ruta.example.Features.EnglishStopWord</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -38,77 +18,17 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.Features.SingleChar</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.NumComma</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.Reference</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.EnglishStopWord</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.FirstNameInd</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.LParen</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.PublisherInd</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.FirstNameInitial</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.ColonSep</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.PeriodSep</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.QuotedStuff</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
             <name>uima.ruta.example.Features.RParen</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.Features.NameLinker</name>
+            <name>uima.ruta.example.Features.EditorMarker</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.Features.NumPeriod</name>
-            <description>Type defined in uima.ruta.example.Features</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.Features.LastToken</name>
+            <name>uima.ruta.example.Features.JournalVolumeMarker</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -118,7 +38,12 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.Features.Month</name>
+            <name>uima.ruta.example.Features.NameLinker</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.FirstNameInitial</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -128,12 +53,87 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
+            <name>uima.ruta.example.Features.QuotedStuff</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.LastToken</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.FirstToken</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.SingleChar</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.PublisherInd</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
             <name>uima.ruta.example.Features.InInd</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
+            <name>uima.ruta.example.Features.YearInd</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.FirstNameInd</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.ColonSep</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.LParen</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.Month</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.Reference</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.NumComma</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.NumPeriod</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
             <name>uima.ruta.example.Features.PagesMarker</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.PeriodSep</name>
+            <description>Type defined in uima.ruta.example.Features</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.Features.NumColon</name>
             <description>Type defined in uima.ruta.example.Features</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>

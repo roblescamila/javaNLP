@@ -8,6 +8,11 @@
     </imports>
     <types>
         <typeDescription>
+            <name>uima.ruta.example.TEIConverter.AddName</name>
+            <description>Type defined in uima.ruta.example.TEIConverter</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
             <name>uima.ruta.example.TEIConverter.LastName</name>
             <description>Type defined in uima.ruta.example.TEIConverter</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
@@ -19,11 +24,6 @@
         </typeDescription>
         <typeDescription>
             <name>uima.ruta.example.TEIConverter.FirstName</name>
-            <description>Type defined in uima.ruta.example.TEIConverter</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.TEIConverter.AddName</name>
             <description>Type defined in uima.ruta.example.TEIConverter</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>

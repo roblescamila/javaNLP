@@ -240,7 +240,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/Misc/script</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/Misc/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -248,7 +248,7 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/Misc/descriptor</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/Misc/descriptor</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -256,7 +256,7 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/Misc/resources</string>
+                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/Misc/resources</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -271,8 +271,8 @@
                 <value>
                     <array>
                         <string>utils.HtmlConverter</string>
-                        <string>utils.HtmlAnnotator</string>
                         <string>TEIViewWriter</string>
+                        <string>utils.HtmlAnnotator</string>
                     </array>
                 </value>
             </nameValuePair>

@@ -4,4 +4,4 @@ PACKAGE uima.ruta.example;
 TYPESYSTEM types.BibtexTypeSystem;
 
 
-AccessModifier ANY*? Types ANY*? Name ANY*? Parameters ANY*? Block {-> MARK(Method)} ;
+( MethodHeader  Block) {-> MARK(Method)} ;

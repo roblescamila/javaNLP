@@ -1,4 +1,4 @@
 PACKAGE uima.ruta.example;
 TYPESYSTEM types.BibtexTypeSystem;
 
-SPECIAL{REGEXP("\\(*?")} ANY*?  {-> MARK(Parameters)}  SPECIAL{REGEXP("\\)*?")};
+(SPECIAL{REGEXP("\\(*?")} ANY*? SPECIAL{REGEXP("\\)*?")})  {-> MARK(Parameters)} ;
