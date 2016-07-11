@@ -2,15 +2,22 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-WORDLIST ReservedWordList = 'JavaReservedWords.txt';
+//WORDLIST ReservedWordList = 'JavaReservedWords.txt';
+//
+//DECLARE ReservedWords;
+//
+//Document{-> MARKFAST(ReservedWords, ReservedWordList)};
 
-DECLARE ReservedWords;
+SW CW{-> MARK(Name,1,2)};
 
-Document{-> MARKFAST(ReservedWords, ReservedWordList)};
+(SW){-> MARK(Name)};
 
-(SW CW){-> MARK(Name)};
 
-Name{CONTAINS(SPACE)->UNMARK(Name)}
+//(CW) {-> MARK(Name)};
 
-Name{->UNMARK(ReservedWords)};
+Name{CONTAINS(SPACE)->UNMARK(Name)};
+
+JavaReservedWords{CONTAINS(Name)->UNMARK(Name)};
+
+
 

@@ -46,5 +46,6 @@ public class MountainBike {
 2*/
     public void setHeight(int newValue, char c) {
         seatHeight = newValue;
+        int pepe = 10;
     }   
 }

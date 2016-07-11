@@ -7,17 +7,22 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.LP2.EditorSTART</name>
+            <name>uima.ruta.example.LP2.VolumeEND</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.TitleEND</name>
+            <name>uima.ruta.example.LP2.InstitutionEND</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.DateEND</name>
+            <name>uima.ruta.example.LP2.JournalEND</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.LocationSTART</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -27,27 +32,7 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.JournalSTART</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.AuthorSTART</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.PagesEND</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.TechEND</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.BooktitleSTART</name>
+            <name>uima.ruta.example.LP2.PagesSTART</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -62,42 +47,17 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.LocationEND</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.InstitutionSTART</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.TitleSTART</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.JournalEND</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.InstitutionEND</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
             <name>uima.ruta.example.LP2.DateSTART</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.NoteSTART</name>
+            <name>uima.ruta.example.LP2.TitleEND</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.EditorEND</name>
+            <name>uima.ruta.example.LP2.DateEND</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -107,7 +67,57 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
+            <name>uima.ruta.example.LP2.PublisherEND</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.LocationEND</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.EditorSTART</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
             <name>uima.ruta.example.LP2.BooktitleEND</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.InstitutionSTART</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.TechEND</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.TitleSTART</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.BooktitleSTART</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.AuthorSTART</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.JournalSTART</name>
+            <description>Type defined in uima.ruta.example.LP2</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>uima.ruta.example.LP2.EditorEND</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -117,22 +127,12 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.VolumeEND</name>
+            <name>uima.ruta.example.LP2.PagesEND</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.LP2.LocationSTART</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.PagesSTART</name>
-            <description>Type defined in uima.ruta.example.LP2</description>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>uima.ruta.example.LP2.PublisherEND</name>
+            <name>uima.ruta.example.LP2.NoteSTART</name>
             <description>Type defined in uima.ruta.example.LP2</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>

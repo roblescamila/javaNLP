@@ -4,4 +4,4 @@ TYPESYSTEM types.BibtexTypeSystem;
 DECLARE Barra;
 //SPECIAL{REGEXP("\\/")} ANY*? {-> MARK(Barra)} ;
 "/" -> Barra;
-Barra Barra  {-> MARK(SingleLineComment)}BREAK;
+(Barra Barra ANY*?)  {-> MARK(SingleLineComment)}BREAK;

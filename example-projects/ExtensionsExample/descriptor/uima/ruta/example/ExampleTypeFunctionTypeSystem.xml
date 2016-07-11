@@ -6,7 +6,7 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.ExampleTypeFunction.T3</name>
+            <name>uima.ruta.example.ExampleTypeFunction.T1</name>
             <description>Type defined in uima.ruta.example.ExampleTypeFunction</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -16,7 +16,7 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.ExampleTypeFunction.T1</name>
+            <name>uima.ruta.example.ExampleTypeFunction.T3</name>
             <description>Type defined in uima.ruta.example.ExampleTypeFunction</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
