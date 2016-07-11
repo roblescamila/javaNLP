@@ -7,12 +7,12 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.MultiLineComment.InicComment</name>
+            <name>uima.ruta.example.MultiLineComment.Endcomment</name>
             <description>Type defined in uima.ruta.example.MultiLineComment</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.example.MultiLineComment.Endcomment</name>
+            <name>uima.ruta.example.MultiLineComment.InicComment</name>
             <description>Type defined in uima.ruta.example.MultiLineComment</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>

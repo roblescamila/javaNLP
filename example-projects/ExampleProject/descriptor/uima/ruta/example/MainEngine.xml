@@ -252,7 +252,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/script</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -260,8 +260,8 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/descriptor</string>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/desc</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/descriptor</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/desc</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -269,7 +269,7 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/resources</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/resources</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -277,24 +277,24 @@
                 <name>additionalScripts</name>
                 <value>
                     <array>
-                        <string>uima.ruta.example.Method</string>
-                        <string>uima.ruta.example.Class</string>
-                        <string>uima.ruta.example.MultiLineComment</string>
-                        <string>uima.ruta.example.AccessModifier</string>
-                        <string>uima.ruta.example.Implementation</string>
-                        <string>uima.ruta.example.ClassName</string>
-                        <string>uima.ruta.example.Declaration</string>
-                        <string>uima.ruta.example.ClassHeader</string>
-                        <string>uima.ruta.example.SingleLineComment</string>
-                        <string>uima.ruta.example.Package</string>
-                        <string>uima.ruta.example.Parameters</string>
-                        <string>uima.ruta.example.Name</string>
                         <string>uima.ruta.example.JavaReservedWords</string>
+                        <string>uima.ruta.example.Package</string>
+                        <string>uima.ruta.example.Name</string>
+                        <string>uima.ruta.example.Method</string>
+                        <string>uima.ruta.example.SingleLineComment</string>
+                        <string>uima.ruta.example.MultiLineComment</string>
                         <string>uima.ruta.example.Block</string>
-                        <string>uima.ruta.example.Types</string>
-                        <string>uima.ruta.example.MethodHeader</string>
+                        <string>uima.ruta.example.Class</string>
+                        <string>uima.ruta.example.ClassName</string>
+                        <string>uima.ruta.example.ClassHeader</string>
                         <string>uima.ruta.example.Import</string>
+                        <string>uima.ruta.example.Declaration</string>
+                        <string>uima.ruta.example.Types</string>
+                        <string>uima.ruta.example.Implementation</string>
+                        <string>uima.ruta.example.Parameters</string>
                         <string>uima.ruta.example.Inheritance</string>
+                        <string>uima.ruta.example.AccessModifier</string>
+                        <string>uima.ruta.example.MethodHeader</string>
                     </array>
                 </value>
             </nameValuePair>

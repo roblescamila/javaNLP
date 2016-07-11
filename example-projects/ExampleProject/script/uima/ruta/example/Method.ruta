@@ -1,7 +1,5 @@
 PACKAGE uima.ruta.example;
 
-
 TYPESYSTEM types.BibtexTypeSystem;
 
-
-( MethodHeader  Block) {-> MARK(Method)} ;
+(MethodHeader Block) {-> MARK(Method)};

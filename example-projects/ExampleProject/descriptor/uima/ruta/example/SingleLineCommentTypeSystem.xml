@@ -7,7 +7,7 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.example.SingleLineComment.Barra</name>
+            <name>uima.ruta.example.SingleLineComment.InitComment</name>
             <description>Type defined in uima.ruta.example.SingleLineComment</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
