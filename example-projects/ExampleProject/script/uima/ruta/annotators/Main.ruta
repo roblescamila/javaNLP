@@ -15,10 +15,10 @@ SCRIPT uima.ruta.annotators.Inheritance;
 SCRIPT uima.ruta.annotators.ClassType;
 SCRIPT uima.ruta.annotators.ClassName;
 SCRIPT uima.ruta.annotators.ClassHeader;
+SCRIPT uima.ruta.annotators.Declaration;
 //SCRIPT uima.ruta.annotators.Method;
 //SCRIPT uima.ruta.annotators.Block;
-//SCRIPT uima.ruta.annotators.Name;
-//SCRIPT uima.ruta.annotators.Declaration;
+SCRIPT uima.ruta.annotators.VarName;
 //SCRIPT uima.ruta.annotators.Class;
 //SCRIPT uima.ruta.annotators.MethodHeader;
 
@@ -35,17 +35,17 @@ Document{-> CALL(Inheritance)};
 Document{-> CALL(ClassType)};
 Document{-> CALL(ClassName)};
 Document{-> CALL(ClassHeader)};
+Document{-> CALL(Declaration)};
 //Document{-> CALL(Method)};
 //Document{-> CALL(Block)};
-//Document{-> CALL(Name)};
-//Document{-> CALL(Declaration)};
+Document{-> CALL(VarName)};
 //Document{-> CALL(Class)};
 //Document{-> CALL(MethodHeader)};
 
 Document{-> CREATE(Java, 
 		"primitivetype" = PrimitiveType, 
 		"classtype" = ClassType, 
-//		"declaration" = Declaration, 
+		"declaration" = Declaration, 
 		"package" = Package, 
 //		"method" = Method, 
 		"import" = Import, 
@@ -54,7 +54,7 @@ Document{-> CREATE(Java,
 		"inheritance" = Inheritance, 
 		"implementation" = Implementation, 
 		"singlelinecomment" = SingleLineComment, 
-//		"name" = Name, 
+		"varname" = VarName, 
 		"classheader" = ClassHeader, 
 		"javareservedwords" = JavaReservedWords, 
 		"multilinecomment" = MultiLineComment, 

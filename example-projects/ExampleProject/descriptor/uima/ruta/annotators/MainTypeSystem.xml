@@ -15,7 +15,9 @@
         <import location="SingleLineCommentTypeSystem.xml"/>
         <import location="ClassNameTypeSystem.xml"/>
         <import location="ParametersTypeSystem.xml"/>
+        <import location="DeclarationTypeSystem.xml"/>
         <import location="ImportTypeSystem.xml"/>
         <import location="JavaReservedWordsTypeSystem.xml"/>
+        <import location="VarNameTypeSystem.xml"/>
     </imports>
 </typeSystemDescription>

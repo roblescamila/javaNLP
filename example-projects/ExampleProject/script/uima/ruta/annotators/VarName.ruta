@@ -1,0 +1,10 @@
+PACKAGE uima.ruta.annotators;
+
+TYPESYSTEM types.JavaTypeSystem;
+
+Document{-> RETAINTYPE(SPACE)};
+
+SW CW{-> MARK(VarName,1,2)};
+
+SW{AND(-IS(JavaReservedWords),-PARTOFNEQ(VarName))->MARK(VarName)};
+
