@@ -4,9 +4,15 @@
     <imports>
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/JavaTypeSystem.xml"/>
-        <import location="TypeTypeSystem.xml"/>
+        <import location="ImplementationTypeSystem.xml"/>
         <import location="PackageTypeSystem.xml"/>
+        <import location="PrimitiveTypeTypeSystem.xml"/>
+        <import location="MultiLineCommentTypeSystem.xml"/>
+        <import location="InheritanceTypeSystem.xml"/>
         <import location="SingleLineCommentTypeSystem.xml"/>
+        <import location="ClassNameTypeSystem.xml"/>
+        <import location="ParametersTypeSystem.xml"/>
+        <import location="ClassTypeTypeSystem.xml"/>
         <import location="AccessModifierTypeSystem.xml"/>
         <import location="ImportTypeSystem.xml"/>
         <import location="JavaReservedWordsTypeSystem.xml"/>

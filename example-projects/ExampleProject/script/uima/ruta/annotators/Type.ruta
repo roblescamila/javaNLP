@@ -1,7 +1,0 @@
-PACKAGE uima.ruta.annotators;
-
-TYPESYSTEM types.JavaTypeSystem;
-
-WORDLIST TypeList = 'Types.txt';
-
-Document{-> MARKFAST(Type, TypeList)};

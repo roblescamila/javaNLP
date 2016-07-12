@@ -1,0 +1,7 @@
+PACKAGE uima.ruta.annotators;
+
+TYPESYSTEM types.JavaTypeSystem;
+
+//Document{-> RETAINTYPE(SPACE)};
+
+CW*{-NEAR(SW,0,1,false)-> MARK(ClassType)};

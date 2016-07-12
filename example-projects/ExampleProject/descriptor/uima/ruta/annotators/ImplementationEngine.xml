@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.annotators.MainEngine</name>
+        <name>uima.ruta.annotators.ImplementationEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.annotators.Main</string>
+                    <string>uima.ruta.annotators.Implementation</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -277,18 +277,7 @@
                 <name>additionalScripts</name>
                 <value>
                     <array>
-                        <string>uima.ruta.annotators.Implementation</string>
-                        <string>uima.ruta.annotators.Package</string>
-                        <string>uima.ruta.annotators.PrimitiveType</string>
-                        <string>uima.ruta.annotators.MultiLineComment</string>
-                        <string>uima.ruta.annotators.Inheritance</string>
-                        <string>uima.ruta.annotators.SingleLineComment</string>
-                        <string>uima.ruta.annotators.ClassName</string>
-                        <string>uima.ruta.annotators.Parameters</string>
                         <string>uima.ruta.annotators.ClassType</string>
-                        <string>uima.ruta.annotators.AccessModifier</string>
-                        <string>uima.ruta.annotators.Import</string>
-                        <string>uima.ruta.annotators.JavaReservedWords</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -325,7 +314,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="MainTypeSystem.xml"/>
+                <import location="ImplementationTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>

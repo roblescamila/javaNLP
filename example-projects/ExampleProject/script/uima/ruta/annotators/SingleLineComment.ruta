@@ -8,4 +8,4 @@ DECLARE InitComment;
 
 Document{-> RETAINTYPE(BREAK)};
 
-(InitComment ANY*? BREAK){-> MARK(SingleLineComment,1,3)};
+InitComment ANY*?{-> MARK(SingleLineComment)} BREAK;
