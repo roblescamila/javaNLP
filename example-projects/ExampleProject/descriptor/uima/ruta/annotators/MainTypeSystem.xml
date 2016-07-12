@@ -7,8 +7,10 @@
         <import location="PackageTypeSystem.xml"/>
         <import location="MultiLineCommentTypeSystem.xml"/>
         <import location="InheritanceTypeSystem.xml"/>
+        <import location="MethodNameTypeSystem.xml"/>
         <import location="ClassTypeTypeSystem.xml"/>
         <import location="AccessModifierTypeSystem.xml"/>
+        <import location="MethodHeaderTypeSystem.xml"/>
         <import location="ImplementationTypeSystem.xml"/>
         <import location="PrimitiveTypeTypeSystem.xml"/>
         <import location="ClassHeaderTypeSystem.xml"/>

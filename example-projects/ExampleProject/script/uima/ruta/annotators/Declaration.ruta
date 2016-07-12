@@ -2,6 +2,8 @@ PACKAGE uima.ruta.annotators;
 
 TYPESYSTEM types.JavaTypeSystem;
 
- PrimitiveType VarName{->MARK(Declaration)};
+AccessModifier PrimitiveType VarName{->MARK(Declaration)};
 
 AccessModifier ClassType VarName{->MARK(Declaration,1,3)};
+
+PrimitiveType VarName{-PARTOFNEQ(Declaration)->MARK(Declaration)};
