@@ -40,11 +40,11 @@
 <!-- 					<description /> -->
 <!-- 					<rangeTypeName>uima.ruta.annotators.Declaration</rangeTypeName> -->
 <!-- 				</featureDescription> -->
-<!-- 				<featureDescription> -->
-<!-- 					<name>classheader</name> -->
-<!-- 					<description /> -->
-<!-- 					<rangeTypeName>uima.ruta.annotators.ClassHeader</rangeTypeName> -->
-<!-- 				</featureDescription> -->
+				<featureDescription>
+					<name>classheader</name>
+					<description />
+					<rangeTypeName>uima.ruta.annotators.ClassHeader</rangeTypeName>
+				</featureDescription>
 <!-- 				<featureDescription> -->
 <!-- 					<name>name</name> -->
 <!-- 					<description /> -->
@@ -217,10 +217,10 @@
 <!-- 			<description /> -->
 <!-- 			<supertypeName>uima.tcas.Annotation</supertypeName> -->
 <!-- 		</typeDescription> -->
-<!-- 		<typeDescription> -->
-<!-- 			<name>uima.ruta.annotators.ClassHeader</name> -->
-<!-- 			<description /> -->
-<!-- 			<supertypeName>uima.tcas.Annotation</supertypeName> -->
-<!-- 		</typeDescription> -->
+		<typeDescription>
+			<name>uima.ruta.annotators.ClassHeader</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
