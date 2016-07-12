@@ -2,4 +2,4 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-W{REGEXP("import") -> MARK(Import)} ANY+?{-> MARK(Import)} SEMICOLON;
+(W{REGEXP("import")} ANY*? SEMICOLON){-> MARK(Import,1,3)};

@@ -1,7 +1,9 @@
 int
 float
 char
-String
 double
 boolean
-void
+byte
+short
+long
+String

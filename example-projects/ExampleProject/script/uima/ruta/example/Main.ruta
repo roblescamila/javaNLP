@@ -21,7 +21,6 @@ SCRIPT uima.ruta.example.Parameters;
 SCRIPT uima.ruta.example.Class;
 SCRIPT uima.ruta.example.MethodHeader;
 
-
 Document{-> CALL(Package)};
 Document{-> CALL(Import)};
 Document{-> CALL(Types)};
@@ -40,7 +39,7 @@ Document{-> CALL(MultiLineComment)};
 Document{-> CALL(Parameters)};
 Document{-> CALL(Class)};
 Document{-> CALL(MethodHeader)};
-// create bibtex annotation
+
 Document{-> CREATE(Bibtex, "types" = Types,
                            "declaration" = Declaration,  
                            "package" = Package, 
@@ -58,8 +57,4 @@ Document{-> CREATE(Bibtex, "types" = Types,
                            "parameters" = Parameters,
                            "class" = Class,
                             "methodheader" = MethodHeader,
-                           "accessmodifier" = AccessModifier)};
-                           
-                           
-                           
-                           
+                           "accessmodifier" = AccessModifier)};               

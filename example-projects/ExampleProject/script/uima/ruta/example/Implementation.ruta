@@ -2,4 +2,4 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-W{REGEXP("implements")} CW* {-> MARK(Implementation)};
+W{REGEXP("implements")} CW* {-> MARK(Implementation,1,2)};

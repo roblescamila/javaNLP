@@ -8,6 +8,3 @@ DECLARE VarList;
 
 (Types Name) {->MARK(Declaration)};
 
-//(Declaration COMMA)+{-> MARK(VarList)} Name;
-
-

@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.YearEngine</name>
+        <name>uima.ruta.annotators.ImportEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Year</string>
+                    <string>uima.ruta.annotators.Import</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -312,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="YearTypeSystem.xml"/>
+                <import location="ImportTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>

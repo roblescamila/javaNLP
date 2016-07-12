@@ -2,4 +2,4 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
-(ClassHeader ANY*? Block) {-> MARK(Method)} ;
+(ClassHeader Block) {-> MARK(Class)};

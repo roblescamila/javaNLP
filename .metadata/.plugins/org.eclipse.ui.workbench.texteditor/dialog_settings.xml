@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="&#x0D;&#x0A;SW{-INLIST(&apos;JavaReservedWords.txt&apos;)-&gt; MARK(Name)};&#x0D;&#x0A;(Name CW*){-CONTAINS(SPACE)-&gt; MARK(Name,1,2)};&#x0D;&#x0A;" key="selection"/>
+		<item value="import" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="import"/>
 			<item value="&#x0D;&#x0A;SW{-INLIST(&apos;JavaReservedWords.txt&apos;)-&gt; MARK(Name)};&#x0D;&#x0A;(Name CW*){-CONTAINS(SPACE)-&gt; MARK(Name,1,2)};&#x0D;&#x0A;"/>
 			<item value="package"/>
 			<item value=""/>

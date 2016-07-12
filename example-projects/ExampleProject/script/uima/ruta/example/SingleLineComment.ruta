@@ -6,4 +6,7 @@ DECLARE InitComment;
 
 "(\\/\\/)*"->InitComment;
 
-InitComment (W|NUM|SPECIAL|PM)*{-> MARK(SingleLineComment)}BREAK;
+//InitComment (W|NUM|SPECIAL|PM|NBSP|SPACE|AMP)*{-> MARK(SingleLineComment,1,2)};
+
+
+InitComment (W|SPACE|NUM)*?  {-> MARK(SingleLineComment)} ;

@@ -1,226 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
-  <name>BibtexTypeSystem</name>
-  <description/>
-  <version>1.0</version>
-  <vendor/>
-  <types>
-    <typeDescription>
-      <name>uima.ruta.example.Bibtex</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-      <features>
-	  <featureDescription>
-          <name>parameters</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Parameters</rangeTypeName>
-        </featureDescription>
-		  <featureDescription>
-          <name>class</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Class</rangeTypeName>
-        </featureDescription>
-		<featureDescription>
-          <name>methodheader</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.MethodHeader</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>javareservedwords</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.JavaReservedWords</rangeTypeName>
-        </featureDescription>
-		 <featureDescription>
-          <name>multilinecomment</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.MultiLineComment</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>declaration</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Declaration</rangeTypeName>
-        </featureDescription>
-         <featureDescription>
-          <name>classheader</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.ClassHeader</rangeTypeName>
-        </featureDescription>
-         <featureDescription>
-          <name>name</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Name</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>author</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Author</rangeTypeName>
-        </featureDescription>
-		  <featureDescription>
-          <name>types</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Types</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>title</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Title</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>package</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Package</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>year</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Year</rangeTypeName>
-        </featureDescription>
-         <featureDescription>
-          <name>method</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Method</rangeTypeName>
-        </featureDescription>
-         <featureDescription>
-          <name>import</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Import</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>block</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Block</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>accessmodifier</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.AccessModifier</rangeTypeName>
-        </featureDescription>
-      	<featureDescription>
-          <name>classname</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.ClassName</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>inheritance</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Inheritance</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>implementation</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.Implementation</rangeTypeName>
-        </featureDescription>
-         <featureDescription>
-          <name>singlelinecomment</name>
-          <description/>
-          <rangeTypeName>uima.ruta.example.SingleLineComment</rangeTypeName>
-        </featureDescription>
-      </features>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Author</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-	<typeDescription>
-      <name>uima.ruta.example.Types</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Year</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Package</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Declaration</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Title</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Method</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Import</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Block</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-        <typeDescription>
-      <name>uima.ruta.example.AccessModifier</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.ClassName</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Inheritance</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-     <typeDescription>
-      <name>uima.ruta.example.Implementation</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-         <typeDescription>
-      <name>uima.ruta.example.SingleLineComment</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.Name</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-	<typeDescription>
-      <name>uima.ruta.example.MultiLineComment</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>uima.ruta.example.JavaReservedWords</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-	 <typeDescription>
-      <name>uima.ruta.example.Parameters</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-	 <typeDescription>
-      <name>uima.ruta.example.Class</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-	 <typeDescription>
-      <name>uima.ruta.example.MethodHeader</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-        <typeDescription>
-      <name>uima.ruta.example.ClassHeader</name>
-      <description/>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-  </types>
+	<name>BibtexTypeSystem</name>
+	<description />
+	<version>1.0</version>
+	<vendor />
+	<types>
+		<typeDescription>
+			<name>uima.ruta.example.Bibtex</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>parameters</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Parameters</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>class</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Class</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>methodheader</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.MethodHeader</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>javareservedwords</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.JavaReservedWords</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>multilinecomment</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.MultiLineComment</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>declaration</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Declaration</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>classheader</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.ClassHeader</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>name</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Name</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>author</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Author</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>types</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Types</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>title</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Title</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>package</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Package</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>year</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Year</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>method</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Method</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>import</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Import</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>block</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Block</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>accessmodifier</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.AccessModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>classname</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.ClassName</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>inheritance</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Inheritance</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>implementation</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.Implementation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>singlelinecomment</name>
+					<description />
+					<rangeTypeName>uima.ruta.example.SingleLineComment</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Author</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Types</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Year</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Package</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Declaration</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Title</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Method</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Import</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Block</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.AccessModifier</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.ClassName</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Inheritance</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Implementation</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.SingleLineComment</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Name</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.MultiLineComment</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.JavaReservedWords</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Parameters</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.Class</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.MethodHeader</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.example.ClassHeader</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+	</types>
 </typeSystemDescription>

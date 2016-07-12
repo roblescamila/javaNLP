@@ -4,7 +4,7 @@
     <primitive>true</primitive>
     <annotatorImplementationName>org.apache.uima.ruta.engine.RutaEngine</annotatorImplementationName>
     <analysisEngineMetaData>
-        <name>uima.ruta.example.TitleEngine</name>
+        <name>uima.ruta.annotators.SingleLineCommentEngine</name>
         <description/>
         <version>1.0</version>
         <vendor/>
@@ -245,7 +245,7 @@
             <nameValuePair>
                 <name>mainScript</name>
                 <value>
-                    <string>uima.ruta.example.Title</string>
+                    <string>uima.ruta.annotators.SingleLineComment</string>
                 </value>
             </nameValuePair>
             <nameValuePair>
@@ -312,7 +312,7 @@
         </configurationParameterSettings>
         <typeSystemDescription>
             <imports>
-                <import location="TitleTypeSystem.xml"/>
+                <import location="SingleLineCommentTypeSystem.xml"/>
             </imports>
         </typeSystemDescription>
         <typePriorities>
@@ -331,10 +331,10 @@
             </capability>
             <capability>
                 <inputs>
-                    <type>uima.ruta.example.Title.TitleStopper</type>
+                    <type>uima.ruta.annotators.SingleLineComment.InitComment</type>
                 </inputs>
                 <outputs>
-                    <type>uima.ruta.example.Title.TitleStopper</type>
+                    <type>uima.ruta.annotators.SingleLineComment.InitComment</type>
                 </outputs>
                 <languagesSupported/>
             </capability>

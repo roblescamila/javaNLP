@@ -2,6 +2,8 @@ PACKAGE uima.ruta.example;
 
 TYPESYSTEM types.BibtexTypeSystem;
 
+Document{-> RETAINTYPE(SPACE)};
+
 SW{AND(-INLIST('JavaReservedWords.txt'),-CONTAINS(SPACE))-> MARK(Name)};
 (CW*{AND(AFTER(Name),-CONTAINS(SPACE))}){-> MARK(Name)};
 
