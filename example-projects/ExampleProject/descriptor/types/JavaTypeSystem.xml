@@ -28,12 +28,14 @@
 				<featureDescription>
 					<name>javareservedwords</name>
 					<description />
-					<rangeTypeName>uima.ruta.annotators.JavaReservedWords</rangeTypeName>
+					<rangeTypeName>uima.ruta.annotators.JavaReservedWords
+					</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>multilinecomment</name>
 					<description />
-					<rangeTypeName>uima.ruta.annotators.MultiLineComment</rangeTypeName>
+					<rangeTypeName>uima.ruta.annotators.MultiLineComment
+					</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>declaration</name>
@@ -70,11 +72,11 @@
 					<description />
 					<rangeTypeName>uima.ruta.annotators.Package</rangeTypeName>
 				</featureDescription>
-<!-- 				<featureDescription> -->
-<!-- 					<name>method</name> -->
-<!-- 					<description /> -->
-<!-- 					<rangeTypeName>uima.ruta.annotators.Method</rangeTypeName> -->
-<!-- 				</featureDescription> -->
+				<featureDescription>
+					<name>method</name>
+					<description />
+					<rangeTypeName>uima.ruta.annotators.Method</rangeTypeName>
+				</featureDescription>
 				<featureDescription>
 					<name>import</name>
 					<description />
@@ -101,6 +103,11 @@
 					<rangeTypeName>uima.ruta.annotators.Inheritance</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>constructor</name>
+					<description />
+					<rangeTypeName>uima.ruta.annotators.Constructor</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>implementation</name>
 					<description />
 					<rangeTypeName>uima.ruta.annotators.Implementation</rangeTypeName>
@@ -108,7 +115,8 @@
 				<featureDescription>
 					<name>singlelinecomment</name>
 					<description />
-					<rangeTypeName>uima.ruta.annotators.SingleLineComment</rangeTypeName>
+					<rangeTypeName>uima.ruta.annotators.SingleLineComment
+					</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -127,11 +135,11 @@
 			<description />
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 		</typeDescription>
-<!-- 		<typeDescription> -->
-<!-- 			<name>uima.ruta.annotators.Method</name> -->
-<!-- 			<description /> -->
-<!-- 			<supertypeName>uima.tcas.Annotation</supertypeName> -->
-<!-- 		</typeDescription> -->
+		<typeDescription>
+			<name>uima.ruta.annotators.Method</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
 		<typeDescription>
 			<name>uima.ruta.annotators.Import</name>
 			<description />
@@ -174,6 +182,11 @@
 		</typeDescription>
 		<typeDescription>
 			<name>uima.ruta.annotators.VarName</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>uima.ruta.annotators.Constructor</name>
 			<description />
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 		</typeDescription>

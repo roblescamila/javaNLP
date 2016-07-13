@@ -7,6 +7,7 @@
         <import location="PackageTypeSystem.xml"/>
         <import location="MultiLineCommentTypeSystem.xml"/>
         <import location="InheritanceTypeSystem.xml"/>
+        <import location="ConstructorTypeSystem.xml"/>
         <import location="MethodNameTypeSystem.xml"/>
         <import location="ClassTypeTypeSystem.xml"/>
         <import location="AccessModifierTypeSystem.xml"/>
@@ -22,6 +23,7 @@
         <import location="DeclarationTypeSystem.xml"/>
         <import location="ImportTypeSystem.xml"/>
         <import location="JavaReservedWordsTypeSystem.xml"/>
+        <import location="MethodTypeSystem.xml"/>
         <import location="VarNameTypeSystem.xml"/>
     </imports>
 </typeSystemDescription>

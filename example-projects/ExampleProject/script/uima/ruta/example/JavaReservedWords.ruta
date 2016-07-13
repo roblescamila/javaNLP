@@ -1,7 +1,0 @@
-PACKAGE uima.ruta.example;
-
-TYPESYSTEM types.BibtexTypeSystem;
-
-WORDLIST ReservedWords = 'JavaReservedWords.txt';
-
-Document{-> MARKFAST(JavaReservedWords, ReservedWords)};

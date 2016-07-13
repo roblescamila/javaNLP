@@ -16,12 +16,13 @@ SCRIPT uima.ruta.annotators.ClassType;
 SCRIPT uima.ruta.annotators.ClassName;
 SCRIPT uima.ruta.annotators.ClassHeader;
 SCRIPT uima.ruta.annotators.Declaration;
-//SCRIPT uima.ruta.annotators.Method;
+SCRIPT uima.ruta.annotators.Method;
 SCRIPT uima.ruta.annotators.Block;
 SCRIPT uima.ruta.annotators.VarName;
 SCRIPT uima.ruta.annotators.Class;
 SCRIPT uima.ruta.annotators.MethodHeader;
 SCRIPT uima.ruta.annotators.MethodName;
+SCRIPT uima.ruta.annotators.Constructor;
 
 Document{-> CALL(Package)};
 Document{-> CALL(Import)};
@@ -37,19 +38,21 @@ Document{-> CALL(ClassType)};
 Document{-> CALL(ClassName)};
 Document{-> CALL(ClassHeader)};
 Document{-> CALL(Declaration)};
-//Document{-> CALL(Method)};
+Document{-> CALL(Method)};
 Document{-> CALL(Block)};
 Document{-> CALL(VarName)};
 Document{-> CALL(Class)};
 Document{-> CALL(MethodHeader)};
 Document{-> CALL(MethodName)};
+Document{-> CALL(Constructor)};
 
 Document{-> CREATE(Java, 
 		"primitivetype" = PrimitiveType, 
+		"constructor" = Constructor, 		
 		"classtype" = ClassType, 
 		"declaration" = Declaration, 
 		"package" = Package, 
-//		"method" = Method, 
+		"method" = Method, 
 		"import" = Import, 
 		"block" = Block, 
 		"classname" = ClassName, 

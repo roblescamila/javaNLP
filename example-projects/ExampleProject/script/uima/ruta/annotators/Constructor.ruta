@@ -1,0 +1,7 @@
+PACKAGE uima.ruta.annotators;
+
+TYPESYSTEM types.JavaTypeSystem;
+
+ClassType{NEAR(Parameters,0,1)-> MARK(Constructor)};
+
+//MethodName{OR(PARTOF(Parameters),PARTOF(VarName))->UNMARK(MethodName)};

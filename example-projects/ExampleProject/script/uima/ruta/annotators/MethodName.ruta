@@ -6,6 +6,4 @@ TYPESYSTEM types.JavaTypeSystem;
 
 (SW CW){AND(BEFORE(Parameters))-> MARK(MethodName)};
 
-//MethodName{AND(IS(VarName),PARTOFNEQ(VarName))->UNMARK(MethodName)};
-
 MethodName{OR(PARTOF(Parameters),PARTOF(VarName))->UNMARK(MethodName)};
