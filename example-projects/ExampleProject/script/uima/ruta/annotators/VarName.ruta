@@ -4,7 +4,7 @@ TYPESYSTEM types.JavaTypeSystem;
 
 Document{-> RETAINTYPE(SPACE)};
 
-(SW CW){-> MARK(VarName)};
+(SW CW){-> MARKONCE(VarName)};
 
 SW{AND(-IS(JavaReservedWords),-PARTOFNEQ(VarName))->MARK(VarName)};
 
