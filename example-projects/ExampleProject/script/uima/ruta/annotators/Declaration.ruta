@@ -2,8 +2,7 @@ PACKAGE uima.ruta.annotators;
 
 TYPESYSTEM types.JavaTypeSystem;
 
-AccessModifier PrimitiveType VarName{->MARK(Declaration,1,3)};
-
+(AccessModifier? (PrimitiveType|ClassType) VarName (SPECIAL{REGEXP("=")})? (NUM|W)?){->MARK(Declaration)};
 
 //AccessModifier PrimitiveType VarName{->MARK(Declaration,1,3)};
 

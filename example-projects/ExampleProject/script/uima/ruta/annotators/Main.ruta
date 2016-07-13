@@ -26,25 +26,25 @@ SCRIPT uima.ruta.annotators.Constructor;
 
 Document{-> CALL(Package)};
 Document{-> CALL(Import)};
-Document{-> CALL(PrimitiveType)};
-Document{-> CALL(AccessModifier)};
-Document{-> CALL(SingleLineComment)};
 Document{-> CALL(JavaReservedWords)};
+Document{-> CALL(AccessModifier)};
+Document{-> CALL(PrimitiveType)};
+Document{-> CALL(ClassType)};
+Document{-> CALL(SingleLineComment)};
 Document{-> CALL(MultiLineComment)};
 Document{-> CALL(Parameters)};
 Document{-> CALL(Implementation)};
 Document{-> CALL(Inheritance)};
-Document{-> CALL(ClassType)};
 Document{-> CALL(ClassName)};
 Document{-> CALL(ClassHeader)};
+Document{-> CALL(VarName)};
+Document{-> CALL(Block)};
+Document{-> CALL(MethodName)};
+Document{-> CALL(MethodHeader)};
+Document{-> CALL(Class)};
+Document{-> CALL(Constructor)};
 Document{-> CALL(Declaration)};
 Document{-> CALL(Method)};
-Document{-> CALL(Block)};
-Document{-> CALL(VarName)};
-Document{-> CALL(Class)};
-Document{-> CALL(MethodHeader)};
-Document{-> CALL(MethodName)};
-Document{-> CALL(Constructor)};
 
 Document{-> CREATE(Java, 
 		"primitivetype" = PrimitiveType, 

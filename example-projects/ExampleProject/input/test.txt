@@ -1,29 +1,21 @@
-package asa.asa.dfasfd.wrgwrg;
-
-import asdasf.grwghreh.dtjf.df;
-
-//cometario 1 as asfa sfa sfasfasffasfasfasfasf 3141341  adsfa
-
-/*a*/
-/* dasasa
-*/
 public class MountainBike extends Bicycle implements AlgunaClase {       
-    // the MountainBike subclass has one field
+  
     public int seatHeight,camiRobles,matiPrado;
 
-    public MountainBike(int startHeight, int startCadence) {
+    public MountainBike() {
         super(startCadence, startSpeed);
         seatHeight = startHeight;
     }   
 
-/* comentario 
-2*/
     private int setHeight(int newValue, char c) {
+        seatHeight = newValue;
+    }   
+    
+    private SegundaClase setHeight(int newValue) {
         seatHeight = newValue;
     }   
 }
 protected class SegundaClase {       
-    // the MountainBike subclass has one protected field 
     public int seatHeight;
     public MountainBike(int startHeight, int startCadence) {
         super(startCadence, startSpeed);

@@ -2,4 +2,4 @@ PACKAGE uima.ruta.annotators;
 
 TYPESYSTEM types.JavaTypeSystem;
 
-ClassHeader Block SPACE?{-> MARK(Class,1,2)};
+ClassHeader Block SPACE?{-> MARK(Class,1,3)};

@@ -276,9 +276,7 @@
             <nameValuePair>
                 <name>additionalScripts</name>
                 <value>
-                    <array>
-                        <string>uima.ruta.annotators.ClassType</string>
-                    </array>
+                    <array/>
                 </value>
             </nameValuePair>
             <nameValuePair>

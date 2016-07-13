@@ -4,6 +4,5 @@
     <imports>
         <import location="../../../BasicTypeSystem.xml"/>
         <import location="../../../types/JavaTypeSystem.xml"/>
-        <import location="ClassTypeTypeSystem.xml"/>
     </imports>
 </typeSystemDescription>

@@ -2,4 +2,8 @@ PACKAGE uima.ruta.annotators;
 
 TYPESYSTEM types.JavaTypeSystem;
 
-ClassType{NEAR(Parameters,0,1)-> MARK(Constructor)};
+DECLARE ConstructorName;
+
+ClassType{NEAR(Parameters,0,1)-> MARK(ConstructorName)};
+
+AccessModifier ConstructorName Parameters{-> MARK(Constructor)};
