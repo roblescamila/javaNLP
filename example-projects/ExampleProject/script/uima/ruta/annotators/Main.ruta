@@ -24,47 +24,48 @@ SCRIPT uima.ruta.annotators.MethodHeader;
 SCRIPT uima.ruta.annotators.MethodName;
 SCRIPT uima.ruta.annotators.Constructor;
 
+Document{-> CALL(Block)};
 Document{-> CALL(Package)};
 Document{-> CALL(Import)};
 Document{-> CALL(JavaReservedWords)};
 Document{-> CALL(AccessModifier)};
 Document{-> CALL(PrimitiveType)};
-Document{-> CALL(ClassType)};
 Document{-> CALL(SingleLineComment)};
 Document{-> CALL(MultiLineComment)};
-Document{-> CALL(Parameters)};
 Document{-> CALL(Implementation)};
 Document{-> CALL(Inheritance)};
-Document{-> CALL(ClassName)};
-Document{-> CALL(ClassHeader)};
+Document{-> CALL(Parameters)};
 Document{-> CALL(VarName)};
-Document{-> CALL(Block)};
+Document{-> CALL(ClassType)};
 Document{-> CALL(MethodName)};
 Document{-> CALL(MethodHeader)};
+Document{-> CALL(Method)};
+Document{-> CALL(ClassName)};
+Document{-> CALL(ClassHeader)};
 Document{-> CALL(Class)};
 Document{-> CALL(Constructor)};
 Document{-> CALL(Declaration)};
-Document{-> CALL(Method)};
+
 
 Document{-> CREATE(Java, 
-		"primitivetype" = PrimitiveType, 
-		"constructor" = Constructor, 		
-		"classtype" = ClassType, 
-		"declaration" = Declaration, 
-		"package" = Package, 
-		"method" = Method, 
-		"import" = Import, 
+		"singlelinecomment" = SingleLineComment, 
 		"block" = Block, 
-		"classname" = ClassName, 
-		"methodname" = MethodName, 		
+		"multilinecomment" = MultiLineComment, 
+		"javareservedwords" = JavaReservedWords, 
 		"inheritance" = Inheritance, 
 		"implementation" = Implementation, 
-		"singlelinecomment" = SingleLineComment, 
-		"varname" = VarName, 
-		"classheader" = ClassHeader, 
-		"javareservedwords" = JavaReservedWords, 
-		"multilinecomment" = MultiLineComment, 
+		"accessmodifier" = AccessModifier, 
+		"primitivetype" = PrimitiveType, 
 		"parameters" = Parameters, 
+		"classtype" = ClassType, 
+		"package" = Package, 
+		"import" = Import, 
+		"varname" = VarName, 
+		"classname" = ClassName, 
+		"classheader" = ClassHeader, 
 		"class" = Class, 
+		"methodname" = MethodName, 
 		"methodheader" = MethodHeader, 
-		"accessmodifier" = AccessModifier)};
+		"method" = Method, 
+		"declaration" = Declaration, 
+		"constructor" = Constructor)};

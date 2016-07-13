@@ -4,6 +4,14 @@ TYPESYSTEM types.JavaTypeSystem;
 
 DECLARE ConstructorName;
 
-ClassType{NEAR(Parameters,0,1)-> MARK(ConstructorName)};
+//Document{->RETAINTYPE(SPACE)};
 
-AccessModifier ConstructorName Parameters{-> MARK(Constructor)};
+ClassType{BEFORE(Parameters)-> MARK(ConstructorName)};
+
+//AccessModifier ClassType{BEFORE(Parameters)} Parameters{-> MARK(Constructor,1,3)};
+
+AccessModifier ConstructorName Parameters{-> MARK(Constructor,1,3)};
+
+//AccessModifier ClassType Parameters{-> MARK(Constructor,1,3)};
+
+//AccessModifier CW CW Parameters{-> MARK(Constructor,1,4)};

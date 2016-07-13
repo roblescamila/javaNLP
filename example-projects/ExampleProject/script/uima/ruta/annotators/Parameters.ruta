@@ -4,7 +4,7 @@ TYPESYSTEM types.JavaTypeSystem;
 
 DECLARE InitParameters, EndParameters;
 
-"\\("->InitParameters;
-"\\)"->EndParameters;
+"\\(" -> InitParameters;
+"\\)" -> EndParameters;
 
-(InitParameters ANY*? EndParameters){-> MARK(Parameters,1,3)};
+InitParameters ANY*? EndParameters{-> MARK(Parameters,1,3)};

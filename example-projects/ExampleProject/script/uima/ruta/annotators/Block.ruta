@@ -6,5 +6,5 @@ DECLARE SubBlock,InitBlock,EndBlock;
 "\\{"->InitBlock;
 "\\}"->EndBlock;
 
-(InitBlock ANY*? EndBlock){-> MARK(Block)};
+InitBlock ANY*? EndBlock{-> MARK(Block,1,3)};
 
