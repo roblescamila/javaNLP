@@ -2,4 +2,10 @@ PACKAGE uima.ruta.annotators;
 
 TYPESYSTEM types.JavaTypeSystem;
 
-AccessModifier PrimitiveType MethodName Parameters{-> MARK(MethodName)} ;
+//Document{-> RETAINTYPE(SPACE)};
+
+(SW CW){AND(BEFORE(Parameters))-> MARK(MethodName)};
+
+//MethodName{AND(IS(VarName),PARTOFNEQ(VarName))->UNMARK(MethodName)};
+
+MethodName{OR(PARTOF(Parameters),PARTOF(VarName))->UNMARK(MethodName)};

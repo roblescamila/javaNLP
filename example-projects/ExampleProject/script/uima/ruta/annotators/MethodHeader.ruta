@@ -2,4 +2,4 @@ PACKAGE uima.ruta.annotators;
 
 TYPESYSTEM types.JavaTypeSystem;
 
-AccessModifier PrimitiveType MethodName Parameters{-> MARK(MethodHeader,1,4)} ;
+AccessModifier (PrimitiveType | W{REGEXP("void")} | ClassType) MethodName Parameters{-> MARK(MethodHeader,1,4)} ;
