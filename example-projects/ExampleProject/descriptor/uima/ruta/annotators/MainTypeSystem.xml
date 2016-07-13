@@ -11,7 +11,9 @@
         <import location="ClassTypeTypeSystem.xml"/>
         <import location="AccessModifierTypeSystem.xml"/>
         <import location="MethodHeaderTypeSystem.xml"/>
+        <import location="ClassTypeSystem.xml"/>
         <import location="ImplementationTypeSystem.xml"/>
+        <import location="BlockTypeSystem.xml"/>
         <import location="PrimitiveTypeTypeSystem.xml"/>
         <import location="ClassHeaderTypeSystem.xml"/>
         <import location="SingleLineCommentTypeSystem.xml"/>

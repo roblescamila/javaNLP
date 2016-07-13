@@ -1,0 +1,10 @@
+PACKAGE uima.ruta.annotators;
+
+TYPESYSTEM types.JavaTypeSystem;
+DECLARE SubBlock,InitBlock,EndBlock;
+
+"\\{"->InitBlock;
+"\\}"->EndBlock;
+
+(InitBlock ANY*? EndBlock){-> MARK(Block)};
+

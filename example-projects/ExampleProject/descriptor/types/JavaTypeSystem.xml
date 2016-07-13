@@ -15,11 +15,11 @@
 					<description />
 					<rangeTypeName>uima.ruta.annotators.Parameters</rangeTypeName>
 				</featureDescription>
-<!-- 				<featureDescription> -->
-<!-- 					<name>class</name> -->
-<!-- 					<description /> -->
-<!-- 					<rangeTypeName>uima.ruta.annotators.Class</rangeTypeName> -->
-<!-- 				</featureDescription> -->
+				<featureDescription>
+					<name>class</name>
+					<description />
+					<rangeTypeName>uima.ruta.annotators.Class</rangeTypeName>
+				</featureDescription>
 				<featureDescription>
 					<name>methodheader</name>
 					<description />
@@ -65,11 +65,6 @@
 					<description />
 					<rangeTypeName>uima.ruta.annotators.ClassType</rangeTypeName>
 				</featureDescription>
-<!-- 				<featureDescription> -->
-<!-- 					<name>title</name> -->
-<!-- 					<description /> -->
-<!-- 					<rangeTypeName>uima.ruta.annotators.Title</rangeTypeName> -->
-<!-- 				</featureDescription> -->
 				<featureDescription>
 					<name>package</name>
 					<description />
@@ -85,11 +80,11 @@
 					<description />
 					<rangeTypeName>uima.ruta.annotators.Import</rangeTypeName>
 				</featureDescription>
-<!-- 				<featureDescription> -->
-<!-- 					<name>block</name> -->
-<!-- 					<description /> -->
-<!-- 					<rangeTypeName>uima.ruta.annotators.Block</rangeTypeName> -->
-<!-- 				</featureDescription> -->
+				<featureDescription>
+					<name>block</name>
+					<description />
+					<rangeTypeName>uima.ruta.annotators.Block</rangeTypeName>
+				</featureDescription>
 				<featureDescription>
 					<name>accessmodifier</name>
 					<description />
@@ -142,11 +137,11 @@
 			<description />
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 		</typeDescription>
-<!-- 		<typeDescription> -->
-<!-- 			<name>uima.ruta.annotators.Block</name> -->
-<!-- 			<description /> -->
-<!-- 			<supertypeName>uima.tcas.Annotation</supertypeName> -->
-<!-- 		</typeDescription> -->
+		<typeDescription>
+			<name>uima.ruta.annotators.Block</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
 		<typeDescription>
 			<name>uima.ruta.annotators.AccessModifier</name>
 			<description />
@@ -197,11 +192,11 @@
 			<description />
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 		</typeDescription>
-<!-- 		<typeDescription> -->
-<!-- 			<name>uima.ruta.annotators.Class</name> -->
-<!-- 			<description /> -->
-<!-- 			<supertypeName>uima.tcas.Annotation</supertypeName> -->
-<!-- 		</typeDescription> -->
+		<typeDescription>
+			<name>uima.ruta.annotators.Class</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
 		<typeDescription>
 			<name>uima.ruta.annotators.MethodHeader</name>
 			<description />

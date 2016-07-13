@@ -27,5 +27,6 @@ searchResultIndication=false
 searchResultIndicationColor=206,204,247
 searchResultTextStyle=NONE
 secondaryIPColor=219,235,204
+spellingEnabled=false
 spellingIndicationColor=255,128,64
 writeOccurrenceIndicationColor=240,216,168

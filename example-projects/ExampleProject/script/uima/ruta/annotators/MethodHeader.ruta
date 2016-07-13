@@ -6,4 +6,4 @@ DECLARE MethodType;
 
 "void"->MethodType;
 
-AccessModifier (PrimitiveType | MethodType | ClassType) MethodName Parameters{-> MARK(MethodHeader,1,4)} ;
+AccessModifier (PrimitiveType | MethodType | ClassType) MethodName Parameters{-> MARK(MethodHeader,1,4)};

@@ -17,9 +17,9 @@ SCRIPT uima.ruta.annotators.ClassName;
 SCRIPT uima.ruta.annotators.ClassHeader;
 SCRIPT uima.ruta.annotators.Declaration;
 //SCRIPT uima.ruta.annotators.Method;
-//SCRIPT uima.ruta.annotators.Block;
+SCRIPT uima.ruta.annotators.Block;
 SCRIPT uima.ruta.annotators.VarName;
-//SCRIPT uima.ruta.annotators.Class;
+SCRIPT uima.ruta.annotators.Class;
 SCRIPT uima.ruta.annotators.MethodHeader;
 SCRIPT uima.ruta.annotators.MethodName;
 
@@ -38,9 +38,9 @@ Document{-> CALL(ClassName)};
 Document{-> CALL(ClassHeader)};
 Document{-> CALL(Declaration)};
 //Document{-> CALL(Method)};
-//Document{-> CALL(Block)};
+Document{-> CALL(Block)};
 Document{-> CALL(VarName)};
-//Document{-> CALL(Class)};
+Document{-> CALL(Class)};
 Document{-> CALL(MethodHeader)};
 Document{-> CALL(MethodName)};
 
@@ -51,7 +51,7 @@ Document{-> CREATE(Java,
 		"package" = Package, 
 //		"method" = Method, 
 		"import" = Import, 
-//		"block" = Block, 
+		"block" = Block, 
 		"classname" = ClassName, 
 		"methodname" = MethodName, 		
 		"inheritance" = Inheritance, 
@@ -62,6 +62,6 @@ Document{-> CREATE(Java,
 		"javareservedwords" = JavaReservedWords, 
 		"multilinecomment" = MultiLineComment, 
 		"parameters" = Parameters, 
-//		"class" = Class, 
+		"class" = Class, 
 		"methodheader" = MethodHeader, 
 		"accessmodifier" = AccessModifier)};

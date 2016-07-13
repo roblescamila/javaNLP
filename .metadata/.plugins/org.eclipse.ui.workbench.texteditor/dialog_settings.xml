@@ -2,18 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="import" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="Name" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="import"/>
-			<item value="&#x0D;&#x0A;SW{-INLIST(&apos;JavaReservedWords.txt&apos;)-&gt; MARK(Name)};&#x0D;&#x0A;(Name CW*){-CONTAINS(SPACE)-&gt; MARK(Name,1,2)};&#x0D;&#x0A;"/>
-			<item value="package"/>
-			<item value=""/>
+			<item value="Name"/>
+			<item value="name"/>
+			<item value="decla"/>
+			<item value="classheader"/>
+			<item value="header"/>
+			<item value="inh"/>
+			<item value="implem"/>
+			<item value="parameters"/>
 		</list>
 		<list key="replacehistory">
+			<item value="annotators"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
