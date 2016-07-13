@@ -329,6 +329,15 @@
                 <outputs/>
                 <languagesSupported/>
             </capability>
+            <capability>
+                <inputs>
+                    <type>uima.ruta.annotators.MethodHeader.MethodType</type>
+                </inputs>
+                <outputs>
+                    <type>uima.ruta.annotators.MethodHeader.MethodType</type>
+                </outputs>
+                <languagesSupported/>
+            </capability>
         </capabilities>
         <operationalProperties>
             <modifiesCas>true</modifiesCas>

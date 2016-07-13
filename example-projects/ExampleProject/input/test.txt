@@ -18,7 +18,7 @@ public class MountainBike extends Bicycle implements AlgunaClase {
 
 /* comentario 
 2*/
-    private void setHeight(int newValue, char c) {
+    private int setHeight(int newValue, char c) {
         seatHeight = newValue;
     }   
 }
