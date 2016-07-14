@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp\example-projects\ExampleProject"/>
 			<item value="C:\Users\Cami\Documents\Faca\Materias\4to\Diseño de Sistemas de Software\javanlp"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
