@@ -1,30 +1,7 @@
-public class MountainBike extends Bicycle implements AlgunaClase {
-    public int seatHeight,camiRobles,matiPrado;
-   
+
     public MountainBike () {
         super(startCadence, startSpeed);
+        {
+        }
         seatHeight = startHeight;
     }   
-
-    private int setHeight(int newValue, char c) {
-        seatHeight = newValue;
-    }   
-    
-    private SegundaClase setHeight(int newValue) {
-        seatHeight = newValue;
-    }   
-}
-
-protected class SegundaClase {       
-    public int seatHeight;
-    
-    public MountainBike (int startHeight, int startCadence) {
-        super(startCadence, startSpeed);
-        seatHeight = startHeight;
-    }   
-    
-    public void setHeight(int newValue, char c) {
-        seatHeight = newValue;
-        int pepe = 10;
-    }   
-}
