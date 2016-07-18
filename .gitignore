@@ -1,6 +1,5 @@
 #eclipse data files
 
-.project
 .metadata
 bin/**
 tmp/**

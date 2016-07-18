@@ -252,7 +252,7 @@
                 <name>scriptPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/script</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/script</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -260,8 +260,8 @@
                 <name>descriptorPaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/descriptor</string>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/desc</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/descriptor</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/desc</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -269,7 +269,7 @@
                 <name>resourcePaths</name>
                 <value>
                     <array>
-                        <string>C:/Users/matia/workspace/uima-ruta-trunk2/example-projects/ExampleProject/resources</string>
+                        <string>C:/Users/Cami/Documents/Faca/Materias/4to/Diseño de Sistemas de Software/javanlp/example-projects/ExampleProject/resources</string>
                     </array>
                 </value>
             </nameValuePair>
@@ -277,27 +277,27 @@
                 <name>additionalScripts</name>
                 <value>
                     <array>
-                        <string>uima.ruta.annotators.MethodHeader</string>
-                        <string>uima.ruta.annotators.Declaration</string>
-                        <string>uima.ruta.annotators.Inheritance</string>
-                        <string>uima.ruta.annotators.ClassName</string>
-                        <string>uima.ruta.annotators.Class</string>
                         <string>uima.ruta.annotators.Package</string>
-                        <string>uima.ruta.annotators.Import</string>
-                        <string>uima.ruta.annotators.ClassHeader</string>
-                        <string>uima.ruta.annotators.VarName</string>
-                        <string>uima.ruta.annotators.Block</string>
-                        <string>uima.ruta.annotators.AccessModifier</string>
-                        <string>uima.ruta.annotators.JavaReservedWords</string>
                         <string>uima.ruta.annotators.MultiLineComment</string>
-                        <string>uima.ruta.annotators.MethodName</string>
-                        <string>uima.ruta.annotators.SingleLineComment</string>
-                        <string>uima.ruta.annotators.PrimitiveType</string>
-                        <string>uima.ruta.annotators.Implementation</string>
-                        <string>uima.ruta.annotators.Parameters</string>
-                        <string>uima.ruta.annotators.Method</string>
+                        <string>uima.ruta.annotators.Inheritance</string>
                         <string>uima.ruta.annotators.Constructor</string>
+                        <string>uima.ruta.annotators.MethodName</string>
                         <string>uima.ruta.annotators.ClassType</string>
+                        <string>uima.ruta.annotators.AccessModifier</string>
+                        <string>uima.ruta.annotators.MethodHeader</string>
+                        <string>uima.ruta.annotators.Class</string>
+                        <string>uima.ruta.annotators.Implementation</string>
+                        <string>uima.ruta.annotators.Block</string>
+                        <string>uima.ruta.annotators.PrimitiveType</string>
+                        <string>uima.ruta.annotators.ClassHeader</string>
+                        <string>uima.ruta.annotators.SingleLineComment</string>
+                        <string>uima.ruta.annotators.ClassName</string>
+                        <string>uima.ruta.annotators.Parameters</string>
+                        <string>uima.ruta.annotators.Declaration</string>
+                        <string>uima.ruta.annotators.Import</string>
+                        <string>uima.ruta.annotators.JavaReservedWords</string>
+                        <string>uima.ruta.annotators.Method</string>
+                        <string>uima.ruta.annotators.VarName</string>
                     </array>
                 </value>
             </nameValuePair>

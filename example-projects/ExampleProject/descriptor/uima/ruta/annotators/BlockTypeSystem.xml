@@ -7,12 +7,12 @@
     </imports>
     <types>
         <typeDescription>
-            <name>uima.ruta.annotators.Block.EndBlock</name>
+            <name>uima.ruta.annotators.Block.SubBlock</name>
             <description>Type defined in uima.ruta.annotators.Block</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>uima.ruta.annotators.Block.SubBlock</name>
+            <name>uima.ruta.annotators.Block.EndBlock</name>
             <description>Type defined in uima.ruta.annotators.Block</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
