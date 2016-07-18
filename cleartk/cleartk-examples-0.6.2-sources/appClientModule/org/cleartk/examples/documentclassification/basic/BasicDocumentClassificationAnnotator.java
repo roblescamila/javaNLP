@@ -50,6 +50,7 @@ import org.cleartk.examples.type.UsenetDocument;
 import org.cleartk.token.type.Token;
 import org.uimafit.util.JCasUtil;
 
+
 import com.google.common.hash.HashCode;
 
 import bsh.org.objectweb.asm.Type;
@@ -124,33 +125,13 @@ Collection<TOP> mati;
   
   
   
-//	while(mati.iterator().hasNext())
-//	{	
-//	auxiliar =mati.iterator().next();
-//	String a1 =auxiliar.toString();
-//	System.out.println(a1);
-//	}
+
 	
 	System.out.println(tp.getName());
 	lista =tp.getFeatures();
 	f=lista.get(2);
 	System.out.println(f.getName());
-	//System.out.println(aux4.getStringValue(f));
-	   
-//	for (int i=0; i<65; i++)
-//	{tp= jCas.getCasType(i);
-//	 System.out.println("TYPE =   "+tp.getName() + "  " + i);
-//	
-//	 lista =tp.getFeatures();
-//		for (int j=0;j<lista.size();j++)
-//		{f=lista.get(j);
-//		 System.out.println("FEATURE  = " +f.getName());
-//		 
-////	}
-//		 System.out.println("++++++++++++++++++++++++++++++++++++++");	
-//		 }
-//
-//	// System.out.println(a.getDocumentText());
+
 	}
 
 }

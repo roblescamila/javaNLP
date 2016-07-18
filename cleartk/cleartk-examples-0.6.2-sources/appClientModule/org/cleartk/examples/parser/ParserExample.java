@@ -50,7 +50,7 @@ public class ParserExample {
 		String outputDirectory = "salida";
 		System.out.println("Inicio");
 		AggregateBuilder builder = new AggregateBuilder();
-		System.out.println("1");
+		System.out.println("1000");
 		builder.add(UriToDocumentTextAnnotator.getDescription());
 		builder.add(SentenceAnnotator.getDescription());
 		builder.add(TokenAnnotator.getDescription());
