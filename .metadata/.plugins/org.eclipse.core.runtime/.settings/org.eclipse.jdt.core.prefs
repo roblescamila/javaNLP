@@ -2,6 +2,7 @@ JRE_LIB=C\:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar
 eclipse.preferences.version=1
 org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/Cami/.p2/pool/plugins/org.junit_4.12.0.v201504281640/
 org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Cami/.m2/repository
+org.eclipse.jdt.core.classpathVariable.RESOURCES=C\:/Users/Cami/Documents/Faca/Materias/4to/Dise\u00F1o de Sistemas de Software/javanlp/cleartk-javaNLP/resources
 org.eclipse.jdt.core.classpathVariable.UIMA_HOME=C\:/apache-uima
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled

@@ -11,13 +11,16 @@ import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.text.AnnotationFS;
+import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
 import org.cleartk.syntax.opennlp.SentenceAnnotator;
 import org.cleartk.token.tokenizer.TokenAnnotator;
 import org.cleartk.token.type.Token;
+import org.cleartk.util.ViewURIFileNamer;
 import org.cleartk.util.ae.UriToDocumentTextAnnotator;
 import org.cleartk.util.cr.UriCollectionReader;
+import org.uimafit.component.xwriter.XWriter;
 import org.uimafit.factory.AggregateBuilder;
 import org.uimafit.pipeline.SimplePipeline;
 import org.uimafit.util.CasUtil;
@@ -37,49 +40,35 @@ public class JavaNLP {
 
 	public static void main(String[] args) throws Exception {
 
-		PrintWriter xmlOut = new PrintWriter("xmlOutput.xml");
-		Properties props = new Properties();
-		props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
-		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-		Annotation annotation = new Annotation("This is a short sentence. And this is another.");
-		pipeline.annotate(annotation);
-		pipeline.xmlPrint(annotation, xmlOut);
-		// An Annotation is a Map and you can get and use the
-		// various analyses individually. For instance, this
-		// gets the parse tree of the 1st sentence in the text.
-		List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
-		if (sentences != null && sentences.size() > 0) {
-			CoreMap sentence = sentences.get(0);
-			Tree tree = sentence.get(TreeAnnotation.class);
-			PrintWriter out = new PrintWriter(System.out);
-			out.println("The first sentence parsed is:");
-			tree.pennPrint(out);
-		}
+		// PrintWriter xmlOut = new PrintWriter("xmlOutput.xml");
+		// Properties props = new Properties();
+		// props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner,
+		// parse");
+		// StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+		// Annotation annotation = new Annotation("This is a short sentence. And
+		// this is another.");
+		// pipeline.annotate(annotation);
+		// pipeline.xmlPrint(annotation, xmlOut);
+		// // An Annotation is a Map and you can get and use the
+		// // various analyses individually. For instance, this
+		// // gets the parse tree of the 1st sentence in the text.
+		// List<CoreMap> sentences =
+		// annotation.get(CoreAnnotations.SentencesAnnotation.class);
+		// if (sentences != null && sentences.size() > 0) {
+		// CoreMap sentence = sentences.get(0);
+		// Tree tree = sentence.get(TreeAnnotation.class);
+		// PrintWriter out = new PrintWriter(System.out);
+		// out.println("The first sentence parsed is:");
+		// tree.pennPrint(out);
+		// }
 
 		File filesDirectory = new File("input");
 
 		FileInputStream fisTargetFile = new FileInputStream(new File("input/test.txt"));
 		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 
-		JCas jCas;
-		Annotator tokenAnn;
-//
-//		int begin = tokenAnn.get(CharacterOffsetBeginAnnotation.class);
-//		int end = tokenAnn.get(CharacterOffsetEndAnnotation.class);
-//		String pos = tokenAnn.get(PartOfSpeechAnnotation.class);
-//		String lemma = tokenAnn.get(LemmaAnnotation.class);
-//		Token token = new Token(jCas, begin, end);
-//		token.setPos(pos);
-//		token.setLemma(lemma);
-//		token.addToIndexes();
-
-		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(UriToDocumentTextAnnotator.getDescription());
-		builder.add(SentenceAnnotator.getDescription());
-		builder.add(TokenAnnotator.getDescription());
-		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
-				builder.createAggregateDescription());
-
+		String outputDirectory = "output";
+		
 		boolean comment, classname, methodname, realvarname, formalvarname, packag, impor;
 
 		comment = true;
@@ -180,5 +169,13 @@ public class JavaNLP {
 		for (int i = 0; i < packages.size(); i++) {
 			System.out.println(packages.elementAt(i));
 		}
+		
+		AggregateBuilder builder = new AggregateBuilder();
+		builder.add(UriToDocumentTextAnnotator.getDescription());
+		builder.add(SentenceAnnotator.getDescription());
+		builder.add(TokenAnnotator.getDescription());
+		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
+				builder.createAggregateDescription());
+
 	}
 }
