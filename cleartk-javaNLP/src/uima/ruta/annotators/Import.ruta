@@ -1,0 +1,5 @@
+PACKAGE uima.ruta.annotators;
+
+TYPESYSTEM types.JavaTypeSystem;
+
+(W{REGEXP("import")} ANY*? SEMICOLON){-> MARK(Import,1,3)};

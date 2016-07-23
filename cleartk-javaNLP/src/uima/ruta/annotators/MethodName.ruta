@@ -1,0 +1,9 @@
+PACKAGE uima.ruta.annotators;
+
+TYPESYSTEM types.JavaTypeSystem;
+
+//Document{-> RETAINTYPE(SPACE)};
+
+(SW CW){BEFORE(Parameters)-> MARKONCE(MethodName)};
+
+MethodName{OR(PARTOF(Parameters),PARTOF(VarName))->UNMARK(MethodName)};

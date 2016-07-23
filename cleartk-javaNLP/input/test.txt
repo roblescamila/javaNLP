@@ -1,0 +1,26 @@
+package asafa.asdfrgqwrg.tjr.ryfd;
+
+import asas.asdas.asf.asa;
+
+public class Hola {
+   
+   // asasa comentario sasrarasara
+   private int casa;
+   boolean tuvieja;
+   
+    public Hola () {
+        super(startCadence, startSpeed);
+        {
+        int b;
+        }
+        seatHeight = startHeight;
+    }   
+    
+    /*kgkg v hgih kyfkfhv*/
+    public void mamaountainBike(boolean asasAa, double tuVieja) {
+        super(startCadence, startSpeed);
+        {
+        }
+        seatHeight = startHeight;
+    }   
+}
