@@ -1,4 +1,25 @@
-package main.java;
+// PrintWriter xmlOut = new PrintWriter("xmlOutput.xml");
+		// Properties props = new Properties();
+		// props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner,
+		// parse");
+		// StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+		// Annotation annotation = new Annotation("This is a short sentence. And
+		// this is another.");
+		// pipeline.annotate(annotation);
+		// pipeline.xmlPrint(annotation, xmlOut);
+		// // An Annotation is a Map and you can get and use the
+		// // various analyses individually. For instance, this
+		// // gets the parse tree of the 1st sentence in the text.
+		// List<CoreMap> sentences =
+		// annotation.get(CoreAnnotations.SentencesAnnotation.class);
+		// if (sentences != null && sentences.size() > 0) {
+		// CoreMap sentence = sentences.get(0);
+		// Tree tree = sentence.get(TreeAnnotation.class);
+		// PrintWriter out = new PrintWriter(System.out);
+		// out.println("The first sentence parsed is:");
+		// tree.pennPrint(out);
+		// }
+package main.cleartk;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -40,33 +61,9 @@ public class JavaNLP {
 
 	public static void main(String[] args) throws Exception {
 
-		// PrintWriter xmlOut = new PrintWriter("xmlOutput.xml");
-		// Properties props = new Properties();
-		// props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner,
-		// parse");
-		// StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-		// Annotation annotation = new Annotation("This is a short sentence. And
-		// this is another.");
-		// pipeline.annotate(annotation);
-		// pipeline.xmlPrint(annotation, xmlOut);
-		// // An Annotation is a Map and you can get and use the
-		// // various analyses individually. For instance, this
-		// // gets the parse tree of the 1st sentence in the text.
-		// List<CoreMap> sentences =
-		// annotation.get(CoreAnnotations.SentencesAnnotation.class);
-		// if (sentences != null && sentences.size() > 0) {
-		// CoreMap sentence = sentences.get(0);
-		// Tree tree = sentence.get(TreeAnnotation.class);
-		// PrintWriter out = new PrintWriter(System.out);
-		// out.println("The first sentence parsed is:");
-		// tree.pennPrint(out);
-		// }
-
 		File filesDirectory = new File("input");
-
 		FileInputStream fisTargetFile = new FileInputStream(new File("input/test.txt"));
 		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
-
 		String outputDirectory = "output";
 		
 		boolean comment, classname, methodname, realvarname, formalvarname, packag, impor;
@@ -90,7 +87,6 @@ public class JavaNLP {
 		// create the annotation engine to extract dates
 		final AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
 		final CAS cas = engine.newCAS();
-
 		cas.setDocumentText(targetFileStr);
 
 		// annotate the document
@@ -174,8 +170,6 @@ public class JavaNLP {
 		builder.add(UriToDocumentTextAnnotator.getDescription());
 		builder.add(SentenceAnnotator.getDescription());
 		builder.add(TokenAnnotator.getDescription());
-		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
-				builder.createAggregateDescription());
-
+		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory), builder.createAggregateDescription());
 	}
 }
