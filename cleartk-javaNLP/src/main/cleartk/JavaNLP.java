@@ -35,7 +35,11 @@ import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
+import org.cleartk.clearnlp.MPAnalyzer;
+import org.cleartk.clearnlp.PosTagger;
+import org.cleartk.clearnlp.Tokenizer;
 import org.cleartk.syntax.opennlp.SentenceAnnotator;
+import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
 import org.cleartk.token.tokenizer.TokenAnnotator;
 import org.cleartk.token.type.Token;
 import org.cleartk.util.ViewURIFileNamer;
@@ -170,6 +174,12 @@ public class JavaNLP {
 		builder.add(UriToDocumentTextAnnotator.getDescription());
 		builder.add(SentenceAnnotator.getDescription());
 		builder.add(TokenAnnotator.getDescription());
-		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory), builder.createAggregateDescription());
+//		builder.add(Tokenizer.getDescription());
+		//builder.add(PosTagger.getDescription());
+//		builder.add(MPAnalyzer.getDescription());
+//		builder.add(DefaultSnowballStemmer.getDescription("English"));
+//		builder.add(AnalysisEngineFactory.createEngineDescription(XWriter.class, XWriter.PARAM_OUTPUT_DIRECTORY_NAME,
+//				outputDirectory, XWriter.PARAM_FILE_NAMER_CLASS_NAME, ViewURIFileNamer.class.getName()));
+		SimplePipeline.runPipeline(cas, builder.createAggregateDescription());
 	}
 }

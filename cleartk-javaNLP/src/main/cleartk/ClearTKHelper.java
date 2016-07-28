@@ -16,7 +16,7 @@ import org.uimafit.factory.TypeSystemDescriptionFactory;
 public class ClearTKHelper {
 
 	public static TypeSystemDescription getTypeSystemDescription() throws ResourceInitializationException {
-		//System.setProperty("org.uimafit.type.import_pattern", "classpath*:desc/typesystems/**/*.xml");
+//		System.setProperty("org.uimafit.type.import_pattern", "classpath*:desc/typesystems/**/*.xml");
 		return TypeSystemDescriptionFactory.createTypeSystemDescription();
 	}
 	

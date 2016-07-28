@@ -23,12 +23,11 @@ public class XMIReaderCollectionReader extends JCasCollectionReader_ImplBase {
 	private URI resourceURI;
 	private FileInputStream inputStream;
 	private boolean processed;
-	//
 
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
 		super.initialize(aContext);
-		// inputString = (String)aContext.getConfigParameterValue("input");
-		//
+		 inputString = (String)aContext.getConfigParameterValue("input");
+		
 		resourceURI = URI.create(inputString);
 		try {
 			inputStream = new FileInputStream(new File(resourceURI));

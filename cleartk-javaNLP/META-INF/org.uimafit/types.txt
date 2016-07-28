@@ -1,0 +1,2 @@
+classpath*:desc/typesystems/**/*.xml
+classpath*:org/cleartk/**/*.xml

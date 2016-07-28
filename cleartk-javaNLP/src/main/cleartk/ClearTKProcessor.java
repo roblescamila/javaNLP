@@ -8,56 +8,56 @@ import org.apache.uima.resource.*;
 import org.apache.uima.resource.metadata.*;
 import org.apache.uima.util.*;
 import org.cleartk.clearnlp.*;
-//import org.cleartk.stanford.StanfordCoreNLPAnnotator;
+import org.cleartk.stanford.*;
 import org.cleartk.syntax.opennlp.*;
 import org.cleartk.timeml.event.*;
 import org.cleartk.timeml.time.*;
 import org.cleartk.timeml.tlink.*;
 import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
+import org.cleartk.util.cr.UriCollectionReader;
 import org.uimafit.factory.*;
 import org.uimafit.pipeline.SimplePipeline;
 
+import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
+import edu.stanford.nlp.pipeline.MorphaAnnotator;
+
 public class ClearTKProcessor {
 
-	private static String[] filenames = new String[] {"CRS", "HWS", "MSLite" };
-	private static String inputPath = "input";
-	
+	private static String[] filenames = new String[] { "test.txt" };
+	private static String inputPath = "C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño de Sistemas de Software\\javanlp\\cleartk-javaNLP\\input\\";
+
 	public static enum ClearTKPreference {
-	    SemanticRoleLabeling, 
-	    TimeML,
-	    Coreference
+		Comments
 	}
 
 	public void appendClearTK(ClearTKPreference preference) {
-		for(String filename : filenames)
+		for (String filename : filenames)
 			appendClearTK(filename, preference);
 	}
-	
+
 	public void appendClearTK(String filename, ClearTKPreference preference) {
 		String inputExtension = ".xmi";
 		String outputExtension = ".xmi";
-		String outputPath = inputPath;
-
-		String input = inputPath + filename + inputExtension;
+		String outputPath = "C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño de Sistemas de Software\\javanlp\\cleartk-javaNLP\\output\\";
+		String input = inputPath + filename;// + inputExtension;
 		String output = outputPath + filename + "-cleartk" + outputExtension;
 		this.executeClearTK(input, output, preference);
 	}
+
 	public void executeClearTK(String inputFile, String outputFile, ClearTKPreference preference) {
 		try {
 			// UIMA TypeSystems & Priorities
 			TypeSystemDescription typeSystemDescription = ClearTKHelper.getTypeSystemDescription();
 			TypePriorities typePriorities = ClearTKHelper.getTypePriorities();
 			// Collection Reader
-			CollectionReader collectionReader = ClearTKHelper.getXMIReaderCR(typeSystemDescription, typePriorities, inputFile);
+			CollectionReader collectionReader = ClearTKHelper.getXMIReaderCR(typeSystemDescription, typePriorities,
+					inputFile);
 			// ClearTK Annotators
 			AggregateBuilder builder = createBuilder(preference);
 			// CAS Writer Consumer
 			AnalysisEngine writerCC = ClearTKHelper.getXMIWriterCC(typeSystemDescription, typePriorities, outputFile);
 			// Pipeline Execution
-			SimplePipeline.runPipeline(
-					collectionReader,
-					builder.createAggregate(),
-					writerCC);
+			SimplePipeline.runPipeline(collectionReader, builder.createAggregate(), writerCC);
 		} catch (ResourceInitializationException e) {
 			e.printStackTrace();
 		} catch (InvalidXMLException e) {
@@ -68,28 +68,25 @@ public class ClearTKProcessor {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private AggregateBuilder createBuilder(ClearTKPreference preference) throws ResourceInitializationException {
 		switch (preference) {
-		case SemanticRoleLabeling:
-			return createSemanticRoleLabelingBuilder();
-		case TimeML:
-			return createTimeMLBuilder();
-		case Coreference:
-			return createCoreferenceBuilder();
+		case Comments:
+			return createCommentsBuilder();
 		default:
-			return null;
+			return createTimeMLBuilder();
 		}
 	}
-	
-	private AggregateBuilder createSemanticRoleLabelingBuilder() throws ResourceInitializationException {
+
+	private AggregateBuilder createCommentsBuilder() throws ResourceInitializationException {
 		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(SentenceAnnotator.getDescription());
+		// builder.add(SentenceAnnotator.getDescription());
 		builder.add(Tokenizer.getDescription());
 		builder.add(PosTagger.getDescription());
 		builder.add(MPAnalyzer.getDescription());
-		builder.add(DependencyParser.getDescription());
-		builder.add(SemanticRoleLabeler.getDescription());
+		// builder.add(DependencyParser.getDescription());
+		// builder.add(SemanticRoleLabeler.getDescription());
+		builder.add(DefaultSnowballStemmer.getDescription("English"));
 		return builder;
 	}
 
@@ -108,27 +105,28 @@ public class ClearTKProcessor {
 		builder.add(EventClassAnnotator.FACTORY.getAnnotatorDescription());
 		builder.add(EventPolarityAnnotator.FACTORY.getAnnotatorDescription());
 		builder.add(EventModalityAnnotator.FACTORY.getAnnotatorDescription());
-		//builder.add(TemporalLinkEventToDocumentCreationTimeAnnotator.FACTORY.getAnnotatorDescription());
+		// builder.add(TemporalLinkEventToDocumentCreationTimeAnnotator.FACTORY.getAnnotatorDescription());
 		builder.add(TemporalLinkEventToSameSentenceTimeAnnotator.FACTORY.getAnnotatorDescription());
 		builder.add(TemporalLinkMainEventToNextSentenceMainEventAnnotator.FACTORY.getAnnotatorDescription());
-		//builder.add(TemporalLinkEventToSubordinatedEventAnnotator.FACTORY.getAnnotatorDescription());
+		// builder.add(TemporalLinkEventToSubordinatedEventAnnotator.FACTORY.getAnnotatorDescription());
 		builder.add(VerbClauseTemporalAnnotator.FACTORY.getAnnotatorDescription());
 		return builder;
 	}
 
-	private AggregateBuilder createCoreferenceBuilder() throws ResourceInitializationException {
-		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(org.cleartk.syntax.opennlp.SentenceAnnotator.getDescription());
-//		builder.add(StanfordCoreNLPAnnotator.getDescription());
-		return builder;
-	}
-	
+	// private AggregateBuilder createCoreferenceBuilder() throws
+	// ResourceInitializationException {
+	// AggregateBuilder builder = new AggregateBuilder();
+	// builder.add(org.cleartk.syntax.opennlp.SentenceAnnotator.getDescription());
+	// // builder.add(StanfordCoreNLPAnnotator.getDescription());
+	// return builder;
+	// }
+
 	public static void main(String[] args) {
 		ClearTKProcessor tester = new ClearTKProcessor();
-		ClearTKPreference preference = ClearTKPreference.Coreference;
+		ClearTKPreference preference = ClearTKPreference.Comments;
 		// Global actions
 		tester.appendClearTK(preference);
 		// Single actions
-		//tester.appendClearTK(filenames[1], preference);
+		// tester.appendClearTK(filenames[1], preference);
 	}
 }

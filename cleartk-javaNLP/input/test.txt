@@ -4,7 +4,7 @@ import asas.asdas.asf.asa;
 
 public class Hola {
    
-   // asasa comentario sasrarasara
+   // am are, is
    private int casa;
    boolean tuvieja;
    
@@ -16,7 +16,7 @@ public class Hola {
         seatHeight = startHeight;
     }   
     
-    /*kgkg v hgih kyfkfhv*/
+    /* car cars car's cars' */
     public void mamaountainBike(boolean asasAa, double tuVieja) {
         super(startCadence, startSpeed);
         {
