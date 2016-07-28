@@ -359,6 +359,8 @@
 				<type>org.apache.uima.ruta.type.RutaFrame</type>
 				<type>uima.tcas.Annotation</type>
 				<type>org.apache.uima.ruta.type.RutaBasic</type>
+<!-- 				<type>uima.ruta.annotators.SingleLineComment</type> -->
+<!-- 				<type>uima.ruta.annotators.MultiLineComment</type> -->
 			</priorityList>
 		</typePriorities>
 		<fsIndexCollection />

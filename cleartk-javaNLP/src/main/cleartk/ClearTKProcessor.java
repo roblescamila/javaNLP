@@ -1,6 +1,9 @@
 package main.cleartk;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.*;
 import org.apache.uima.collection.*;
@@ -24,22 +27,23 @@ import edu.stanford.nlp.pipeline.MorphaAnnotator;
 public class ClearTKProcessor {
 
 	private static String[] filenames = new String[] { "test.txt" };
-	private static String inputPath = "C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño de Sistemas de Software\\javanlp\\cleartk-javaNLP\\input\\";
+	private static String inputPath = "file:///c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/";
 
 	public static enum ClearTKPreference {
 		Comments
 	}
 
-	public void appendClearTK(ClearTKPreference preference) {
+	public void appendClearTK(ClearTKPreference preference) throws UnsupportedEncodingException {
 		for (String filename : filenames)
 			appendClearTK(filename, preference);
 	}
 
-	public void appendClearTK(String filename, ClearTKPreference preference) {
+	public void appendClearTK(String filename, ClearTKPreference preference) throws UnsupportedEncodingException {
 		String inputExtension = ".xmi";
 		String outputExtension = ".xmi";
-		String outputPath = "C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño de Sistemas de Software\\javanlp\\cleartk-javaNLP\\output\\";
-		String input = inputPath + filename;// + inputExtension;
+//		inputPath = URLEncoder.encode(inputPath, "UTF-8");
+		String outputPath = inputPath;
+		String input = inputPath + filename + inputExtension;
 		String output = outputPath + filename + "-cleartk" + outputExtension;
 		this.executeClearTK(input, output, preference);
 	}
@@ -50,8 +54,7 @@ public class ClearTKProcessor {
 			TypeSystemDescription typeSystemDescription = ClearTKHelper.getTypeSystemDescription();
 			TypePriorities typePriorities = ClearTKHelper.getTypePriorities();
 			// Collection Reader
-			CollectionReader collectionReader = ClearTKHelper.getXMIReaderCR(typeSystemDescription, typePriorities,
-					inputFile);
+			CollectionReader collectionReader = ClearTKHelper.getXMIReaderCR(typeSystemDescription, typePriorities,	inputFile);
 			// ClearTK Annotators
 			AggregateBuilder builder = createBuilder(preference);
 			// CAS Writer Consumer
@@ -121,12 +124,12 @@ public class ClearTKProcessor {
 	// return builder;
 	// }
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnsupportedEncodingException {
 		ClearTKProcessor tester = new ClearTKProcessor();
 		ClearTKPreference preference = ClearTKPreference.Comments;
 		// Global actions
-		tester.appendClearTK(preference);
+		// tester.appendClearTK(preference);
 		// Single actions
-		// tester.appendClearTK(filenames[1], preference);
+		tester.appendClearTK("test.txt", preference);
 	}
 }

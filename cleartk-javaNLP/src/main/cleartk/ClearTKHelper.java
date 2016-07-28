@@ -17,32 +17,32 @@ public class ClearTKHelper {
 
 	public static TypeSystemDescription getTypeSystemDescription() throws ResourceInitializationException {
 //		System.setProperty("org.uimafit.type.import_pattern", "classpath*:desc/typesystems/**/*.xml");
+//		System.setProperty("org.uimafit.type.import_pattern", "classpath*:META-INF/edu/isistan/uima/unified/**/*.xml");
 		return TypeSystemDescriptionFactory.createTypeSystemDescription();
 	}
 	
 	public static TypePriorities getTypePriorities() {
 		return TypePrioritiesFactory.createTypePriorities(
-			"edu.isistan.uima.unified.typesystems.srs.Project",
-			"edu.isistan.uima.unified.typesystems.srs.Document",
-			"edu.isistan.uima.unified.typesystems.srs.Section",
-			"edu.isistan.uima.unified.typesystems.nlp.Sentence",
-			"edu.isistan.uima.unified.typesystems.domain.DomainAction",
-			"edu.isistan.uima.unified.typesystems.srl.Predicate",
-			"edu.isistan.uima.unified.typesystems.srl.Structure",
-			"edu.isistan.uima.unified.typesystems.srl.Argument",
-			"edu.isistan.uima.unified.typesystems.nlp.SDDependency",
-			"edu.isistan.uima.unified.typesystems.nlp.Chunk",
-			"edu.isistan.uima.unified.typesystems.nlp.Entity",
-			"edu.isistan.uima.unified.typesystems.srl.Role",
-			"edu.isistan.uima.unified.typesystems.domain.DomainNumber",
-			"edu.isistan.uima.unified.typesystems.nlp.Token",
-			"edu.isistan.uima.unified.typesystems.wordnet.Sense");
+			"uima.ruta.annotators.SingleLineComment",
+			"uima.ruta.annotators.MultiLineComment",
+			"uima.ruta.annotators.ClassName",
+			"uima.ruta.annotators.MethodName",
+			"uima.ruta.annotators.Package",
+			"uima.ruta.annotators.Import"//,
+//			"edu.isistan.uima.unified.typesystems.srl.Structure",
+//			"edu.isistan.uima.unified.typesystems.srl.Argument",
+//			"edu.isistan.uima.unified.typesystems.nlp.SDDependency",
+//			"edu.isistan.uima.unified.typesystems.nlp.Chunk",
+//			"edu.isistan.uima.unified.typesystems.nlp.Entity",
+//			"edu.isistan.uima.unified.typesystems.srl.Role",
+//			"edu.isistan.uima.unified.typesystems.domain.DomainNumber",
+//			"edu.isistan.uima.unified.typesystems.nlp.Token",
+//			"edu.isistan.uima.unified.typesystems.wordnet.Sense"
+			);
 	}
 	
 	public static CollectionReader getXMIReaderCR(TypeSystemDescription typeSystemDescription, TypePriorities typePriorities, String inputFile) throws ResourceInitializationException, InvalidXMLException {
-		CollectionReaderDescription crDescription = 
-			CollectionReaderFactory.createDescription(XMIReaderCollectionReader.class, typeSystemDescription, typePriorities, 
-			"input", inputFile);
+		CollectionReaderDescription crDescription = CollectionReaderFactory.createDescription(XMIReaderCollectionReader.class, typeSystemDescription, typePriorities, "input", inputFile);
 		return CollectionReaderFactory.createCollectionReader(crDescription);
 	}
 	

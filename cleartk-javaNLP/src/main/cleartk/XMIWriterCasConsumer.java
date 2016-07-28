@@ -20,15 +20,15 @@ import org.xml.sax.SAXException;
 public class XMIWriterCasConsumer extends JCasConsumer_ImplBase {
 	@ConfigurationParameter(name="output")
 	private String outputString;
-	//
+	
 	private URI resourceURI;
 	private FileOutputStream outputStream;
-	//
+	
 	private XMLSerializer xmlSer;
 	private ContentHandler contentHandler;
-	//
+	
 	private XmiCasSerializer ser;
-	//
+	
 	
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
 		super.initialize(aContext);
