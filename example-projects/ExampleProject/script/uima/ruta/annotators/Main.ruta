@@ -24,7 +24,7 @@ SCRIPT uima.ruta.annotators.MethodHeader;
 SCRIPT uima.ruta.annotators.MethodName;
 SCRIPT uima.ruta.annotators.Constructor;
 
-Document{-> CALL(Block)};
+//Document{-> CALL(Block)};
 Document{-> CALL(Package)};
 Document{-> CALL(Import)};
 Document{-> CALL(JavaReservedWords)};
@@ -43,8 +43,8 @@ Document{-> CALL(Method)};
 Document{-> CALL(ClassName)};
 Document{-> CALL(ClassHeader)};
 Document{-> CALL(Class)};
-Document{-> CALL(Constructor)};
-Document{-> CALL(Declaration)};
+//Document{-> CALL(Constructor)};
+//Document{-> CALL(Declaration)};
 
 
 Document{-> CREATE(Java, 

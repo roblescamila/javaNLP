@@ -41,7 +41,10 @@ import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.cleartk.clearnlp.MPAnalyzer;
 import org.cleartk.clearnlp.PosTagger;
 import org.cleartk.clearnlp.Tokenizer;
+import org.cleartk.examples.documentclassification.basic.BasicDocumentClassificationAnnotator;
+import org.cleartk.syntax.opennlp.PosTaggerAnnotator;
 import org.cleartk.syntax.opennlp.SentenceAnnotator;
+import org.cleartk.token.lemma.choi.LemmaAnnotator;
 import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
 import org.cleartk.token.tokenizer.TokenAnnotator;
 import org.cleartk.token.type.Token;
@@ -57,10 +60,10 @@ public class JavaNLP {
 
 	public static void main(String[] args) throws Exception {
 
-		File filesDirectory = new File("input");
-		FileInputStream fisTargetFile = new FileInputStream(new File("input/test.txt"));
+//		File filesDirectory = new File("input");
+		FileInputStream fisTargetFile = new FileInputStream(new File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
 		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
-		String outputDirectory = "output";
+//		String outputDirectory = "output";
 
 		boolean comment, classname, methodname, realvarname, formalvarname, packag, impor;
 
@@ -72,47 +75,54 @@ public class JavaNLP {
 		packag = true;
 		impor = true;
 
-		Vector<String> comments = new Vector<String>();
-		Vector<String> classnames = new Vector<String>();
-		Vector<String> methodnames = new Vector<String>();
-		Vector<String> formalvarnames = new Vector<String>();
-		Vector<String> realvarnames = new Vector<String>();
-		Vector<String> packages = new Vector<String>();
-		Vector<String> imports = new Vector<String>();
+		
+		String inputEngine = "main.descriptors.MainEngine";
+		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
+		CAS cas = engine.newCAS();		
+		cas.setDocumentText(targetFileStr);
+		
+//		Vector<String> comments = new Vector<String>();
+//		Vector<String> classnames = new Vector<String>();
+//		Vector<String> methodnames = new Vector<String>();
+//		Vector<String> formalvarnames = new Vector<String>();
+//		Vector<String> realvarnames = new Vector<String>();
+//		Vector<String> packages = new Vector<String>();
+//		Vector<String> imports = new Vector<String>();
 
 		// create the annotation engine to extract dates
-		final AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
-		final CAS cas = engine.newCAS();
-		cas.setDocumentText(targetFileStr);
+//		final AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
+//		final CAS cas = engine.newCAS();
+//		cas.setDocumentText(targetFileStr);
 
 		// annotate the document
-		engine.process(cas);
+//		engine.process(cas);
 
 		// extract dates from the annotated document
 		if (comment) {
-			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.SingleLineComment");
-			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
-				comments.add(type.getCoveredText());
-			}
-
-			final Type MultiLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.MultiLineComment");
-			for (AnnotationFS type : CasUtil.select(cas, MultiLineCommentType)) {
-				comments.add(type.getCoveredText());
-			}
+			UimaRutaANnotator
+//			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.SingleLineComment");
+//			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
+//				comments.add(type.getCoveredText());
+//			}
+//
+//			final Type MultiLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.MultiLineComment");
+//			for (AnnotationFS type : CasUtil.select(cas, MultiLineCommentType)) {
+//				comments.add(type.getCoveredText());
+//			}
 		}
 
 		if (classname) {
-			final Type ClassNameType = cas.getTypeSystem().getType("uima.ruta.annotators.ClassName");
-			for (AnnotationFS type : CasUtil.select(cas, ClassNameType)) {
-				classnames.add(type.getCoveredText());
-			}
+//			final Type ClassNameType = cas.getTypeSystem().getType("uima.ruta.annotators.ClassName");
+//			for (AnnotationFS type : CasUtil.select(cas, ClassNameType)) {
+//				classnames.add(type.getCoveredText());
+//			}
 		}
 
 		if (methodname) {
-			final Type MethodNameType = cas.getTypeSystem().getType("uima.ruta.annotators.MethodName");
-			for (AnnotationFS type : CasUtil.select(cas, MethodNameType)) {
-				comments.add(type.getCoveredText());
-			}
+//			final Type MethodNameType = cas.getTypeSystem().getType("uima.ruta.annotators.MethodName");
+//			for (AnnotationFS type : CasUtil.select(cas, MethodNameType)) {
+//				comments.add(type.getCoveredText());
+//			}
 		}
 
 		// if (realvarname) {
@@ -134,17 +144,17 @@ public class JavaNLP {
 		// }
 
 		if (packag) {
-			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.Package");
-			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
-				packages.add(type.getCoveredText());
-			}
+//			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.Package");
+//			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
+//				packages.add(type.getCoveredText());
+//			}
 		}
 
 		if (impor) {
-			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.Import");
-			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
-				imports.add(type.getCoveredText());
-			}
+//			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.Import");
+//			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
+//				imports.add(type.getCoveredText());
+//			}
 		}
 
 		System.out.println("Comments:");
@@ -162,51 +172,18 @@ public class JavaNLP {
 			System.out.println(packages.elementAt(i));
 		}
 
-		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(UriToDocumentTextAnnotator.getDescription());
-		builder.add(SentenceAnnotator.getDescription());
-		// builder.add(TokenAnnotator.getDescription());
-		builder.add(Tokenizer.getDescription());
-		// builder.add(PosTagger.getDescription());
-		// builder.add(MPAnalyzer.getDescription());
-		// builder.add(DefaultSnowballStemmer.getDescription("English"));
-		builder.add(AnalysisEngineFactory.createEngineDescription(XWriter.class, XWriter.PARAM_OUTPUT_DIRECTORY_NAME,
-				outputDirectory, XWriter.PARAM_FILE_NAMER_CLASS_NAME, ViewURIFileNamer.class.getName()));
-		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
-				builder.createAggregate());// , writerCC);
-
-		// String inputFile =
-		// "C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño de Sistemas
-		// de Software\\javanlp\\cleartk-javaNLP\\input\\test.txt.xmi";
-		// String outputFile =
-		// "C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño de Sistemas
-		// de Software\\javanlp\\cleartk-javaNLP\\output\\test.txt.xmi";
-		// inputFile = URLEncoder.encode(inputFile, "UTF-8");
-
-		// TypeSystemDescription typeSystemDescription =
-		// ClearTKHelper.getTypeSystemDescription();
-		// TypePriorities typePriorities = ClearTKHelper.getTypePriorities();
-		// CollectionReader collectionReader =
-		// ClearTKHelper.getXMIReaderCR(typeSystemDescription, typePriorities,
-		// inputFile);
-		// AnalysisEngine writerCC =
-		// ClearTKHelper.getXMIWriterCC(typeSystemDescription, typePriorities,
-		// outputFile);
-
-		// AggregateBuilder builder = new AggregateBuilder();
-		// builder.add(UriToDocumentTextAnnotator.getDescription());
-		// builder.add(SentenceAnnotator.getDescription());
-		// builder.add(TokenAnnotator.getDescription());
-		// builder.add(Tokenizer.getDescription());
-		// builder.add(PosTagger.getDescription());
-		// builder.add(MPAnalyzer.getDescription());
-		// builder.add(DefaultSnowballStemmer.getDescription("English"));
-		// builder.add(AnalysisEngineFactory.createEngineDescription(XWriter.class,
-		// XWriter.PARAM_OUTPUT_DIRECTORY_NAME,
-		// outputDirectory, XWriter.PARAM_FILE_NAMER_CLASS_NAME,
-		// ViewURIFileNamer.class.getName()));
-		// SimplePipeline.runPipeline(cas,
-		// builder.createAggregateDescription());
-		System.out.println("END");
+//		AggregateBuilder builder = new AggregateBuilder();
+//		builder.add(UriToDocumentTextAnnotator.getDescription());
+//		builder.add(SentenceAnnotator.getDescription());
+//		builder.add(TokenAnnotator.getDescription());
+//		builder.add(AnalysisEngineFactory.createPrimitiveDescription(XWriter.class, XWriter.PARAM_OUTPUT_DIRECTORY_NAME,
+//				outputDirectory, XWriter.PARAM_FILE_NAMER_CLASS_NAME, ViewURIFileNamer.class.getName()));
+//		builder.add(PosTaggerAnnotator.getDescription());
+//		builder.add(LemmaAnnotator.getDescription());
+//		builder.add(DefaultSnowballStemmer.getDescription("English"));
+//		// builder.add(AnalysisEngineFactory.createPrimitiveDescription(BasicDocumentClassificationAnnotator.class));
+//		SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
+//				builder.createAggregateDescription());
+		System.out.println("FIN");
 	}
 }
