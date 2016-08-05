@@ -53,6 +53,7 @@ public class UserInterface extends JFrame {
 	private JTextField textField;
 	private WordCloudCreator wcc;
 	private Cloud cloud;
+	private static Vector<File> files;
 
 	/**
 	 * Launch the application.
@@ -107,7 +108,13 @@ public class UserInterface extends JFrame {
 	 */
 	public UserInterface() throws IOException {
 
-		wcc = new WordCloudCreator();
+//		for (File file : directory) {
+			files.add(new File("C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\cleartk-javaNLP\\input\\test.txt.xmi"));
+//		} //unir con lo de abajo
+		
+		for (File file : files) {
+			wcc = new WordCloudCreator(file);
+		}
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		contentPane = new JPanel();

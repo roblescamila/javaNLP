@@ -16,14 +16,20 @@ import org.uimafit.factory.*;
 import org.uimafit.pipeline.SimplePipeline;
 
 public class ClearTKProcessor {
+	
+	private static File filesDirectory;
+	private static String outputDir;
 
-	private static File filesDirectory = new File("input");
-
+	
+	public ClearTKProcessor (String input, String output){
+		filesDirectory = new File(input);
+		outputDir = output;
+	}
+	
 	public void executeClearTK(String outputFile) {
 		try {
 			AggregateBuilder builder = createBuilder();
-			SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
-					builder.createAggregateDescription());
+			SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory), builder.createAggregateDescription());
 		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 			e.printStackTrace();
 		} catch (UIMAException e) {
@@ -42,8 +48,8 @@ public class ClearTKProcessor {
 		return builder;
 	}
 
-	public static void main(String[] args) throws UnsupportedEncodingException {
-		ClearTKProcessor tester = new ClearTKProcessor();
-		tester.executeClearTK("output");
-	}
+//	public static void main(String[] args) throws UnsupportedEncodingException {
+//		ClearTKProcessor tester = new ClearTKProcessor("input","output");
+//		tester.executeClearTK("output");
+//	}
 }

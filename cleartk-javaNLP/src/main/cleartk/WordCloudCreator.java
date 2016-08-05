@@ -31,11 +31,11 @@ public class WordCloudCreator {
 	static final int PACKAGE = 4;
 	static final int IMPORT = 5;
 
-	FileInputStream fisTargetFile;// = new FileInputStream(new File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
-	String targetFileStr;// = IOUtils.toString(fisTargetFile, "UTF-8");
+	FileInputStream fisTargetFile;
+	String targetFileStr;
 
-	public WordCloudCreator() throws IOException {
-		fisTargetFile = new FileInputStream(new File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
+	public WordCloudCreator(File file) throws IOException {
+		fisTargetFile = new FileInputStream(file);
 		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 	}
 
@@ -79,9 +79,5 @@ public class WordCloudCreator {
 		}
 
 		return c;
-	}
-
-	public static void main(String[] args) throws Exception {
-		System.out.println("FIN");
 	}
 }
