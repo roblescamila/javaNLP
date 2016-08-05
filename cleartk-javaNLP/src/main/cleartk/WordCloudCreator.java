@@ -24,13 +24,12 @@ import org.uimafit.util.CasUtil;
 
 public class WordCloudCreator {
 
-	static final int COMMENTS = 0;
+	static final int COMMENT = 0;
 	static final int CLASSNAME = 1;
 	static final int METHODNAME = 2;
-	static final int REALVARNAME = 3;
-	static final int FORMALVARNAME = 4;
-	static final int PACKAGE = 5;
-	static final int IMPORT = 6;
+	static final int VARNAME = 3;
+	static final int PACKAGE = 4;
+	static final int IMPORT = 5;
 
 	FileInputStream fisTargetFile;// = new FileInputStream(new
 									// File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
@@ -49,45 +48,36 @@ public class WordCloudCreator {
 		CAS cas = engine.newCAS();
 		cas.setDocumentText(targetFileStr);
 
-		if (arr[COMMENTS]) {
+		if (arr[COMMENT]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", cas, c);
 			UimaRutaAnnotator b = new UimaRutaAnnotator("uima.ruta.annotators.MultiLineComment", cas, c);
-			a.addInCloud();
-			b.addInCloud();
+			a.addToCloud();
+			b.addToCloud();
 		}
 
 		if (arr[CLASSNAME]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.ClassName", cas, c);
-			a.addInCloud();
+			a.addToCloud();
 		}
 
 		if (arr[METHODNAME]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.MethodName", cas, c);
-			a.addInCloud();
+			a.addToCloud();
 		}
 
-		// if (arr[REALVARNAME]) {
-		// UimaRutaAnnotator a=new
-		// UimaRutaAnnotator(uima.ruta.annotators.SingleLineComment,cas,c);
-		// a.addInCloud();
-
-		// }
-
-		// if (arr[FORMALVARNAME]) {
-		// UimaRutaAnnotator a=new
-		// UimaRutaAnnotator(uima.ruta.annotators.SingleLineComment,cas,c);
-		// a.addInCloud();
-
-		// }
+		if (arr[VARNAME]) {
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.VarName", cas, c);
+			a.addToCloud();
+		}
 
 		if (arr[PACKAGE]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Package", cas, c);
-			a.addInCloud();
+			a.addToCloud();
 		}
 
 		if (arr[IMPORT]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Import", cas, c);
-			a.addInCloud();
+			a.addToCloud();
 		}
 
 		return c;

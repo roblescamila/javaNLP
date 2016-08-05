@@ -25,7 +25,7 @@ public class UimaRutaAnnotator {
 		cloud = c;
 	}
 
-	public void addInCloud() {
+	public void addToCloud() {
 		Type type = cas.getTypeSystem().getType(classPath);
 		JCas a = (JCas) cas;
 		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
