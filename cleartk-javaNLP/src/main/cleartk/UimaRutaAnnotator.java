@@ -1,40 +1,51 @@
 package main.cleartk;
 
-import java.io.IOException;
-import java.util.Vector;
-
-import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.text.AnnotationFS;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.util.InvalidXMLException;
+import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.cleartk.token.type.Token;
+import org.mcavallo.opencloud.Cloud;
 import org.uimafit.util.CasUtil;
 
 public class UimaRutaAnnotator {
 
-	private boolean selected;
-	private String classPath;
-	private Vector<String> wordVector;
-	private CAS cas;
+	// boolean selected;
+	String classPath;
+	// Vector<String> wordVector;
+	CAS cas;
+	Cloud cloud;
 
 	// path : "uima.ruta.annotators.MethodName"
-	public UimaRutaAnnotator(String path, CAS inputCas) {
-		selected = false;
+	public UimaRutaAnnotator(String path, CAS inputCas, Cloud c) {
+		// selected = false;
 		classPath = path;
 		cas = inputCas;
+		cloud = c;
 	}
 
-	public Vector<String> createVector() {
+	public void addInCloud() {
 		Type type = cas.getTypeSystem().getType(classPath);
+		JCas a = (JCas) cas;
 		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
-			wordVector.add(annotation.getCoveredText());
+			for (Token token : JCasUtil.select(a, Token.class)) {
+				String aux2 = token.getLemma();
+				String[] r2 = aux2.split("[.]");
+				for (String s : r2) {
+					String[] r3 = s.split("(?=\\p{Upper})");
+					if (r3.length != 1) {
+						for (int i = 1; i < r3.length; i++) {
+							cloud.addTag(r3[i]);
+						}
+					} else
+						cloud.addTag(r3[0]);
+				}
+			}
+
+			// cloud.addTag(annotation.getCoveredText());
 		}
-		return wordVector;
+
 	}
 
-	public Vector<String> getVector() {
-		return wordVector;
-	}
 }

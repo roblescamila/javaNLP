@@ -2,7 +2,6 @@ package main.cleartk;
 
 import java.awt.EventQueue;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Vector;
 
@@ -10,12 +9,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeModel;
 
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.cas.CAS;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.util.InvalidXMLException;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
@@ -34,10 +32,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.JTree;
 
 public class UserInterface extends JFrame {
 
@@ -81,16 +78,6 @@ public class UserInterface extends JFrame {
 
 	public boolean isFilteredWord(String word) {
 		return filteredWords.contains(word);
-	}
-
-	// por que asi? Ver.
-	public static void clearVector() {
-		// comments = new Vector<String>();
-		className = new Vector<String>();
-		methodsName = new Vector<String>();
-		realVariableName = new Vector<String>();
-		imports = new Vector<String>();
-		packages = new Vector<String>();
 	}
 
 	public static void loadComments(Vector<String> aux) {
@@ -137,6 +124,8 @@ public class UserInterface extends JFrame {
 		setJMenuBar(menuBar);
 
 		final JFileChooser fc = new JFileChooser();
+		FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.JAVA", "*.java");
+		fc.setFileFilter(filtro);		
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		JMenu mnFile = new JMenu("File");
 		menuBar.add(mnFile);
@@ -190,6 +179,10 @@ public class UserInterface extends JFrame {
 
 		JPanel panel = new JPanel();
 
+		final DefaultMutableTreeNode paquetes = new DefaultMutableTreeNode("Packages");
+		final TreeModel packagesmodel = new DefaultTreeModel(paquetes);
+		JTree tree = new JTree(packagesmodel);
+		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap().addGroup(gl_contentPane
@@ -271,15 +264,16 @@ public class UserInterface extends JFrame {
 																GroupLayout.PREFERRED_SIZE, 497,
 																GroupLayout.PREFERRED_SIZE)))
 										.addGap(316)));
-
-		final JList list = new JList();
-		scrollPane.setViewportView(list);
+		
+		
+		scrollPane.setViewportView(tree);
 		final DefaultListModel wordsModel = new DefaultListModel();
 		wordsModel.addElement("get");
 		wordsModel.addElement("set");
 		wordsModel.addElement("java");
 		final DefaultListModel modelo = new DefaultListModel();
 		contentPane.setLayout(gl_contentPane);
+		
 		final JList wordsList = new JList();
 		scrollPane_1.setViewportView(wordsList);
 		wordsList.setModel(wordsModel);
@@ -290,141 +284,98 @@ public class UserInterface extends JFrame {
 				for (int a : aux) {
 					String palabra = (String) wordsModel.getElementAt(a);
 					System.out.println(palabra);
-					filteredWords.addElement(palabra);
+					filteredWords.addElement(palabra); 
 				}
+				
+				System.out.println("empiezo a crear la cloud");
+				panel2.removeAll();
+				panel2.repaint();
+				for (Tag tag : cloud.tags()) {
 
-				String inputEngine = "main.descriptors.MainEngine";
-				AnalysisEngine engine;
-				CAS cas;
-
-				try {
-					engine = AnalysisEngineFactory.createEngine(inputEngine);
-					cas = engine.newCAS();
-					cas.setDocumentText("output");// targetFileStr);
-
-					if (commentsRadioButton.isSelected()) {
-						UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", cas);
-						Vector<String> comments = a.createVector();
-
-						for (int i = 0; i < comments.size(); i++) {
-							cloud.addTag(comments.elementAt(i));
-						}
+					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
+						System.out.println("entro al for de los tag");
+						final JLabel label = new JLabel(tag.getName());
+						label.setOpaque(false);
+						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20));
+						panel2.add(label);
 					}
-					if (packageRadioButton.isSelected()) {
-						System.out.println("entre al if package");
-						for (int i = 0; i < packages.size(); i++) {
-							cloud.addTag(packages.elementAt(i));
-						}
-					}
-					if (importsRadioButton.isSelected()) {
-						for (int i = 0; i < imports.size(); i++) {
-							cloud.addTag(imports.elementAt(i));
-						}
-					}
-					if (classNameRadioButton.isSelected()) {
-						for (int i = 0; i < className.size(); i++) {
-							cloud.addTag(className.elementAt(i));
-						}
-					}
-					if (methodsNameRadioButton.isSelected()) {
-						for (int i = 0; i < methodsName.size(); i++) {
-							cloud.addTag(methodsName.elementAt(i));
-						}
-					}
-					if (realVariableNameRadioButton.isSelected()) {
-						for (int i = 0; i < realVariableName.size(); i++) {
-							cloud.addTag(realVariableName.elementAt(i));
-						}
-					}
-
-					System.out.println("empiezo a crear la cloud");
-					for (Tag tag : cloud.tags()) {
-
-						if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
-							System.out.println("entro al for de los tag");
-							final JLabel label = new JLabel(tag.getName());
-							label.setOpaque(false);
-							label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20));
-							panel.add(label);
-						}
-					}
-					panel.revalidate();
-					panel.repaint();
-					// contentPane.add(panel);
-
-					// frame2.getContentPane().add(panel2);
-					// frame2.setSize(400, 400);
-					// frame2.setVisible(true);
-
-					// panel.add(panel2);
-
-					clearVector();
-					cloud.clear(); // creo que es asi hay que pensarlo bien
-				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 				}
+				// contentPane.add(panel);
 
-			}
+				frame2.getContentPane().add(panel2);
+				frame2.setSize(400, 400);
+				frame2.setVisible(true);
+		}
+		
 		});
-
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int seleccion = fc.showOpenDialog(frame3);
 				// fc.showOpenDialog(contentPane);
-
+				 DefaultMutableTreeNode padre;
 				// Si el usuario, pincha en aceptar
 				fc.setMultiSelectionEnabled(true);
 				if (seleccion == JFileChooser.APPROVE_OPTION) {
 
 					// Seleccionamos el fichero
-
+		
 					File a = fc.getSelectedFile();
 					File[] a2 = a.listFiles();
-
-					Vector<File> ficheros = new Vector<File>();
-					for (File archivo : a2) {
+                String name= a.getName();
+                System.out.println(name);
+                 padre = new DefaultMutableTreeNode(name);
+                 ((DefaultTreeModel) packagesmodel).insertNodeInto(padre,paquetes,0);
+		             Vector<File> ficheros =new Vector<File>();
+					for (File archivo:a2)
+					{
 						ficheros.add(archivo);
 					}
-
-					// Ecribe la ruta del fichero seleccionado en el campo de
-					// texto
-
+				
 					// textField.setText(fichero.getAbsolutePath());
-					for (int i = 0; i < ficheros.size(); i++) {
-
+					
+					for (int i=0; i<ficheros.size();i++ ) {
+											
 						File fichero = ficheros.elementAt(i);
-
+						
 						if (!fichero.isDirectory()) {
 							modelo.addElement(fichero.getName());
-							list.setModel(modelo);
-
-							try (FileReader fr = new FileReader(fichero)) {
-								String cadena = "";
-
-								int valor = fr.read();
-								while (valor != -1) {
-
-									cadena = cadena + (char) valor;
-									valor = fr.read();
-								}
-								System.out.println(cadena);
-							} catch (IOException e1) {
-								e1.printStackTrace();
-							}
+							 DefaultMutableTreeNode hijo = new DefaultMutableTreeNode(fichero.getName());
+							 ((DefaultTreeModel) packagesmodel).insertNodeInto(hijo,padre,0);
+						
+//							try (FileReader fr = new FileReader(fichero)) {
+//								String cadena = "";
+//							
+//								int valor = fr.read();
+//								while (valor != -1) {
+//								
+//									cadena = cadena + (char) valor;
+//									valor = fr.read();
+//								}
+//								System.out.println(cadena);
+//							} catch (IOException e1) {
+//								e1.printStackTrace();
+//							}
 						} else {
-							File[] auxiliar = fichero.listFiles();
+						 name=fichero.getName();
+						 System.out.println( name );
+						
+						 DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(name);
+		                 ((DefaultTreeModel) packagesmodel).insertNodeInto(padre2,padre,0);	
+		                 
+						 File[] auxiliar = fichero.listFiles();
 							for (File aux : auxiliar) {
-								System.out.println(ficheros.size());
-
-								ficheros.addElement(aux);
+																
+								ficheros.addElement(aux); 
+							
 							}
+							padre=padre2;
+
 						}
 					}
 				}
 			}
 		});
-
+		
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				wordsModel.addElement(textField.getText());
