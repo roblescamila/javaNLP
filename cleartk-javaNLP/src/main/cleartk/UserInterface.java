@@ -250,35 +250,32 @@ public class UserInterface extends JFrame {
 							packageRadioButton.isSelected(), importsRadioButton.isSelected() };
 
 					cloud = wcc.CreateCloud(selected);
+
+					pnlWordCloud.removeAll();
+					pnlWordCloud.repaint();
+					// cloud.addTag("a");
+					for (Tag tag : cloud.tags()) {
+						if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
+							// System.out.println("entro al for de los tag");
+							JLabel label = new JLabel(tag.getName());
+							label.setOpaque(false);
+							label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); //hacerlo dinamico, elegido por el usuario
+							pnlWordCloud.add(label);
+						}
+					}
+
+					pnlWordCloud.revalidate();
+					pnlWordCloud.repaint();
 				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
-				// System.out.println("empiezo a crear la cloud");
-				pnlWordCloud.removeAll();
-				pnlWordCloud.repaint();
-				// cloud.addTag("a");
-				for (Tag tag : cloud.tags()) {
-					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
-						// System.out.println("entro al for de los tag");
-						final JLabel label = new JLabel(tag.getName());
-						label.setOpaque(false);
-						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20));
-						pnlWordCloud.add(label);
-					}
-				}
-				pnlWordCloud.revalidate();
-				pnlWordCloud.repaint();
 			}
-
 		});
+		
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int seleccion = fc.showOpenDialog(openFileDialog);
-				// fc.showOpenDialog(contentPane);
 				DefaultMutableTreeNode padre;
-				// Si el usuario, pincha en aceptar
 				fc.setMultiSelectionEnabled(true);
 				if (seleccion == JFileChooser.APPROVE_OPTION) {
 					File a = fc.getSelectedFile();
@@ -317,8 +314,7 @@ public class UserInterface extends JFrame {
 							// }
 						} else {
 							name = fichero.getName();
-							System.out.println(name);
-
+//							System.out.println(name);
 							DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(name);
 							((DefaultTreeModel) packagesmodel).insertNodeInto(padre2, padre, 0);
 

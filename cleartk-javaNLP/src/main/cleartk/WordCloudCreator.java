@@ -31,14 +31,12 @@ public class WordCloudCreator {
 	static final int PACKAGE = 4;
 	static final int IMPORT = 5;
 
-	FileInputStream fisTargetFile;// = new FileInputStream(new
-									// File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
+	FileInputStream fisTargetFile;// = new FileInputStream(new File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
 	String targetFileStr;// = IOUtils.toString(fisTargetFile, "UTF-8");
 
 	public WordCloudCreator() throws IOException {
-		FileInputStream fisTargetFile = new FileInputStream(new File(
-				"c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
-		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
+		fisTargetFile = new FileInputStream(new File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
+		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 	}
 
 	public Cloud CreateCloud(boolean arr[]) throws InvalidXMLException, ResourceInitializationException, IOException {

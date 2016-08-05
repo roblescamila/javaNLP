@@ -19,15 +19,9 @@ public class ClearTKProcessor {
 
 	private static File filesDirectory = new File("input");
 
-	public static enum ClearTKPreference {
-		Comments
-	}
-
-	public void executeClearTK(String outputFile, ClearTKPreference preference) {
+	public void executeClearTK(String outputFile) {
 		try {
-			// ClearTK Annotators
-			AggregateBuilder builder = createBuilder(preference);
-			// Pipeline Execution
+			AggregateBuilder builder = createBuilder();
 			SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory),
 					builder.createAggregateDescription());
 		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
@@ -37,7 +31,7 @@ public class ClearTKProcessor {
 		}
 	}
 
-	private AggregateBuilder createBuilder(ClearTKPreference preference) throws ResourceInitializationException {
+	private AggregateBuilder createBuilder() throws ResourceInitializationException {
 		AggregateBuilder builder = new AggregateBuilder();
 		builder.add(UriToDocumentTextAnnotator.getDescription());
 		builder.add(SentenceAnnotator.getDescription());
@@ -50,7 +44,6 @@ public class ClearTKProcessor {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		ClearTKProcessor tester = new ClearTKProcessor();
-		ClearTKPreference preference = ClearTKPreference.Comments;
-		tester.executeClearTK("output", preference);
+		tester.executeClearTK("output");
 	}
 }
