@@ -25,6 +25,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JRadioButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -50,9 +52,15 @@ public class UserInterface extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * 
+	 * @throws UnsupportedLookAndFeelException
+	 * @throws IllegalAccessException
+	 * @throws InstantiationException
+	 * @throws ClassNotFoundException
 	 */
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
+			IllegalAccessException, UnsupportedLookAndFeelException {
+		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		Vector<String> aux = new Vector<String>();
 		aux.add("mati");
 		aux.add("mati");
@@ -81,7 +89,6 @@ public class UserInterface extends JFrame {
 	}
 
 	public static void loadComments(Vector<String> aux) {
-		// quizas hay que cambiar todos por add
 		comments = aux;
 	}
 
@@ -125,7 +132,7 @@ public class UserInterface extends JFrame {
 
 		final JFileChooser fc = new JFileChooser();
 		FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.JAVA", "*.java");
-		fc.setFileFilter(filtro);		
+		fc.setFileFilter(filtro);
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		JMenu mnFile = new JMenu("File");
 		menuBar.add(mnFile);
@@ -154,13 +161,7 @@ public class UserInterface extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 
 		JLabel lblClassList = new JLabel("Class list");
-		SpinnerNumberModel model = new SpinnerNumberModel(new Integer(0), // Dato
-																			// visualizado
-																			// al
-																			// inicio
-																			// en
-																			// el
-																			// spinner
+		SpinnerNumberModel model = new SpinnerNumberModel(new Integer(0), // Dato visualizado al inicio en el spinner
 				new Integer(0), // Límite inferior
 				new Integer(1000), // Límite superior
 				new Integer(1) // incremento-decremento
@@ -182,7 +183,7 @@ public class UserInterface extends JFrame {
 		final DefaultMutableTreeNode paquetes = new DefaultMutableTreeNode("Packages");
 		final TreeModel packagesmodel = new DefaultTreeModel(paquetes);
 		JTree tree = new JTree(packagesmodel);
-		
+
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap().addGroup(gl_contentPane
@@ -264,8 +265,7 @@ public class UserInterface extends JFrame {
 																GroupLayout.PREFERRED_SIZE, 497,
 																GroupLayout.PREFERRED_SIZE)))
 										.addGap(316)));
-		
-		
+
 		scrollPane.setViewportView(tree);
 		final DefaultListModel wordsModel = new DefaultListModel();
 		wordsModel.addElement("get");
@@ -273,7 +273,7 @@ public class UserInterface extends JFrame {
 		wordsModel.addElement("java");
 		final DefaultListModel modelo = new DefaultListModel();
 		contentPane.setLayout(gl_contentPane);
-		
+
 		final JList wordsList = new JList();
 		scrollPane_1.setViewportView(wordsList);
 		wordsList.setModel(wordsModel);
@@ -284,9 +284,9 @@ public class UserInterface extends JFrame {
 				for (int a : aux) {
 					String palabra = (String) wordsModel.getElementAt(a);
 					System.out.println(palabra);
-					filteredWords.addElement(palabra); 
+					filteredWords.addElement(palabra);
 				}
-				
+
 				System.out.println("empiezo a crear la cloud");
 				panel2.removeAll();
 				panel2.repaint();
@@ -305,77 +305,76 @@ public class UserInterface extends JFrame {
 				frame2.getContentPane().add(panel2);
 				frame2.setSize(400, 400);
 				frame2.setVisible(true);
-		}
-		
+			}
+
 		});
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int seleccion = fc.showOpenDialog(frame3);
 				// fc.showOpenDialog(contentPane);
-				 DefaultMutableTreeNode padre;
+				DefaultMutableTreeNode padre;
 				// Si el usuario, pincha en aceptar
 				fc.setMultiSelectionEnabled(true);
 				if (seleccion == JFileChooser.APPROVE_OPTION) {
 
 					// Seleccionamos el fichero
-		
+
 					File a = fc.getSelectedFile();
 					File[] a2 = a.listFiles();
-                String name= a.getName();
-                System.out.println(name);
-                 padre = new DefaultMutableTreeNode(name);
-                 ((DefaultTreeModel) packagesmodel).insertNodeInto(padre,paquetes,0);
-		             Vector<File> ficheros =new Vector<File>();
-					for (File archivo:a2)
-					{
+					String name = a.getName();
+					System.out.println(name);
+					padre = new DefaultMutableTreeNode(name);
+					((DefaultTreeModel) packagesmodel).insertNodeInto(padre, paquetes, 0);
+					Vector<File> ficheros = new Vector<File>();
+					for (File archivo : a2) {
 						ficheros.add(archivo);
 					}
-				
+
 					// textField.setText(fichero.getAbsolutePath());
-					
-					for (int i=0; i<ficheros.size();i++ ) {
-											
+
+					for (int i = 0; i < ficheros.size(); i++) {
+
 						File fichero = ficheros.elementAt(i);
-						
+
 						if (!fichero.isDirectory()) {
 							modelo.addElement(fichero.getName());
-							 DefaultMutableTreeNode hijo = new DefaultMutableTreeNode(fichero.getName());
-							 ((DefaultTreeModel) packagesmodel).insertNodeInto(hijo,padre,0);
-						
-//							try (FileReader fr = new FileReader(fichero)) {
-//								String cadena = "";
-//							
-//								int valor = fr.read();
-//								while (valor != -1) {
-//								
-//									cadena = cadena + (char) valor;
-//									valor = fr.read();
-//								}
-//								System.out.println(cadena);
-//							} catch (IOException e1) {
-//								e1.printStackTrace();
-//							}
+							DefaultMutableTreeNode hijo = new DefaultMutableTreeNode(fichero.getName());
+							((DefaultTreeModel) packagesmodel).insertNodeInto(hijo, padre, 0);
+
+							// try (FileReader fr = new FileReader(fichero)) {
+							// String cadena = "";
+							//
+							// int valor = fr.read();
+							// while (valor != -1) {
+							//
+							// cadena = cadena + (char) valor;
+							// valor = fr.read();
+							// }
+							// System.out.println(cadena);
+							// } catch (IOException e1) {
+							// e1.printStackTrace();
+							// }
 						} else {
-						 name=fichero.getName();
-						 System.out.println( name );
-						
-						 DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(name);
-		                 ((DefaultTreeModel) packagesmodel).insertNodeInto(padre2,padre,0);	
-		                 
-						 File[] auxiliar = fichero.listFiles();
+							name = fichero.getName();
+							System.out.println(name);
+
+							DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(name);
+							((DefaultTreeModel) packagesmodel).insertNodeInto(padre2, padre, 0);
+
+							File[] auxiliar = fichero.listFiles();
 							for (File aux : auxiliar) {
-																
-								ficheros.addElement(aux); 
-							
+
+								ficheros.addElement(aux);
+
 							}
-							padre=padre2;
+							padre = padre2;
 
 						}
 					}
 				}
 			}
 		});
-		
+
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				wordsModel.addElement(textField.getText());

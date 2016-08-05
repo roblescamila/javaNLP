@@ -1,28 +1,99 @@
 package main.cleartk;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-
+import org.apache.commons.io.IOUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
+import org.cleartk.token.lemma.choi.LemmaAnnotator;
+import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
+import org.cleartk.token.tokenizer.TokenAnnotator;
+import org.cleartk.token.type.Token;
+import org.cleartk.util.ViewURIFileNamer;
+import org.cleartk.util.ae.UriToDocumentTextAnnotator;
+import org.cleartk.util.cr.UriCollectionReader;
 import org.mcavallo.opencloud.Cloud;
+import org.uimafit.component.xwriter.XWriter;
+import org.uimafit.factory.AggregateBuilder;
+import org.uimafit.pipeline.SimplePipeline;
+import org.uimafit.util.CasUtil;
 
 public class WordCloudCreator {
-	
-	private AnalysisEngine engine;
-	private CAS cas; 
-	
-	public WordCloudCreator(String targetFileStr) throws InvalidXMLException, ResourceInitializationException, IOException {
+
+	static final int COMMENTS = 0;
+	static final int CLASSNAME = 1;
+	static final int METHODNAME = 2;
+	static final int REALVARNAME = 3;
+	static final int FORMALVARNAME = 4;
+	static final int PACKAGE = 5;
+	static final int IMPORT = 6;
+
+	FileInputStream fisTargetFile;// = new FileInputStream(new
+									// File("c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
+	String targetFileStr;// = IOUtils.toString(fisTargetFile, "UTF-8");
+
+	public WordCloudCreator() throws IOException {
+		FileInputStream fisTargetFile = new FileInputStream(new File(
+				"c:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\example-projects\\ExampleProject\\output\\test.txt.xmi"));
+		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
+	}
+
+	public Cloud CreateCloud(boolean arr[]) throws InvalidXMLException, ResourceInitializationException, IOException {
+		Cloud c = new Cloud();
 		String inputEngine = "main.descriptors.MainEngine";
-		engine = AnalysisEngineFactory.createEngine(inputEngine);
-		cas = engine.newCAS();
+		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
+		CAS cas = engine.newCAS();
 		cas.setDocumentText(targetFileStr);
+
+		if (arr[COMMENTS]) {
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", cas, c);
+			UimaRutaAnnotator b = new UimaRutaAnnotator("uima.ruta.annotators.MultiLineComment", cas, c);
+			a.addInCloud();
+			b.addInCloud();
+		}
+
+		if (arr[CLASSNAME]) {
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.ClassName", cas, c);
+			a.addInCloud();
+		}
+
+		if (arr[METHODNAME]) {
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.MethodName", cas, c);
+			a.addInCloud();
+		}
+
+		// if (arr[REALVARNAME]) {
+		// UimaRutaAnnotator a=new
+		// UimaRutaAnnotator(uima.ruta.annotators.SingleLineComment,cas,c);
+		// a.addInCloud();
+
+		// }
+
+		// if (arr[FORMALVARNAME]) {
+		// UimaRutaAnnotator a=new
+		// UimaRutaAnnotator(uima.ruta.annotators.SingleLineComment,cas,c);
+		// a.addInCloud();
+
+		// }
+
+		if (arr[PACKAGE]) {
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Package", cas, c);
+			a.addInCloud();
+		}
+
+		if (arr[IMPORT]) {
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Import", cas, c);
+			a.addInCloud();
+		}
+
+		return c;
 	}
 
-	public void add(Cloud cloud) {
-		
+	public static void main(String[] args) throws Exception {
+		System.out.println("FIN");
 	}
-
 }
