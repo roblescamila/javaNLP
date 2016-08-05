@@ -14,10 +14,10 @@ import org.uimafit.util.CasUtil;
 
 public class UimaRutaAnnotator {
 
-	boolean selected;
-	String classPath;
-	Vector<String> wordVector;
-	CAS cas;
+	private boolean selected;
+	private String classPath;
+	private Vector<String> wordVector;
+	private CAS cas;
 
 	// path : "uima.ruta.annotators.MethodName"
 	public UimaRutaAnnotator(String path, CAS inputCas) {
@@ -26,11 +26,12 @@ public class UimaRutaAnnotator {
 		cas = inputCas;
 	}
 
-	public void createVector() {
+	public Vector<String> createVector() {
 		Type type = cas.getTypeSystem().getType(classPath);
 		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
 			wordVector.add(annotation.getCoveredText());
 		}
+		return wordVector;
 	}
 
 	public Vector<String> getVector() {

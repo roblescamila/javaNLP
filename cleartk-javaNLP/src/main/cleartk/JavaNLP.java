@@ -99,7 +99,7 @@ public class JavaNLP {
 
 		// extract dates from the annotated document
 		if (comment) {
-			UimaRutaANnotator
+//			UimaRutaANnotator
 //			final Type SingleLineCommentType = cas.getTypeSystem().getType("uima.ruta.annotators.SingleLineComment");
 //			for (AnnotationFS type : CasUtil.select(cas, SingleLineCommentType)) {
 //				comments.add(type.getCoveredText());
@@ -157,20 +157,20 @@ public class JavaNLP {
 //			}
 		}
 
-		System.out.println("Comments:");
-		for (int i = 0; i < comments.size(); i++) {
-			System.out.println(comments.elementAt(i));
-		}
-
-		System.out.println("Imports:");
-		for (int i = 0; i < imports.size(); i++) {
-			System.out.println(imports.elementAt(i));
-		}
-
-		System.out.println("Packages:");
-		for (int i = 0; i < packages.size(); i++) {
-			System.out.println(packages.elementAt(i));
-		}
+//		System.out.println("Comments:");
+//		for (int i = 0; i < comments.size(); i++) {
+//			System.out.println(comments.elementAt(i));
+//		}
+//
+//		System.out.println("Imports:");
+//		for (int i = 0; i < imports.size(); i++) {
+//			System.out.println(imports.elementAt(i));
+//		}
+//
+//		System.out.println("Packages:");
+//		for (int i = 0; i < packages.size(); i++) {
+//			System.out.println(packages.elementAt(i));
+//		}
 
 //		AggregateBuilder builder = new AggregateBuilder();
 //		builder.add(UriToDocumentTextAnnotator.getDescription());
