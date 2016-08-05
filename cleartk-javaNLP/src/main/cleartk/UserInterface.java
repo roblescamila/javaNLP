@@ -14,6 +14,8 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeModel;
 
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.InvalidXMLException;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
@@ -50,7 +52,8 @@ public class UserInterface extends JFrame {
 	private static Vector<String> filteredWords;
 	private JTextField textField;
 	private WordCloudCreator wcc;
-	
+	private Cloud cloud;
+
 	/**
 	 * Launch the application.
 	 * 
@@ -59,7 +62,8 @@ public class UserInterface extends JFrame {
 	 * @throws InstantiationException
 	 * @throws ClassNotFoundException
 	 */
-	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
+			IllegalAccessException, UnsupportedLookAndFeelException {
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		Vector<String> aux = new Vector<String>();
 		aux.add("mati");
@@ -83,7 +87,7 @@ public class UserInterface extends JFrame {
 			}
 		});
 	}
-	
+
 	public boolean isFilteredWord(String word) {
 		return filteredWords.contains(word);
 	}
@@ -104,8 +108,11 @@ public class UserInterface extends JFrame {
 	public UserInterface() throws IOException {
 
 		wcc = new WordCloudCreator();
+
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(gl_contentPane);
 		setContentPane(contentPane);
 
 		textField = new JTextField();
@@ -113,23 +120,23 @@ public class UserInterface extends JFrame {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
-		
-		Cloud cloud = new Cloud();
-		SpinnerNumberModel model = new SpinnerNumberModel(new Integer(0), new Integer(0), new Integer(1000), new Integer(1));
+
+		SpinnerNumberModel model = new SpinnerNumberModel(new Integer(0), new Integer(0), new Integer(1000),
+				new Integer(1));
 		DefaultMutableTreeNode paquetes = new DefaultMutableTreeNode("Packages");
 		TreeModel packagesmodel = new DefaultTreeModel(paquetes);
-		
-		JFrame frame2 = new JFrame("cloud word");
-		JFrame frame3 = new JFrame("choice");
+		DefaultListModel wordsModel = new DefaultListModel();
+		DefaultListModel modelo = new DefaultListModel();
 
-		JButton btnCreateWordCloud = new JButton("Create word cloud");
-		JButton btnAddWord = new JButton("Add");
-		
 		JMenu mnFile = new JMenu("File");
 		JMenuBar menuBar = new JMenuBar();
 		JMenuItem mntmOpen = new JMenuItem("Open");
 		JMenuItem mntmSave = new JMenuItem("Save");
 		JFileChooser fc = new JFileChooser();
+		JFrame openFileDialog = new JFrame("Select directory");
+
+		JButton btnCreateWordCloud = new JButton("Create word cloud");
+		JButton btnAddWord = new JButton("Add");
 
 		JLabel lblMinWordCount = new JLabel("Minimun word count");
 		JLabel lblClassList = new JLabel("Class list");
@@ -139,6 +146,7 @@ public class UserInterface extends JFrame {
 		JScrollPane scrollPane_1 = new JScrollPane();
 		JSpinner spinner = new JSpinner(model);
 		JTree tree = new JTree(packagesmodel);
+		JList wordList = new JList();
 
 		JRadioButton commentsRadioButton = new JRadioButton("Comments", false);
 		JRadioButton classNameRadioButton = new JRadioButton("Class names", false);
@@ -146,18 +154,26 @@ public class UserInterface extends JFrame {
 		JRadioButton variableNameRadioButton = new JRadioButton("Variable names", false);
 		JRadioButton packageRadioButton = new JRadioButton("Packages", false);
 		JRadioButton importsRadioButton = new JRadioButton("Imports", false);
-		
+
 		setJMenuBar(menuBar);
 
 		FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.JAVA", "*.java");
 		fc.setFileFilter(filtro);
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		
+
 		menuBar.add(mnFile);
 		mnFile.add(mntmOpen);
-		mnFile.add(mntmSave);		
+		mnFile.add(mntmSave);
 
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		scrollPane.setViewportView(tree);
+		scrollPane_1.setViewportView(wordList);
+
+		wordsModel.addElement("get");
+		wordsModel.addElement("set");
+		wordsModel.addElement("java");
+
+		wordList.setModel(wordsModel);
+
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap().addGroup(gl_contentPane
 						.createParallelGroup(Alignment.LEADING, false).addGroup(gl_contentPane
@@ -181,76 +197,44 @@ public class UserInterface extends JFrame {
 												.addGroup(gl_contentPane.createSequentialGroup()
 														.addComponent(textField, GroupLayout.PREFERRED_SIZE, 114,
 																GroupLayout.PREFERRED_SIZE)
-														.addGap(18).addComponent(btnAddWord,
-																GroupLayout.PREFERRED_SIZE, 62,
-																GroupLayout.PREFERRED_SIZE)))
+														.addGap(18).addComponent(btnAddWord, GroupLayout.PREFERRED_SIZE,
+																62, GroupLayout.PREFERRED_SIZE)))
 										.addComponent(btnCreateWordCloud, GroupLayout.PREFERRED_SIZE, 142,
 												GroupLayout.PREFERRED_SIZE))
-								.addPreferredGap(ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-								.addComponent(pnlWordCloud, GroupLayout.PREFERRED_SIZE, 710, GroupLayout.PREFERRED_SIZE))
+								.addPreferredGap(ComponentPlacement.RELATED, 77, Short.MAX_VALUE).addComponent(
+										pnlWordCloud, GroupLayout.PREFERRED_SIZE, 710, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_contentPane.createSequentialGroup().addComponent(lblClassList)
 								.addContainerGap(1301, Short.MAX_VALUE)))));
-		gl_contentPane
-				.setVerticalGroup(
-						gl_contentPane.createParallelGroup(Alignment.TRAILING)
-								.addGroup(gl_contentPane.createSequentialGroup().addContainerGap()
-										.addComponent(lblClassList)
-										.addPreferredGap(ComponentPlacement.RELATED).addGroup(gl_contentPane
-												.createParallelGroup(Alignment.LEADING)
-												.addComponent(pnlWordCloud, GroupLayout.PREFERRED_SIZE, 599,
-														GroupLayout.PREFERRED_SIZE)
-												.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-														.addGroup(gl_contentPane.createSequentialGroup()
-																.addComponent(commentsRadioButton)
-																.addPreferredGap(ComponentPlacement.RELATED)
-																.addComponent(classNameRadioButton)
-																.addPreferredGap(ComponentPlacement.RELATED)
-																.addComponent(methodsNameRadioButton)
-																.addPreferredGap(ComponentPlacement.RELATED)
-																.addComponent(variableNameRadioButton)
-																.addPreferredGap(ComponentPlacement.RELATED)
-																.addComponent(packageRadioButton)
-																.addPreferredGap(ComponentPlacement.RELATED)
-																.addComponent(importsRadioButton)
-																.addPreferredGap(ComponentPlacement.UNRELATED)
-																.addGroup(gl_contentPane
-																		.createParallelGroup(Alignment.BASELINE)
-																		.addComponent(lblMinWordCount).addComponent(
-																				spinner, GroupLayout.PREFERRED_SIZE,
-																				GroupLayout.DEFAULT_SIZE,
-																				GroupLayout.PREFERRED_SIZE))
-																.addGap(18).addComponent(lblFilterWords)
-																.addPreferredGap(ComponentPlacement.RELATED)
-																.addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE,
-																		208, GroupLayout.PREFERRED_SIZE)
-																.addGap(18)
-																.addGroup(gl_contentPane
-																		.createParallelGroup(Alignment.BASELINE)
-																		.addComponent(textField,
-																				GroupLayout.PREFERRED_SIZE, 22,
-																				GroupLayout.PREFERRED_SIZE)
-																		.addComponent(btnAddWord))
-																.addGap(40)
-																.addComponent(btnCreateWordCloud, GroupLayout.PREFERRED_SIZE,
-																		75, GroupLayout.PREFERRED_SIZE)
-																.addGap(144))
-														.addComponent(scrollPane, Alignment.LEADING,
-																GroupLayout.PREFERRED_SIZE, 497,
-																GroupLayout.PREFERRED_SIZE)))
-										.addGap(316)));
+		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING).addGroup(gl_contentPane
+				.createSequentialGroup().addContainerGap().addComponent(lblClassList)
+				.addPreferredGap(ComponentPlacement.RELATED)
+				.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(pnlWordCloud, GroupLayout.PREFERRED_SIZE, 599, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING).addGroup(gl_contentPane
+								.createSequentialGroup().addComponent(commentsRadioButton)
+								.addPreferredGap(ComponentPlacement.RELATED).addComponent(classNameRadioButton)
+								.addPreferredGap(ComponentPlacement.RELATED).addComponent(methodsNameRadioButton)
+								.addPreferredGap(ComponentPlacement.RELATED).addComponent(variableNameRadioButton)
+								.addPreferredGap(ComponentPlacement.RELATED).addComponent(packageRadioButton)
+								.addPreferredGap(ComponentPlacement.RELATED).addComponent(importsRadioButton)
+								.addPreferredGap(ComponentPlacement.UNRELATED)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+										.addComponent(lblMinWordCount).addComponent(spinner, GroupLayout.PREFERRED_SIZE,
+												GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addGap(18).addComponent(lblFilterWords).addPreferredGap(ComponentPlacement.RELATED)
+								.addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
+								.addGap(18)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+										.addComponent(textField, GroupLayout.PREFERRED_SIZE, 22,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(btnAddWord))
+								.addGap(40)
+								.addComponent(btnCreateWordCloud, GroupLayout.PREFERRED_SIZE, 75,
+										GroupLayout.PREFERRED_SIZE)
+								.addGap(144)).addComponent(scrollPane, Alignment.LEADING, GroupLayout.PREFERRED_SIZE,
+										497, GroupLayout.PREFERRED_SIZE)))
+				.addGap(316)));
 
-		scrollPane.setViewportView(tree);
-		final DefaultListModel wordsModel = new DefaultListModel();
-		wordsModel.addElement("get");
-		wordsModel.addElement("set");
-		wordsModel.addElement("java");
-		final DefaultListModel modelo = new DefaultListModel();
-		contentPane.setLayout(gl_contentPane);
-
-		final JList wordList = new JList();
-		scrollPane_1.setViewportView(wordList);
-		wordList.setModel(wordsModel);
-		
 		btnCreateWordCloud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int[] aux;
@@ -259,24 +243,25 @@ public class UserInterface extends JFrame {
 					String palabra = (String) wordsModel.getElementAt(a);
 					filteredWords.addElement(palabra);
 				}
-				
-				boolean selected[] = {  commentsRadioButton.isSelected(),
-						classNameRadioButton.isSelected(),
-						methodsNameRadioButton.isSelected(),
-						variableNameRadioButton.isSelected(),
-						packageRadioButton.isSelected(),
-						importsRadioButton.isSelected()					
-				};			
-					
-//				cloud = wcc.CreateCloud(selected);
-				
-//				System.out.println("empiezo a crear la cloud");
+
+				try {
+					boolean selected[] = { commentsRadioButton.isSelected(), classNameRadioButton.isSelected(),
+							methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
+							packageRadioButton.isSelected(), importsRadioButton.isSelected() };
+
+					cloud = wcc.CreateCloud(selected);
+				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				// System.out.println("empiezo a crear la cloud");
 				pnlWordCloud.removeAll();
 				pnlWordCloud.repaint();
-//				cloud.addTag("a");
+				// cloud.addTag("a");
 				for (Tag tag : cloud.tags()) {
 					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
-//						System.out.println("entro al for de los tag");
+						// System.out.println("entro al for de los tag");
 						final JLabel label = new JLabel(tag.getName());
 						label.setOpaque(false);
 						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20));
@@ -285,23 +270,17 @@ public class UserInterface extends JFrame {
 				}
 				pnlWordCloud.revalidate();
 				pnlWordCloud.repaint();
-//				frame2.getContentPane().add(pnlWordCloud);
-//				frame2.setSize(400, 400);
-//				frame2.setVisible(true);
 			}
 
 		});
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int seleccion = fc.showOpenDialog(frame3);
+				int seleccion = fc.showOpenDialog(openFileDialog);
 				// fc.showOpenDialog(contentPane);
 				DefaultMutableTreeNode padre;
 				// Si el usuario, pincha en aceptar
 				fc.setMultiSelectionEnabled(true);
 				if (seleccion == JFileChooser.APPROVE_OPTION) {
-
-					// Seleccionamos el fichero
-
 					File a = fc.getSelectedFile();
 					File[] a2 = a.listFiles();
 					String name = a.getName();
@@ -347,7 +326,7 @@ public class UserInterface extends JFrame {
 							for (File aux : auxiliar) {
 								ficheros.addElement(aux);
 							}
-							
+
 							padre = padre2;
 						}
 					}
