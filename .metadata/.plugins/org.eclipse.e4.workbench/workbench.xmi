@@ -195,8 +195,9 @@
           <tags>persp.newWizSC:org.eclipse.ui.editors.wizards.UntitledTextFileWizard</tags>
           <tags>persp.perspSC:org.apache.uima.ruta.ide.ui.RutaPerspective</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_KmQKR006EeaK5a99eo00ZA" selectedElement="_KmQKSE06EeaK5a99eo00ZA" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_KmQKSE06EeaK5a99eo00ZA" containerData="7412" selectedElement="_KmQKS006EeaK5a99eo00ZA" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_KmQKSE06EeaK5a99eo00ZA" containerData="7412" selectedElement="_KmQKSU06EeaK5a99eo00ZA" horizontal="true">
               <children xsi:type="basic:PartStack" xmi:id="_KmQKSU06EeaK5a99eo00ZA" elementId="left" containerData="2726" selectedElement="_KmQKSk06EeaK5a99eo00ZA">
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_KmQKSk06EeaK5a99eo00ZA" elementId="org.eclipse.dltk.ui.ScriptExplorer" ref="_KmR_tE06EeaK5a99eo00ZA"/>
               </children>
               <children xsi:type="basic:PartSashContainer" xmi:id="_KmQKS006EeaK5a99eo00ZA" containerData="7274" selectedElement="_KmQKTE06EeaK5a99eo00ZA">
@@ -444,7 +445,6 @@
       <children xsi:type="basic:PartStack" xmi:id="_KmRYkU06EeaK5a99eo00ZA" elementId="PartStack@2f95653f" selectedElement="_Ra9uwFqZEeaFC_CrlvFx7A">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_1q2_kFTfEea0hbHDqEDzzw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Main.ruta" iconURI="platform:/plugin/org.apache.uima.ruta.ide.ui/icons/ruta_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.apache.uima.ruta.ide.ui.editor.RutaEditor&quot; name=&quot;Main.ruta&quot; partName=&quot;Main.ruta&quot; title=&quot;Main.ruta&quot; tooltip=&quot;javaNLP/script/uima/ruta/annotators/Main.ruta&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/javaNLP/script/uima/ruta/annotators/Main.ruta&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2268&quot; selectionTopPixel=&quot;923&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -456,8 +456,6 @@
           <tags>Editor</tags>
           <tags>org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -591,6 +589,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; isWindowWorkingSet=&quot;false&quot; layout=&quot;1&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.NonScriptProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.internal.ui.PackageExplorer.DotFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.NonScriptElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.internal.ui.PackageExplorer.ContainMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.SMFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.dltk.ui.ScriptExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Dynamic Languages</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_KmR_tU06EeaK5a99eo00ZA" elementId="org.eclipse.dltk.ui.ScriptExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -921,7 +921,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT0n006EeaK5a99eo00ZA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6MNEcFvdEeavI9z1mrgNuA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KmdmVE06EeaK5a99eo00ZA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_sJJCQFvxEeaJGasRnBt-rQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KmdmVE06EeaK5a99eo00ZA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT0rU06EeaK5a99eo00ZA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -930,7 +930,7 @@
       <children xsi:type="menu:ToolBar" xmi:id="_KmT03006EeaK5a99eo00ZA" elementId="org.eclipse.jdt.ui.JavaElementCreationActionSet" visible="false">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_KmT05E06EeaK5a99eo00ZA" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_KmT05E06EeaK5a99eo00ZA" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT07E06EeaK5a99eo00ZA" elementId="org.eclipse.debug.ui.launchActionSet">
@@ -976,29 +976,29 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmUbmE06EeaK5a99eo00ZA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6MRV4FvdEeavI9z1mrgNuA" elementId="history.group">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sJN6wVvxEeaJGasRnBt-rQ" elementId="history.group">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6MRV4VvdEeavI9z1mrgNuA" elementId="group.application" visible="false">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sJOh0FvxEeaJGasRnBt-rQ" elementId="group.application" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6MR88FvdEeavI9z1mrgNuA" elementId="backardHistory">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sJOh0VvxEeaJGasRnBt-rQ" elementId="backardHistory">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6MR88VvdEeavI9z1mrgNuA" elementId="forwardHistory">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sJPI4FvxEeaJGasRnBt-rQ" elementId="forwardHistory">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6MSkAFvdEeavI9z1mrgNuA" elementId="pin.group">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sJPI4VvxEeaJGasRnBt-rQ" elementId="pin.group">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6MTyIFvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KmdmAk06EeaK5a99eo00ZA"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6lREsFvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_sJQXAFvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KmdmAk06EeaK5a99eo00ZA"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sYNZAFvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6lREsVvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sYOAEFvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_6lREslvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_sYOAEVvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
           <tags>Opaque</tags>
         </children>
       </children>

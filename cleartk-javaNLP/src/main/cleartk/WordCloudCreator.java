@@ -36,7 +36,7 @@ public class WordCloudCreator {
 	CAS cas;
 	
 	public WordCloudCreator(File file) throws IOException, InvalidXMLException, ResourceInitializationException {
-		fisTargetFile = new FileInputStream("input");
+		fisTargetFile = new FileInputStream(file);
 		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 		createCas();
 	}

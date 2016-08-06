@@ -11,6 +11,7 @@ import org.cleartk.syntax.opennlp.*;
 import org.cleartk.token.lemma.choi.LemmaAnnotator;
 import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
 import org.cleartk.token.tokenizer.TokenAnnotator;
+import org.cleartk.token.type.Sentence;
 import org.cleartk.util.ae.UriToDocumentTextAnnotator;
 import org.cleartk.util.cr.UriCollectionReader;
 import org.uimafit.factory.*;
@@ -23,14 +24,16 @@ public class ClearTKProcessor {
 	private static CAS cas;
 	
 	public ClearTKProcessor (String input, CAS c){
-		filesDirectory = new File(input);
+		filesDirectory = new File("file:///" + input);
 		cas = c;
 	}
 	
 	public void executeClearTK(){
 		try {
 			AggregateBuilder builder = createBuilder();
+			System.out.println("EMPIEZA");
 			SimplePipeline.runPipeline(cas, builder.createAggregateDescription());
+			System.out.println("FIN");
 		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 			e.printStackTrace();
 		} catch (UIMAException e) {
@@ -40,17 +43,12 @@ public class ClearTKProcessor {
 
 	private AggregateBuilder createBuilder() throws ResourceInitializationException {
 		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(UriToDocumentTextAnnotator.getDescription());
+//		builder.add(UriToDocumentTextAnnotator.getDescription());
 		builder.add(SentenceAnnotator.getDescription());
-		builder.add(TokenAnnotator.getDescription());
-		builder.add(PosTaggerAnnotator.getDescription());
-		builder.add(DefaultSnowballStemmer.getDescription("English"));
-		builder.add(LemmaAnnotator.getDescription());
+//		builder.add(TokenAnnotator.getDescription());
+//		builder.add(PosTaggerAnnotator.getDescription());
+//		builder.add(LemmaAnnotator.getDescription());
+//		builder.add(DefaultSnowballStemmer.getDescription("English"));
 		return builder;
 	}
-
-//	public static void main(String[] args) throws UnsupportedEncodingException {
-//		ClearTKProcessor tester = new ClearTKProcessor("input","output");
-//		tester.executeClearTK("output");
-//	}
 }

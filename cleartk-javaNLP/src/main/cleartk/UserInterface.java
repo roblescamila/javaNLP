@@ -109,21 +109,9 @@ public class UserInterface extends JFrame {
 	 * @throws InvalidXMLException 
 	 */
 	public UserInterface() throws IOException, InvalidXMLException, ResourceInitializationException {
-
-		files = new Vector<File>();
-		String input = "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java"; 
-		File file = new File("input");
-//		for (File file : directory) {
-		files.add(file);
-//		} //unir con lo de abajo
-		
-		for (File f : files) {
-			wcc = new WordCloudCreator(f);
-		}
-
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		contentPane.setLayout(gl_contentPane);
 		setContentPane(contentPane);
 
@@ -249,6 +237,22 @@ public class UserInterface extends JFrame {
 
 		btnCreateWordCloud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				files = new Vector<File>();
+				String input = "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java"; 
+				File file = new File(input);
+//				for (File file : directory) {
+				files.add(file);
+//				} //unir con lo de abajo
+				
+				for (File f : files) {
+					try {
+						wcc = new WordCloudCreator(f);
+					} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
+						e.printStackTrace();
+					}
+				}				
+				
 				int[] aux;
 				aux = wordList.getSelectedIndices();
 				for (int a : aux) {
@@ -256,27 +260,27 @@ public class UserInterface extends JFrame {
 					filteredWords.addElement(palabra);
 				}
 
-					boolean selected[] = { commentsRadioButton.isSelected(), classNameRadioButton.isSelected(),
-							methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
-							packageRadioButton.isSelected(), importsRadioButton.isSelected() };
+				boolean selected[] = { commentsRadioButton.isSelected(), classNameRadioButton.isSelected(),
+						methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
+						packageRadioButton.isSelected(), importsRadioButton.isSelected() };
 
-					cloud = wcc.CreateCloud(selected);
+				cloud = wcc.CreateCloud(selected);
 
-					pnlWordCloud.removeAll();
-					pnlWordCloud.repaint();
-					// cloud.addTag("a");
-					for (Tag tag : cloud.tags()) {
-						if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
-							// System.out.println("entro al for de los tag");
-							JLabel label = new JLabel(tag.getName());
-							label.setOpaque(false);
-							label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); //hacerlo dinamico, elegido por el usuario
-							pnlWordCloud.add(label);
-						}
+				pnlWordCloud.removeAll();
+				pnlWordCloud.repaint();
+				// cloud.addTag("a");
+				for (Tag tag : cloud.tags()) {
+					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
+						// System.out.println("entro al for de los tag");
+						JLabel label = new JLabel(tag.getName());
+						label.setOpaque(false);
+						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); //hacerlo dinamico, elegido por el usuario
+						pnlWordCloud.add(label);
 					}
+				}
 
-					pnlWordCloud.revalidate();
-					pnlWordCloud.repaint();
+				pnlWordCloud.revalidate();
+				pnlWordCloud.repaint();
 			
 			}
 		});
