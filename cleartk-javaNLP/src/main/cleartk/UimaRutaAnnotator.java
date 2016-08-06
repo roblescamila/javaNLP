@@ -42,7 +42,7 @@ public class UimaRutaAnnotator {
 						cloud.addTag(r3[0]);
 				}
 			}
-//			cloud.addTag(annotation.getCoveredText());
-		}
+			//cloud.addTag(annotation.getCoveredText());
+		}	//cloud.addTag("b");
 	}
 }

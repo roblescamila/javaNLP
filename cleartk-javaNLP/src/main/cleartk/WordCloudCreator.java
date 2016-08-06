@@ -9,6 +9,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.cleartk.token.lemma.choi.LemmaAnnotator;
@@ -37,13 +38,14 @@ public class WordCloudCreator {
 	String targetFileStr;
 	CAS cas;
 	
-	public WordCloudCreator(String f) throws IOException, InvalidXMLException, ResourceInitializationException, AnalysisEngineProcessException {
+	public WordCloudCreator(String f) throws IOException, InvalidXMLException, ResourceInitializationException, AnalysisEngineProcessException, CASException {
 		fisTargetFile = new FileInputStream(new File(f));
 		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 		createCas();
+		
 	}
 	
-	private void createCas() throws InvalidXMLException, ResourceInitializationException, IOException, AnalysisEngineProcessException {
+	private void createCas() throws InvalidXMLException, ResourceInitializationException, IOException, AnalysisEngineProcessException, CASException {
 		String inputEngine = "main.descriptors.MainEngine";
 		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
 		cas = engine.newCAS();

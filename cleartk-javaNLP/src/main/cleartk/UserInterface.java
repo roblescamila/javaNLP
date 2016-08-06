@@ -332,6 +332,9 @@ public class UserInterface extends JFrame {
 				// }
 				catch (AnalysisEngineProcessException e) {
 					e.printStackTrace();
+				} catch (CASException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 
 				int[] aux;
@@ -348,7 +351,6 @@ public class UserInterface extends JFrame {
 				try {
 					cloud = wcc.CreateCloud(selected);
 				} catch (CASException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -359,12 +361,7 @@ public class UserInterface extends JFrame {
 					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
 						JLabel label = new JLabel(tag.getName());
 						label.setOpaque(false);
-						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo
-																									// dinamico,
-																									// elegido
-																									// por
-																									// el
-																									// usuario
+						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo	elegido	por el	usuario															// dinamico,
 						pnlWordCloud.add(label);
 					}
 				}
