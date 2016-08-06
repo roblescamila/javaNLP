@@ -6,7 +6,9 @@ import java.io.UnsupportedEncodingException;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.cas.CAS;
+import org.apache.uima.collection.CollectionReaderDescription;
 import org.apache.uima.resource.*;
+import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.apache.uima.util.*;
 import org.cleartk.syntax.opennlp.*;
 import org.cleartk.token.lemma.choi.LemmaAnnotator;
@@ -20,22 +22,28 @@ import org.uimafit.pipeline.SimplePipeline;
 
 public class ClearTKProcessor {
 	
-	private static File filesDirectory;
+//	private static File filesDirectory;
+	private static String filesDirectory;
 	private static String outputDir;
 	private static CAS cas;
 	private static AnalysisEngine engine;
 	
 	public ClearTKProcessor (String input, CAS c, AnalysisEngine e){
-		filesDirectory = new File("file:///" + input);
+		filesDirectory = "file:///" + input;//new File("file:///" + input);
 		cas = c;
 		engine = e;
 	}
 	
 	public void executeClearTK(){
 		try {
+			
+			TypeSystemDescription typeSystemDescription = TypeSystemDescriptionFactory.createTypeSystemDescription();
+			CollectionReaderDescription crDescription = CollectionReaderFactory.createDescription(XMICollectionReader.class, typeSystemDescription, "input", filesDirectory);
+
+		
 			AggregateBuilder builder = createBuilder();
 			System.out.println("EMPIEZA");
-			SimplePipeline.runPipeline(cas, builder.createAggregateDescription());
+			SimplePipeline.runPipeline(crDescription, builder.createAggregateDescription());
 			System.out.println("FIN");
 		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 			e.printStackTrace();

@@ -10,11 +10,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreePath;
 
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.mcavallo.opencloud.Cloud;
@@ -54,7 +59,8 @@ public class UserInterface extends JFrame {
 	private JTextField textField;
 	private WordCloudCreator wcc;
 	private Cloud cloud;
-	private static Vector<File> files;
+	private static Vector<String> files;
+	private JTree tree;
 
 	/**
 	 * Launch the application.
@@ -78,6 +84,43 @@ public class UserInterface extends JFrame {
 			}
 		});
 	}
+
+	// private void crearArbol() {
+
+	/* Construimos los nodos del arbol que seran ramas u hojas */
+	// DefaultMutableTreeNode carpetaRaiz = new DefaultMutableTreeNode("root");
+	// /* Definimos el modelo donde se agregaran los nodos */
+	// DefaultTreeModel modelo = new DefaultTreeModel(carpetaRaiz);
+	// /*
+	// * agregamos el modelo al arbol, donde previamente establecimos la raiz
+	// */
+	// tree = new JTree(modelo);
+	// /* definimos los eventos */
+	//// tree.getSelectionModel().addTreeSelectionListener(this);
+	//
+	// /* Definimos mas nodos del arbol y se lo agregamos al modelo */
+	// DefaultMutableTreeNode carpeta2 = new
+	// DefaultMutableTreeNode("SubCarpeta");
+	// DefaultMutableTreeNode archivo1 = new DefaultMutableTreeNode("Archivo1");
+	// DefaultMutableTreeNode archivo2 = new DefaultMutableTreeNode("Archivo2");
+	// DefaultMutableTreeNode archivo3 = new DefaultMutableTreeNode("Archivo3");
+	// /*
+	// * Definimos donde se agrega el nodo, dentro de que rama y que posicion
+	// */
+	// modelo.insertNodeInto(carpeta2, carpetaRaiz, 0);
+	// modelo.insertNodeInto(archivo1, carpetaRaiz, 1);
+	// modelo.insertNodeInto(archivo2, carpetaRaiz, 2);
+	//
+	// /* Creamos las hojas del arbol */
+	// DefaultMutableTreeNode archivo4 = new DefaultMutableTreeNode("Archivo4");
+	// DefaultMutableTreeNode archivo5 = new DefaultMutableTreeNode("Archivo5");
+	// DefaultMutableTreeNode archivo6 = new DefaultMutableTreeNode("Archivo6");
+	//
+	// modelo.insertNodeInto(archivo3, carpeta2, 0);
+	// modelo.insertNodeInto(archivo4, carpeta2, 1);
+	// modelo.insertNodeInto(archivo5, carpeta2, 2);
+	// modelo.insertNodeInto(archivo6, carpeta2, 3);
+	// }
 
 	private DefaultMutableTreeNode addNodes(DefaultMutableTreeNode curTop, MyFile dir) {
 		String curPath = dir.getPath();
@@ -109,6 +152,15 @@ public class UserInterface extends JFrame {
 		for (int fnum = 0; fnum < files.size(); fnum++)
 			curDir.add(new DefaultMutableTreeNode(files.elementAt(fnum)));
 		return curDir;
+	}
+
+	public static String createFilePath(TreePath treePath) {
+		StringBuilder sb = new StringBuilder();
+		Object[] nodes = treePath.getPath();
+		for (int i = 0; i < nodes.length; i++) {
+			sb.append(nodes[i].toString()).append(File.separatorChar);
+		}
+		return sb.toString();
 	}
 
 	public boolean isFilteredWord(String word) {
@@ -159,7 +211,6 @@ public class UserInterface extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		JScrollPane scrollPane_1 = new JScrollPane();
 		JSpinner spinner = new JSpinner(model);
-		JTree tree = new JTree(packagesmodel);
 		JList wordList = new JList();
 
 		JRadioButton commentsRadioButton = new JRadioButton("Comments", false);
@@ -249,22 +300,38 @@ public class UserInterface extends JFrame {
 										497, GroupLayout.PREFERRED_SIZE)))
 				.addGap(316)));
 
+		// treefile.addTreeSelectionListener(new TreeSelectionListener() {
+		// public void valueChanged(TreeSelectionEvent e) {
+		// DefaultMutableTreeNode node = (DefaultMutableTreeNode)
+		// treefile.getLastSelectedPathComponent();
+		// /* if nothing is selected */
+		// if (node == null)
+		// return;
+		// /* retrieve the node that was selected */
+		//// Object nodeInfo = node.getUserObject();
+		// }
+		// });
+
 		btnCreateWordCloud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				files = new Vector<File>();
-				String input = "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java";
-				File file = new File(input);
+				// files = new Vector<File>();
+				// String input =
+				// "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java";
+				// File file = new File(input);
 				// for (File file : directory) {
-				files.add(file);
-				// } //unir con lo de abajo
 
-				for (File f : files) {
-					try {
-						wcc = new WordCloudCreator(f);
-					} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
-						e.printStackTrace();
-					}
+				String f = createFilePath(tree.getSelectionPath());
+				
+				// for (String f : files) {
+				try {
+					wcc = new WordCloudCreator(f);
+				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
+					e.printStackTrace();
+				}
+				// }
+				catch (AnalysisEngineProcessException e) {
+					e.printStackTrace();
 				}
 
 				int[] aux;
@@ -278,16 +345,26 @@ public class UserInterface extends JFrame {
 						methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
 						packageRadioButton.isSelected(), importsRadioButton.isSelected() };
 
-				cloud = wcc.CreateCloud(selected);
+				try {
+					cloud = wcc.CreateCloud(selected);
+				} catch (CASException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				pnlWordCloud.removeAll();
 				pnlWordCloud.repaint();
-				// cloud.addTag("a");
+				cloud.addTag("a");
 				for (Tag tag : cloud.tags()) {
 					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
 						JLabel label = new JLabel(tag.getName());
 						label.setOpaque(false);
-						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo  dinamico, elegido  por  el usuario
+						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo
+																									// dinamico,
+																									// elegido
+																									// por
+																									// el
+																									// usuario
 						pnlWordCloud.add(label);
 					}
 				}
@@ -305,7 +382,7 @@ public class UserInterface extends JFrame {
 				if (seleccion == JFileChooser.APPROVE_OPTION) {
 					final MyFile projectFile;
 					projectFile = new MyFile(fc.getSelectedFile().getAbsolutePath());
-					JTree tree = new JTree(addNodes(null, projectFile));
+					tree = new JTree(addNodes(null, projectFile));
 					scrollPane.setViewportView(tree);
 					File a = fc.getSelectedFile();
 					File[] a2 = a.listFiles();

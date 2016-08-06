@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CAS;
+import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
@@ -35,22 +37,23 @@ public class WordCloudCreator {
 	String targetFileStr;
 	CAS cas;
 	
-	public WordCloudCreator(File file) throws IOException, InvalidXMLException, ResourceInitializationException {
-		fisTargetFile = new FileInputStream(file);
+	public WordCloudCreator(String f) throws IOException, InvalidXMLException, ResourceInitializationException, AnalysisEngineProcessException {
+		fisTargetFile = new FileInputStream(new File(f));
 		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 		createCas();
 	}
-
-	private void createCas() throws InvalidXMLException, ResourceInitializationException, IOException {
+	
+	private void createCas() throws InvalidXMLException, ResourceInitializationException, IOException, AnalysisEngineProcessException {
 		String inputEngine = "main.descriptors.MainEngine";
 		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
 		cas = engine.newCAS();
 		cas.setDocumentText(targetFileStr);
-		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr, cas, engine);
-		nlp.executeClearTK();
+		engine.process(cas);
+//		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr, cas, engine);
+//		nlp.executeClearTK();
 	}
 
-	public Cloud CreateCloud(boolean arr[]){
+	public Cloud CreateCloud(boolean arr[]) throws CASException{
 		Cloud c = new Cloud();
 
 		if (arr[COMMENT]) {

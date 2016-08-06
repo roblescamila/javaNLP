@@ -1,6 +1,7 @@
 package main.cleartk;
 
 import org.apache.uima.cas.CAS;
+import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.fit.util.JCasUtil;
@@ -13,7 +14,6 @@ public class UimaRutaAnnotator {
 
 	// boolean selected;
 	String classPath;
-	// Vector<String> wordVector;
 	CAS cas;
 	Cloud cloud;
 
@@ -25,9 +25,9 @@ public class UimaRutaAnnotator {
 		cloud = c;
 	}
 
-	public void addToCloud() {
+	public void addToCloud() throws CASException {
 		Type type = cas.getTypeSystem().getType(classPath);
-		JCas a = (JCas) cas;
+		JCas a = cas.getJCas();
 		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
 			for (Token token : JCasUtil.select(a, Token.class)) {
 				String aux2 = token.getLemma();
@@ -42,10 +42,7 @@ public class UimaRutaAnnotator {
 						cloud.addTag(r3[0]);
 				}
 			}
-
-			// cloud.addTag(annotation.getCoveredText());
+//			cloud.addTag(annotation.getCoveredText());
 		}
-
 	}
-
 }
