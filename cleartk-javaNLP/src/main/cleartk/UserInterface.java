@@ -105,15 +105,20 @@ public class UserInterface extends JFrame {
 	 * Create the frame.
 	 * 
 	 * @throws IOException
+	 * @throws ResourceInitializationException 
+	 * @throws InvalidXMLException 
 	 */
-	public UserInterface() throws IOException {
+	public UserInterface() throws IOException, InvalidXMLException, ResourceInitializationException {
 
+		files = new Vector<File>();
+		String input = "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java"; 
+		File file = new File("input");
 //		for (File file : directory) {
-			files.add(new File("C:\\Users\\Cami\\Documents\\Faca\\Materias\\4to\\Diseño\\javanlp\\cleartk-javaNLP\\input\\test.txt.xmi"));
+		files.add(file);
 //		} //unir con lo de abajo
 		
-		for (File file : files) {
-			wcc = new WordCloudCreator(file);
+		for (File f : files) {
+			wcc = new WordCloudCreator(f);
 		}
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -251,7 +256,6 @@ public class UserInterface extends JFrame {
 					filteredWords.addElement(palabra);
 				}
 
-				try {
 					boolean selected[] = { commentsRadioButton.isSelected(), classNameRadioButton.isSelected(),
 							methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
 							packageRadioButton.isSelected(), importsRadioButton.isSelected() };
@@ -273,9 +277,7 @@ public class UserInterface extends JFrame {
 
 					pnlWordCloud.revalidate();
 					pnlWordCloud.repaint();
-				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
-					e.printStackTrace();
-				}
+			
 			}
 		});
 		

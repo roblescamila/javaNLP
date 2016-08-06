@@ -33,18 +33,25 @@ public class WordCloudCreator {
 
 	FileInputStream fisTargetFile;
 	String targetFileStr;
-
-	public WordCloudCreator(File file) throws IOException {
-		fisTargetFile = new FileInputStream(file);
+	CAS cas;
+	
+	public WordCloudCreator(File file) throws IOException, InvalidXMLException, ResourceInitializationException {
+		fisTargetFile = new FileInputStream("input");
 		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
+		createCas();
 	}
 
-	public Cloud CreateCloud(boolean arr[]) throws InvalidXMLException, ResourceInitializationException, IOException {
-		Cloud c = new Cloud();
+	private void createCas() throws InvalidXMLException, ResourceInitializationException, IOException {
 		String inputEngine = "main.descriptors.MainEngine";
 		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
-		CAS cas = engine.newCAS();
+		cas = engine.newCAS();
 		cas.setDocumentText(targetFileStr);
+		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr, cas);
+		nlp.executeClearTK();
+	}
+
+	public Cloud CreateCloud(boolean arr[]){
+		Cloud c = new Cloud();
 
 		if (arr[COMMENT]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", cas, c);

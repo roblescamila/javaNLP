@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import org.apache.uima.UIMAException;
+import org.apache.uima.cas.CAS;
 import org.apache.uima.resource.*;
 import org.apache.uima.util.*;
 import org.cleartk.syntax.opennlp.*;
@@ -19,17 +20,17 @@ public class ClearTKProcessor {
 	
 	private static File filesDirectory;
 	private static String outputDir;
-
+	private static CAS cas;
 	
-	public ClearTKProcessor (String input, String output){
+	public ClearTKProcessor (String input, CAS c){
 		filesDirectory = new File(input);
-		outputDir = output;
+		cas = c;
 	}
 	
-	public void executeClearTK(String outputFile) {
+	public void executeClearTK(){
 		try {
 			AggregateBuilder builder = createBuilder();
-			SimplePipeline.runPipeline(UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory), builder.createAggregateDescription());
+			SimplePipeline.runPipeline(cas, builder.createAggregateDescription());
 		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 			e.printStackTrace();
 		} catch (UIMAException e) {
@@ -43,8 +44,8 @@ public class ClearTKProcessor {
 		builder.add(SentenceAnnotator.getDescription());
 		builder.add(TokenAnnotator.getDescription());
 		builder.add(PosTaggerAnnotator.getDescription());
-		builder.add(LemmaAnnotator.getDescription());
 		builder.add(DefaultSnowballStemmer.getDescription("English"));
+		builder.add(LemmaAnnotator.getDescription());
 		return builder;
 	}
 

@@ -452,7 +452,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_Ra9uwFqZEeaFC_CrlvFx7A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="JavaTypeSystem.xml" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/xmldoc.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart&quot; name=&quot;JavaTypeSystem.xml&quot; partName=&quot;JavaTypeSystem.xml&quot; title=&quot;JavaTypeSystem.xml&quot; tooltip=&quot;javaNLP/descriptor/types/JavaTypeSystem.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/javaNLP/descriptor/types/JavaTypeSystem.xml&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;516&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart&quot; name=&quot;JavaTypeSystem.xml&quot; partName=&quot;JavaTypeSystem.xml&quot; title=&quot;JavaTypeSystem.xml&quot; tooltip=&quot;javaNLP/descriptor/types/JavaTypeSystem.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/javaNLP/descriptor/types/JavaTypeSystem.xml&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;527&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart</tags>
           <tags>removeOnHide</tags>
@@ -921,7 +921,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT0n006EeaK5a99eo00ZA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ELOXAFqZEeaFC_CrlvFx7A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KmdmVE06EeaK5a99eo00ZA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6MNEcFvdEeavI9z1mrgNuA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KmdmVE06EeaK5a99eo00ZA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT0rU06EeaK5a99eo00ZA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -976,29 +976,29 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmUbmE06EeaK5a99eo00ZA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_ELRaUFqZEeaFC_CrlvFx7A" elementId="history.group">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6MRV4FvdEeavI9z1mrgNuA" elementId="history.group">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_ELRaUVqZEeaFC_CrlvFx7A" elementId="group.application" visible="false">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6MRV4VvdEeavI9z1mrgNuA" elementId="group.application" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_ELRaUlqZEeaFC_CrlvFx7A" elementId="backardHistory">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6MR88FvdEeavI9z1mrgNuA" elementId="backardHistory">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_ELSBYFqZEeaFC_CrlvFx7A" elementId="forwardHistory">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6MR88VvdEeavI9z1mrgNuA" elementId="forwardHistory">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_ELSBYVqZEeaFC_CrlvFx7A" elementId="pin.group">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6MSkAFvdEeavI9z1mrgNuA" elementId="pin.group">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ELSocFqZEeaFC_CrlvFx7A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KmdmAk06EeaK5a99eo00ZA"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Ej4HkFqZEeaFC_CrlvFx7A" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6MTyIFvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KmdmAk06EeaK5a99eo00ZA"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6lREsFvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Ej4HkVqZEeaFC_CrlvFx7A" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6lREsVvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_Ej4uoFqZEeaFC_CrlvFx7A" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_6lREslvdEeavI9z1mrgNuA" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
           <tags>Opaque</tags>
         </children>
       </children>
