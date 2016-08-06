@@ -3,6 +3,7 @@ package main.cleartk;
 import java.awt.EventQueue;
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Vector;
 
 import javax.swing.JFrame;
@@ -66,17 +67,6 @@ public class UserInterface extends JFrame {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException, UnsupportedLookAndFeelException {
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		Vector<String> aux = new Vector<String>();
-		aux.add("mati");
-		aux.add("mati");
-		aux.add("mati");
-		loadComments(aux);
-		Vector<String> aux2 = new Vector<String>();
-		aux2.add("cami");
-		aux2.add("cami");
-		aux2.add("cami");
-		loadImports(aux2);
-
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -89,24 +79,48 @@ public class UserInterface extends JFrame {
 		});
 	}
 
+	private DefaultMutableTreeNode addNodes(DefaultMutableTreeNode curTop, MyFile dir) {
+		String curPath = dir.getPath();
+		DefaultMutableTreeNode curDir = new DefaultMutableTreeNode(curPath);
+		if (curTop != null) { // should only be null at root
+			curTop.add(curDir);
+		}
+		Vector<String> ol = new Vector<String>();
+		String[] tmp = dir.list();
+		for (int i = 0; i < tmp.length; i++)
+			ol.addElement(tmp[i]);
+		Collections.sort(ol, String.CASE_INSENSITIVE_ORDER);
+		MyFile f;
+		Vector<String> files = new Vector<String>();
+		// Make two passes, one for Dirs and one for Files. This is #1.
+		for (int i = 0; i < ol.size(); i++) {
+			String thisObject = (String) ol.elementAt(i);
+			String newPath;
+			if (curPath.equals("."))
+				newPath = thisObject;
+			else
+				newPath = curPath + MyFile.separator + thisObject;
+			if ((f = new MyFile(newPath)).isDirectory())
+				addNodes(curDir, f);
+			else
+				files.addElement(thisObject);
+		}
+		// Pass two: for files.
+		for (int fnum = 0; fnum < files.size(); fnum++)
+			curDir.add(new DefaultMutableTreeNode(files.elementAt(fnum)));
+		return curDir;
+	}
+
 	public boolean isFilteredWord(String word) {
 		return filteredWords.contains(word);
-	}
-
-	public static void loadComments(Vector<String> aux) {
-		comments = aux;
-	}
-
-	public static void loadImports(Vector<String> aux) {
-		imports = aux;
 	}
 
 	/**
 	 * Create the frame.
 	 * 
 	 * @throws IOException
-	 * @throws ResourceInitializationException 
-	 * @throws InvalidXMLException 
+	 * @throws ResourceInitializationException
+	 * @throws InvalidXMLException
 	 */
 	public UserInterface() throws IOException, InvalidXMLException, ResourceInitializationException {
 		contentPane = new JPanel();
@@ -237,22 +251,22 @@ public class UserInterface extends JFrame {
 
 		btnCreateWordCloud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 				files = new Vector<File>();
-				String input = "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java"; 
+				String input = "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java";
 				File file = new File(input);
-//				for (File file : directory) {
+				// for (File file : directory) {
 				files.add(file);
-//				} //unir con lo de abajo
-				
+				// } //unir con lo de abajo
+
 				for (File f : files) {
 					try {
 						wcc = new WordCloudCreator(f);
 					} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 						e.printStackTrace();
 					}
-				}				
-				
+				}
+
 				int[] aux;
 				aux = wordList.getSelectedIndices();
 				for (int a : aux) {
@@ -271,74 +285,30 @@ public class UserInterface extends JFrame {
 				// cloud.addTag("a");
 				for (Tag tag : cloud.tags()) {
 					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
-						// System.out.println("entro al for de los tag");
 						JLabel label = new JLabel(tag.getName());
 						label.setOpaque(false);
-						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); //hacerlo dinamico, elegido por el usuario
+						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo  dinamico, elegido  por  el usuario
 						pnlWordCloud.add(label);
 					}
 				}
 
 				pnlWordCloud.revalidate();
 				pnlWordCloud.repaint();
-			
 			}
 		});
-		
+
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int seleccion = fc.showOpenDialog(openFileDialog);
-				DefaultMutableTreeNode padre;
+
 				fc.setMultiSelectionEnabled(true);
 				if (seleccion == JFileChooser.APPROVE_OPTION) {
+					final MyFile projectFile;
+					projectFile = new MyFile(fc.getSelectedFile().getAbsolutePath());
+					JTree tree = new JTree(addNodes(null, projectFile));
+					scrollPane.setViewportView(tree);
 					File a = fc.getSelectedFile();
 					File[] a2 = a.listFiles();
-					String name = a.getName();
-					System.out.println(name);
-					padre = new DefaultMutableTreeNode(name);
-					((DefaultTreeModel) packagesmodel).insertNodeInto(padre, paquetes, 0);
-					Vector<File> ficheros = new Vector<File>();
-					for (File archivo : a2) {
-						ficheros.add(archivo);
-					}
-
-					// textField.setText(fichero.getAbsolutePath());
-
-					for (int i = 0; i < ficheros.size(); i++) {
-
-						File fichero = ficheros.elementAt(i);
-
-						if (!fichero.isDirectory()) {
-							modelo.addElement(fichero.getName());
-							DefaultMutableTreeNode hijo = new DefaultMutableTreeNode(fichero.getName());
-							((DefaultTreeModel) packagesmodel).insertNodeInto(hijo, padre, 0);
-							// try (FileReader fr = new FileReader(fichero)) {
-							// String cadena = "";
-							//
-							// int valor = fr.read();
-							// while (valor != -1) {
-							//
-							// cadena = cadena + (char) valor;
-							// valor = fr.read();
-							// }
-							// System.out.println(cadena);
-							// } catch (IOException e1) {
-							// e1.printStackTrace();
-							// }
-						} else {
-							name = fichero.getName();
-//							System.out.println(name);
-							DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(name);
-							((DefaultTreeModel) packagesmodel).insertNodeInto(padre2, padre, 0);
-
-							File[] auxiliar = fichero.listFiles();
-							for (File aux : auxiliar) {
-								ficheros.addElement(aux);
-							}
-
-							padre = padre2;
-						}
-					}
 				}
 			}
 		});
