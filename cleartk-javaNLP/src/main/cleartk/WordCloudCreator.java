@@ -46,7 +46,7 @@ public class WordCloudCreator {
 		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
 		cas = engine.newCAS();
 		cas.setDocumentText(targetFileStr);
-		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr, cas);
+		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr, cas, engine);
 		nlp.executeClearTK();
 	}
 

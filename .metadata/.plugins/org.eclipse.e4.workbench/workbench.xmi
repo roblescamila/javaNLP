@@ -921,7 +921,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT0n006EeaK5a99eo00ZA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_sJJCQFvxEeaJGasRnBt-rQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KmdmVE06EeaK5a99eo00ZA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_1lKpEFv3EeaWcJCwWZxuzg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KmdmVE06EeaK5a99eo00ZA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmT0rU06EeaK5a99eo00ZA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -976,29 +976,29 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KmUbmE06EeaK5a99eo00ZA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sJN6wVvxEeaJGasRnBt-rQ" elementId="history.group">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1lNsYVv3EeaWcJCwWZxuzg" elementId="history.group">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sJOh0FvxEeaJGasRnBt-rQ" elementId="group.application" visible="false">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1lNsYlv3EeaWcJCwWZxuzg" elementId="group.application" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sJOh0VvxEeaJGasRnBt-rQ" elementId="backardHistory">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1lOTcFv3EeaWcJCwWZxuzg" elementId="backardHistory">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sJPI4FvxEeaJGasRnBt-rQ" elementId="forwardHistory">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1lOTcVv3EeaWcJCwWZxuzg" elementId="forwardHistory">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sJPI4VvxEeaJGasRnBt-rQ" elementId="pin.group">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1lO6gFv3EeaWcJCwWZxuzg" elementId="pin.group">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_sJQXAFvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KmdmAk06EeaK5a99eo00ZA"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sYNZAFvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_1lQIoFv3EeaWcJCwWZxuzg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KmdmAk06EeaK5a99eo00ZA"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1u-FUFv3EeaWcJCwWZxuzg" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sYOAEFvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1u-FUVv3EeaWcJCwWZxuzg" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_sYOAEVvxEeaJGasRnBt-rQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_1u-FUlv3EeaWcJCwWZxuzg" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
           <tags>Opaque</tags>
         </children>
       </children>

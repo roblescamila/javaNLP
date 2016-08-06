@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import org.apache.uima.UIMAException;
+import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.resource.*;
 import org.apache.uima.util.*;
@@ -22,10 +23,12 @@ public class ClearTKProcessor {
 	private static File filesDirectory;
 	private static String outputDir;
 	private static CAS cas;
+	private static AnalysisEngine engine;
 	
-	public ClearTKProcessor (String input, CAS c){
+	public ClearTKProcessor (String input, CAS c, AnalysisEngine e){
 		filesDirectory = new File("file:///" + input);
 		cas = c;
+		engine = e;
 	}
 	
 	public void executeClearTK(){
@@ -44,11 +47,12 @@ public class ClearTKProcessor {
 	private AggregateBuilder createBuilder() throws ResourceInitializationException {
 		AggregateBuilder builder = new AggregateBuilder();
 //		builder.add(UriToDocumentTextAnnotator.getDescription());
+		TypeSystemDescriptionFactory.createTypeSystemDescription();
 		builder.add(SentenceAnnotator.getDescription());
-//		builder.add(TokenAnnotator.getDescription());
-//		builder.add(PosTaggerAnnotator.getDescription());
-//		builder.add(LemmaAnnotator.getDescription());
-//		builder.add(DefaultSnowballStemmer.getDescription("English"));
+		builder.add(TokenAnnotator.getDescription());
+		builder.add(PosTaggerAnnotator.getDescription());
+		builder.add(LemmaAnnotator.getDescription());
+		builder.add(DefaultSnowballStemmer.getDescription("English"));
 		return builder;
 	}
 }
