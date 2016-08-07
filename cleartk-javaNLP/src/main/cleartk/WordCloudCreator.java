@@ -3,6 +3,7 @@ package main.cleartk;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -10,21 +11,9 @@ import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.util.CasIOUtil;
-import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
-import org.cleartk.token.lemma.choi.LemmaAnnotator;
-import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
-import org.cleartk.token.tokenizer.TokenAnnotator;
-import org.cleartk.token.type.Token;
-import org.cleartk.util.ViewURIFileNamer;
-import org.cleartk.util.ae.UriToDocumentTextAnnotator;
-import org.cleartk.util.cr.UriCollectionReader;
 import org.mcavallo.opencloud.Cloud;
-import org.uimafit.component.xwriter.XWriter;
-import org.uimafit.factory.AggregateBuilder;
-import org.uimafit.pipeline.SimplePipeline;
-import org.uimafit.util.CasUtil;
 
 public class WordCloudCreator {
 
@@ -38,8 +27,13 @@ public class WordCloudCreator {
 	FileInputStream fisTargetFile;
 	CAS cas;
 	File file; 
-	
-	public WordCloudCreator(String f) throws IOException, InvalidXMLException, ResourceInitializationException, AnalysisEngineProcessException, CASException {
+	String outputPath;
+	// Cloud c;
+
+	public WordCloudCreator(String f, String output) throws IOException, InvalidXMLException,
+			ResourceInitializationException, AnalysisEngineProcessException, CASException {
+//		c = new Cloud();
+		outputPath = output;
 		file = new File(f);
 		fisTargetFile = new FileInputStream(file);
 		createCas();
@@ -51,19 +45,18 @@ public class WordCloudCreator {
 		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 		cas.setDocumentText(targetFileStr);
 		engine.process(cas);
-		String out = "output" + "/" + file.getName();
+		String out = outputPath.concat("/" + file.getName());
 		CasIOUtil.writeXmi(cas, new File(out + ".xmi"));
-		ClearTKProcessor nlp = new ClearTKProcessor("output");
-		nlp.executeClearTK();
+		// ClearTKProcessor nlp = new ClearTKProcessor(outputPath);
+//		nlp.executeClearTK();
 	}
 	
 	public void setCas() throws IOException
 	{
-		CasIOUtil.readCas(cas, new File("output" + "/" + file.getName()+".xmi.xmi"));
+		CasIOUtil.readCas(cas, new File(outputPath.concat("/" + file.getName() + ".xmi.xmi")));
 	}
 
-	public Cloud CreateCloud(boolean arr[]) throws CASException{
-		Cloud c = new Cloud();
+	public Cloud updateCloud(boolean arr[], Cloud c) throws CASException {
 
 		if (arr[COMMENT]) {
 			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", cas, c);

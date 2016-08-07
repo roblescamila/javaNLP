@@ -1,23 +1,47 @@
 package main.cleartk;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Vector;
 
+import javax.swing.DefaultListModel;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.JTree;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.SwingWorker;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreePath;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -25,28 +49,9 @@ import org.apache.uima.util.InvalidXMLException;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.DefaultListModel;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JRadioButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JList;
-import javax.swing.JScrollPane;
-import javax.swing.JSpinner;
-import javax.swing.JTextField;
-import javax.swing.JTree;
-
 public class UserInterface extends JFrame {
+
+	private static final String OUTPUT = "output";
 
 	private JPanel contentPane;
 	private static Vector<String> comments;
@@ -61,6 +66,8 @@ public class UserInterface extends JFrame {
 	private Cloud cloud;
 	private static Vector<String> files;
 	private JTree tree;
+	private MyFile projectFile;
+	private static UserInterface frame;
 
 	/**
 	 * Launch the application.
@@ -76,7 +83,7 @@ public class UserInterface extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UserInterface frame = new UserInterface();
+					frame = new UserInterface();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -84,43 +91,6 @@ public class UserInterface extends JFrame {
 			}
 		});
 	}
-
-	// private void crearArbol() {
-
-	/* Construimos los nodos del arbol que seran ramas u hojas */
-	// DefaultMutableTreeNode carpetaRaiz = new DefaultMutableTreeNode("root");
-	// /* Definimos el modelo donde se agregaran los nodos */
-	// DefaultTreeModel modelo = new DefaultTreeModel(carpetaRaiz);
-	// /*
-	// * agregamos el modelo al arbol, donde previamente establecimos la raiz
-	// */
-	// tree = new JTree(modelo);
-	// /* definimos los eventos */
-	//// tree.getSelectionModel().addTreeSelectionListener(this);
-	//
-	// /* Definimos mas nodos del arbol y se lo agregamos al modelo */
-	// DefaultMutableTreeNode carpeta2 = new
-	// DefaultMutableTreeNode("SubCarpeta");
-	// DefaultMutableTreeNode archivo1 = new DefaultMutableTreeNode("Archivo1");
-	// DefaultMutableTreeNode archivo2 = new DefaultMutableTreeNode("Archivo2");
-	// DefaultMutableTreeNode archivo3 = new DefaultMutableTreeNode("Archivo3");
-	// /*
-	// * Definimos donde se agrega el nodo, dentro de que rama y que posicion
-	// */
-	// modelo.insertNodeInto(carpeta2, carpetaRaiz, 0);
-	// modelo.insertNodeInto(archivo1, carpetaRaiz, 1);
-	// modelo.insertNodeInto(archivo2, carpetaRaiz, 2);
-	//
-	// /* Creamos las hojas del arbol */
-	// DefaultMutableTreeNode archivo4 = new DefaultMutableTreeNode("Archivo4");
-	// DefaultMutableTreeNode archivo5 = new DefaultMutableTreeNode("Archivo5");
-	// DefaultMutableTreeNode archivo6 = new DefaultMutableTreeNode("Archivo6");
-	//
-	// modelo.insertNodeInto(archivo3, carpeta2, 0);
-	// modelo.insertNodeInto(archivo4, carpeta2, 1);
-	// modelo.insertNodeInto(archivo5, carpeta2, 2);
-	// modelo.insertNodeInto(archivo6, carpeta2, 3);
-	// }
 
 	private DefaultMutableTreeNode addNodes(DefaultMutableTreeNode curTop, MyFile dir) {
 		String curPath = dir.getPath();
@@ -175,6 +145,7 @@ public class UserInterface extends JFrame {
 	 * @throws InvalidXMLException
 	 */
 	public UserInterface() throws IOException, InvalidXMLException, ResourceInitializationException {
+
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -239,6 +210,41 @@ public class UserInterface extends JFrame {
 
 		wordList.setModel(wordsModel);
 
+		cloud = new Cloud();
+
+		/**
+		 * Progress dialog
+		 */
+		final JDialog dialog = new JDialog(frame, true); // modal
+		dialog.setUndecorated(true);
+		JProgressBar bar = new JProgressBar();
+		bar.setIndeterminate(true);
+		bar.setStringPainted(true);
+		bar.setString("Please wait");
+		dialog.add(bar);
+		dialog.pack();
+
+		// SwingWorker<Void,Void> worker = new SwingWorker<Void,Void>()
+		// {
+		// @Override
+		// protected Void doInBackground()
+		// {
+		// // do your intensive stuff here
+		// return null;
+		// }
+		//
+		// @Override
+		// protected void done()
+		// {
+		// dialog.dispose();
+		// }
+		// };
+		// worker.execute();
+		// dialog.setVisible(true); // will block but with a responsive GUI
+		/**
+		 * Termina Progrss dialog
+		 **/
+
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap().addGroup(gl_contentPane
 						.createParallelGroup(Alignment.LEADING, false).addGroup(gl_contentPane
@@ -300,109 +306,101 @@ public class UserInterface extends JFrame {
 										497, GroupLayout.PREFERRED_SIZE)))
 				.addGap(316)));
 
-		// treefile.addTreeSelectionListener(new TreeSelectionListener() {
-		// public void valueChanged(TreeSelectionEvent e) {
-		// DefaultMutableTreeNode node = (DefaultMutableTreeNode)
-		// treefile.getLastSelectedPathComponent();
-		// /* if nothing is selected */
-		// if (node == null)
-		// return;
-		// /* retrieve the node that was selected */
-		//// Object nodeInfo = node.getUserObject();
-		// }
-		// });
-
 		btnCreateWordCloud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				// files = new Vector<File>();
-				// String input =
-				// "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java";
-				// File file = new File(input);
-				// for (File file : directory) {
-				try {
-					TreePath[] tpVector = tree.getSelectionPaths();
-					String f;
-//					tree.getSelectionPath();
-					for (int i = 0; i < tpVector.length; i++) {
-						TreePath aux = tpVector[i];
-						f = createFilePath(aux);
-						wcc = new WordCloudCreator(f);
+				SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
+					@Override
+					protected Void doInBackground() {
+						try {
+							int[] aux;
+							aux = wordList.getSelectedIndices();
+							for (int a : aux) {
+								String palabra = (String) wordsModel.getElementAt(a);
+								filteredWords.addElement(palabra);
+							}
+
+							boolean selected[] = { commentsRadioButton.isSelected(), classNameRadioButton.isSelected(),
+									methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
+									packageRadioButton.isSelected(), importsRadioButton.isSelected() };
+
+							TreePath[] tpVector = tree.getSelectionPaths();
+							String f;
+
+							for (int i = 0; i < tpVector.length; i++) {
+								f = createFilePath(tpVector[i]);
+								wcc = new WordCloudCreator(f, OUTPUT);
+								wcc.updateCloud(selected, cloud);
+							}
+
+							pnlWordCloud.removeAll();
+							pnlWordCloud.repaint();
+							for (Tag tag : cloud.tags()) {
+								if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
+									JLabel label = new JLabel(tag.getName());
+									label.setOpaque(false);
+									label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20));
+									pnlWordCloud.add(label);
+								}
+							}
+							pnlWordCloud.revalidate();
+							pnlWordCloud.repaint();
+						} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
+							e.printStackTrace();
+						} catch (AnalysisEngineProcessException e) {
+							e.printStackTrace();
+						} catch (CASException e) {
+							e.printStackTrace();
+						}
+						return null;
 					}
-				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
-					e.printStackTrace();
-				}
-				// }
-				catch (AnalysisEngineProcessException e) {
-					e.printStackTrace();
-				} catch (CASException e) {
-					e.printStackTrace();
-				}
 
-				int[] aux;
-				aux = wordList.getSelectedIndices();
-				for (int a : aux) {
-					String palabra = (String) wordsModel.getElementAt(a);
-					filteredWords.addElement(palabra);
-				}
-
-				boolean selected[] = { commentsRadioButton.isSelected(), classNameRadioButton.isSelected(),
-						methodsNameRadioButton.isSelected(), variableNameRadioButton.isSelected(),
-						packageRadioButton.isSelected(), importsRadioButton.isSelected() };
-
-				try {
-					wcc.setCas();
-					cloud = wcc.CreateCloud(selected);
-				} catch (CASException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-
-				pnlWordCloud.removeAll();
-				pnlWordCloud.repaint();
-				cloud.addTag("a");
-				for (Tag tag : cloud.tags()) {
-					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
-						JLabel label = new JLabel(tag.getName());
-						label.setOpaque(false);
-						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo
-																									// elegido
-																									// por
-																									// el
-																									// usuario
-																									// //
-																									// dinamico,
-						pnlWordCloud.add(label);
+					@Override
+					protected void done() {
+						dialog.dispose();
 					}
-				}
-
-				pnlWordCloud.revalidate();
-				pnlWordCloud.repaint();
+				};
+				worker.execute();
+				dialog.setVisible(true); // will block but with a responsive GUI
 			}
 		});
 
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int seleccion = fc.showOpenDialog(openFileDialog);
-
+				int selection = fc.showOpenDialog(openFileDialog);
 				fc.setMultiSelectionEnabled(true);
-				if (seleccion == JFileChooser.APPROVE_OPTION) {
-					final MyFile projectFile;
+				if (selection == JFileChooser.APPROVE_OPTION) {
 					projectFile = new MyFile(fc.getSelectedFile().getAbsolutePath());
 					tree = new JTree(addNodes(null, projectFile));
 					scrollPane.setViewportView(tree);
 					File a = fc.getSelectedFile();
-					File[] a2 = a.listFiles();
+					// File[] a2 = a.listFiles();
 				}
 			}
 		});
 
+		/*
+		 * Add word to filtered word list
+		 */
 		btnAddWord.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				wordsModel.addElement(textField.getText());
 				wordList.setModel(wordsModel);
 				textField.setText("");
+			}
+		});
+
+		/**
+		 * Clean output directory before closing
+		 */
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				try {
+					FileUtils.cleanDirectory(new File(OUTPUT));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 	}
