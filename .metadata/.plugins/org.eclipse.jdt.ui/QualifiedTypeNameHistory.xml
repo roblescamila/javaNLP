@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.uima.analysis_engine.AnalysisEngineDescription"/>
+<fullyQualifiedTypeName name="org.apache.uima.ruta.engine.XMIWriter"/>
+<fullyQualifiedTypeName name="org.apache.uima.cas.admin.CASFactory"/>
+<fullyQualifiedTypeName name="org.apache.uima.resource.metadata.TypeSystemDescription"/>
+<fullyQualifiedTypeName name="org.apache.uima.UIMAFramework"/>
+<fullyQualifiedTypeName name="org.apache.uima.util.XMLInputSource"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="org.apache.uima.cas.impl.XmiCasDeserializer"/>
+<fullyQualifiedTypeName name="java.io.DataInputStream"/>
+<fullyQualifiedTypeName name="org.apache.xerces.util.URI"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="org.apache.uima.jcas.JCas"/>
+<fullyQualifiedTypeName name="org.apache.uima.fit.factory.JCasFactory"/>
+<fullyQualifiedTypeName name="org.apache.uima.util.CasCreationUtils"/>
+<fullyQualifiedTypeName name="org.apache.uima.fit.factory.TypeSystemDescriptionFactory"/>
+<fullyQualifiedTypeName name="org.apache.uima.cas.TypeSystem"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="org.apache.uima.cas.Type"/>
+</qualifiedTypeNameHistroy>

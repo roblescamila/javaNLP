@@ -19,23 +19,23 @@ public class UimaRutaAnnotator {
 
 	// boolean selected;
 	String classPath;
-	JCas jcas;
+	CAS cas;
 	Cloud cloud;
 
 	// path : "uima.ruta.annotators.MethodName"
-	public UimaRutaAnnotator(String path, JCas inputCas, Cloud c) {
+	public UimaRutaAnnotator(String path, CAS cas, Cloud c) {
 		classPath = path;
-		jcas = inputCas;
+		cas = cas;
 		cloud = c;
 	}
 
 	public void addToCloud() throws CASException {
-		Type type = jcas.getTypeSystem().getType(classPath);
+		Type type = cas.getTypeSystem().getType(classPath);
 		System.out.println("empieza jcas");
-		for (AnnotationFS annotation : CasUtil.select(jcas.getCas(), type)) {
+		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
 			// System.out.println("entro al forr de las anotation");
 			// System.out.println(annotation.getCoveredText());
-			for (Token token : JCasUtil.selectCovered(jcas, Token.class, annotation)) {
+			for (Token token : JCasUtil.selectCovered(cas.getJCas(), Token.class, annotation)) {
 				System.out.println("entro al forr de los token");
 				System.out.println("Entre: " + token.getLemma());
 				String aux2 = token.getLemma();

@@ -1,3 +1,0 @@
-classpath*:uima/ruta/annotators/*.xml
-classpath*:org/cleartk/**/*.xml
-classpath*:org/uimafit/type/Token.xml

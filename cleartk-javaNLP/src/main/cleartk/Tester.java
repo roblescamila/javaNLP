@@ -53,20 +53,20 @@ public class Tester extends CleartkAnnotator<String> {
 
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 
-//		System.out.println("boooooooooooooooooooooooom");
+		// System.out.println("boooooooooooooooooooooooom");
 		CAS cas = jCas.getCas();
 		org.apache.uima.cas.Type type = cas.getTypeSystem().getType("uima.ruta.annotators.SingleLineComment");
-//		System.out.println("boooooooooooooooooooooooom1");
+		// System.out.println("boooooooooooooooooooooooom1");
 		Collection<AnnotationFS> a = CasUtil.select(cas, type);
-//		System.out.println("boooooooooooooooooooooooom111");
+		// System.out.println("boooooooooooooooooooooooom111");
 		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
-			{
-//				System.out.println("boooooooooooooooooooooooom2");
-//				System.out.println("entro al forr de las anotation");
-//				System.out.println(annotation.getCoveredText());
+			
+				// System.out.println("boooooooooooooooooooooooom2");
+				// System.out.println("entro al forr de las anotation");
+				// System.out.println(annotation.getCoveredText());
 				for (Token token : JCasUtil.selectCovered(jCas, Token.class, annotation)) {
 
-//					System.out.println("entro al forr de los token");
+					// System.out.println("entro al forr de los token");
 
 					String aux2 = token.getLemma();
 					String[] r2 = aux2.split("[.]");
@@ -80,23 +80,23 @@ public class Tester extends CleartkAnnotator<String> {
 							System.out.println(r3[0]);
 					}
 				}
-			}
+			
 
-//			System.out.println(jCas.getDocumentText());
-//			System.out.println("IMPRIMO TODOS LOS TOKEN");
-//			for (Token token : JCasUtil.select(jCas, Token.class)) {
-//				System.out.print(token.getCoveredText() + " ");
-//			}
-//			System.out.println(" ");
-//			System.out.println("IMPRIMO TODOS LOS STEM");
-//			for (Token token : JCasUtil.select(jCas, Token.class)) {
-//				System.out.print(token.getStem() + " ");
-//			}
-//			System.out.println(" ");
-//			System.out.println("IMPRIMO TODOS LOS LEMMA");
-//			for (Token token : JCasUtil.select(jCas, Token.class)) {
-//				System.out.print(token.getLemma() + " ");
-//			}
+			// System.out.println(jCas.getDocumentText());
+			// System.out.println("IMPRIMO TODOS LOS TOKEN");
+			// for (Token token : JCasUtil.select(jCas, Token.class)) {
+			// System.out.print(token.getCoveredText() + " ");
+			// }
+			// System.out.println(" ");
+			// System.out.println("IMPRIMO TODOS LOS STEM");
+			// for (Token token : JCasUtil.select(jCas, Token.class)) {
+			// System.out.print(token.getStem() + " ");
+			// }
+			// System.out.println(" ");
+			// System.out.println("IMPRIMO TODOS LOS LEMMA");
+			// for (Token token : JCasUtil.select(jCas, Token.class)) {
+			// System.out.print(token.getLemma() + " ");
+			// }
 
 		}
 	}
