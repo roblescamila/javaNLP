@@ -9,6 +9,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
+import org.apache.uima.fit.util.CasIOUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
@@ -35,24 +36,30 @@ public class WordCloudCreator {
 	static final int IMPORT = 5;
 
 	FileInputStream fisTargetFile;
-	String targetFileStr;
 	CAS cas;
+	File file; 
 	
 	public WordCloudCreator(String f) throws IOException, InvalidXMLException, ResourceInitializationException, AnalysisEngineProcessException, CASException {
-		fisTargetFile = new FileInputStream(new File(f));
-		targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
+		file = new File(f);
+		fisTargetFile = new FileInputStream(file);
 		createCas();
-		
 	}
 	
 	private void createCas() throws InvalidXMLException, ResourceInitializationException, IOException, AnalysisEngineProcessException, CASException {
-		String inputEngine = "main.descriptors.MainEngine";
-		AnalysisEngine engine = AnalysisEngineFactory.createEngine(inputEngine);
+		AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
 		cas = engine.newCAS();
+		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
 		cas.setDocumentText(targetFileStr);
 		engine.process(cas);
-//		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr, cas, engine);
-//		nlp.executeClearTK();
+		String out = "output" + "/" + file.getName();
+		CasIOUtil.writeXmi(cas, new File(out + ".xmi"));
+		ClearTKProcessor nlp = new ClearTKProcessor("output");
+		nlp.executeClearTK();
+	}
+	
+	public void setCas() throws IOException
+	{
+		CasIOUtil.readCas(cas, new File("output" + "/" + file.getName()+".xmi.xmi"));
 	}
 
 	public Cloud CreateCloud(boolean arr[]) throws CASException{

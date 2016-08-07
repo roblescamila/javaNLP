@@ -160,7 +160,7 @@ public class UserInterface extends JFrame {
 		for (int i = 0; i < nodes.length; i++) {
 			sb.append(nodes[i].toString()).append(File.separatorChar);
 		}
-		return sb.toString();
+		return sb.toString().substring(0, sb.toString().length() - 1);
 	}
 
 	public boolean isFilteredWord(String word) {
@@ -320,12 +320,15 @@ public class UserInterface extends JFrame {
 				// "c:/Users/Cami/Documents/Faca/Materias/4to/Diseño/javanlp/cleartk-javaNLP/input/test.java";
 				// File file = new File(input);
 				// for (File file : directory) {
-
-				String f = createFilePath(tree.getSelectionPath());
-				
-				// for (String f : files) {
 				try {
-					wcc = new WordCloudCreator(f);
+					TreePath[] tpVector = tree.getSelectionPaths();
+					String f;
+//					tree.getSelectionPath();
+					for (int i = 0; i < tpVector.length; i++) {
+						TreePath aux = tpVector[i];
+						f = createFilePath(aux);
+						wcc = new WordCloudCreator(f);
+					}
 				} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 					e.printStackTrace();
 				}
@@ -333,7 +336,6 @@ public class UserInterface extends JFrame {
 				catch (AnalysisEngineProcessException e) {
 					e.printStackTrace();
 				} catch (CASException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -349,8 +351,11 @@ public class UserInterface extends JFrame {
 						packageRadioButton.isSelected(), importsRadioButton.isSelected() };
 
 				try {
+					wcc.setCas();
 					cloud = wcc.CreateCloud(selected);
 				} catch (CASException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
 					e.printStackTrace();
 				}
 
@@ -361,7 +366,13 @@ public class UserInterface extends JFrame {
 					if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner.getModel()).getNumber())) {
 						JLabel label = new JLabel(tag.getName());
 						label.setOpaque(false);
-						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo	elegido	por el	usuario															// dinamico,
+						label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 20)); // hacerlo
+																									// elegido
+																									// por
+																									// el
+																									// usuario
+																									// //
+																									// dinamico,
 						pnlWordCloud.add(label);
 					}
 				}
