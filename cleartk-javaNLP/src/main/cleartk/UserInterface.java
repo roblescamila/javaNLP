@@ -44,16 +44,19 @@ import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreePath;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
+import org.xml.sax.SAXException;
 
 public class UserInterface extends JFrame {
 
 	private static final String OUTPUT = "output";
+	private static final String INPUT = "input";
 
 	private JPanel contentPane;
 	private static Vector<String> comments;
@@ -292,7 +295,7 @@ public class UserInterface extends JFrame {
 
 				SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
 					@Override
-					protected Void doInBackground() {
+					protected Void doInBackground() throws UIMAException, SAXException {
 						try {
 							frame.setVisible(true);
 							int[] aux;
@@ -310,8 +313,7 @@ public class UserInterface extends JFrame {
 							String f;
 							for (int i = 0; i < tpVector.length; i++) {
 								f = createFilePath(tpVector[i]);
-								wcc = new WordCloudCreator(f, OUTPUT);
-								wcc.setCas();
+								wcc = new WordCloudCreator(f);
 								wcc.updateCloud(selected, cloud);
 							}
 
@@ -373,13 +375,14 @@ public class UserInterface extends JFrame {
 		});
 
 		/**
-		 * Clean output directory before closing
+		 * Clean output/input directories before closing
 		 */
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent arg0) {
 				try {
 					FileUtils.cleanDirectory(new File(OUTPUT));
+					FileUtils.cleanDirectory(new File(INPUT));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

@@ -6,6 +6,9 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.jcas.JCas;
+import org.cleartk.classifier.feature.extractor.CleartkExtractor;
+import org.cleartk.classifier.feature.extractor.CleartkExtractor.Count;
+import org.cleartk.classifier.feature.extractor.CleartkExtractor.Covered;
 import org.cleartk.classifier.feature.extractor.simple.CoveredTextExtractor;
 import org.cleartk.token.type.Token;
 import org.mcavallo.opencloud.Cloud;
@@ -16,27 +19,26 @@ public class UimaRutaAnnotator {
 
 	// boolean selected;
 	String classPath;
-	CAS cas;
+	JCas jcas;
 	Cloud cloud;
 
 	// path : "uima.ruta.annotators.MethodName"
-	public UimaRutaAnnotator(String path, CAS inputCas, Cloud c) {
+	public UimaRutaAnnotator(String path, JCas inputCas, Cloud c) {
 		classPath = path;
-		cas = inputCas;
+		jcas = inputCas;
 		cloud = c;
 	}
 
 	public void addToCloud() throws CASException {
-		Type type = cas.getTypeSystem().getType(classPath);
-		JCas a = cas.getJCas();
-		System.out.println("entro al add cloud");
-		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
-			System.out.println("entro al forr de las anotation");
-			System.out.println(annotation.getCoveredText());
-			for (Token token : JCasUtil.select(annotation.getCAS().getJCas(), Token.class)) {
+		Type type = jcas.getTypeSystem().getType(classPath);
+		System.out.println("empieza jcas");
+		for (AnnotationFS annotation : CasUtil.select(jcas.getCas(), type)) {
+			// System.out.println("entro al forr de las anotation");
+			// System.out.println(annotation.getCoveredText());
+			for (Token token : JCasUtil.selectCovered(jcas, Token.class, annotation)) {
 				System.out.println("entro al forr de los token");
-				System.out.println("ETNREERTE: " + token.getFeatureValue((Feature) new CoveredTextExtractor()));
-				String aux2 = token.getFeatureValue((Feature) new CoveredTextExtractor()).toString();
+				System.out.println("Entre: " + token.getLemma());
+				String aux2 = token.getLemma();
 				String[] r2 = aux2.split("[.]");
 				for (String s : r2) {
 					String[] r3 = s.split("(?=\\p{Upper})");
@@ -48,7 +50,8 @@ public class UimaRutaAnnotator {
 						cloud.addTag(r3[0]);
 				}
 			}
-//			cloud.addTag(annotation.getCoveredText());
-		}  cloud.addTag("b");
+			System.out.println("termina jcas");
+			cloud.addTag(annotation.getCoveredText());
+		} // cloud.addTag("b");
 	}
 }
