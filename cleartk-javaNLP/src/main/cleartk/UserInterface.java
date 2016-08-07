@@ -1,6 +1,8 @@
 package main.cleartk;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -217,32 +219,17 @@ public class UserInterface extends JFrame {
 		 */
 		final JDialog dialog = new JDialog(frame, true); // modal
 		dialog.setUndecorated(true);
+		dialog.setAlwaysOnTop(true);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		dialog.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
 		JProgressBar bar = new JProgressBar();
 		bar.setIndeterminate(true);
 		bar.setStringPainted(true);
-		bar.setString("Please wait");
+		bar.setString("Creating word cloud");
 		dialog.add(bar);
 		dialog.pack();
-
-		// SwingWorker<Void,Void> worker = new SwingWorker<Void,Void>()
-		// {
-		// @Override
-		// protected Void doInBackground()
-		// {
-		// // do your intensive stuff here
-		// return null;
-		// }
-		//
-		// @Override
-		// protected void done()
-		// {
-		// dialog.dispose();
-		// }
-		// };
-		// worker.execute();
-		// dialog.setVisible(true); // will block but with a responsive GUI
 		/**
-		 * Termina Progrss dialog
+		 * Termina Progress dialog
 		 **/
 
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -313,6 +300,7 @@ public class UserInterface extends JFrame {
 					@Override
 					protected Void doInBackground() {
 						try {
+							frame.setVisible(true);
 							int[] aux;
 							aux = wordList.getSelectedIndices();
 							for (int a : aux) {
@@ -358,6 +346,7 @@ public class UserInterface extends JFrame {
 					@Override
 					protected void done() {
 						dialog.dispose();
+						// frame.setVisible(true);
 					}
 				};
 				worker.execute();
