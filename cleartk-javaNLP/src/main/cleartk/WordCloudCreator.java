@@ -28,11 +28,9 @@ public class WordCloudCreator {
 	CAS cas;
 	File file; 
 	String outputPath;
-	// Cloud c;
 
 	public WordCloudCreator(String f, String output) throws IOException, InvalidXMLException,
 			ResourceInitializationException, AnalysisEngineProcessException, CASException {
-//		c = new Cloud();
 		outputPath = output;
 		file = new File(f);
 		fisTargetFile = new FileInputStream(file);
@@ -47,13 +45,13 @@ public class WordCloudCreator {
 		engine.process(cas);
 		String out = outputPath.concat("/" + file.getName());
 		CasIOUtil.writeXmi(cas, new File(out + ".xmi"));
-		// ClearTKProcessor nlp = new ClearTKProcessor(outputPath);
-//		nlp.executeClearTK();
+		ClearTKProcessor nlp = new ClearTKProcessor(outputPath);
+		nlp.executeClearTK();
 	}
 	
 	public void setCas() throws IOException
 	{
-		CasIOUtil.readCas(cas, new File(outputPath.concat("/" + file.getName() + ".xmi.xmi")));
+		CasIOUtil.readCas(cas, new File(outputPath.concat("/" + file.getName() + ".xmi")));
 	}
 
 	public Cloud updateCloud(boolean arr[], Cloud c) throws CASException {

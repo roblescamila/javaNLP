@@ -27,9 +27,9 @@
     <import location="timeml/type/Time.xml"/>
     <import location="timeml/type/DocumentCreationTime.xml"/>
     
-    <import location="token/type/Token.xml"/>
-    <import location="token/type/Sentence.xml"/>
-    <import location="token/type/Subtoken.xml"/>
+    <import name="token.type.Token"/>
+    <import name="token.type.Sentence"/>
+    <import name="token.type.Subtoken"/>
     
     <import location="util/type/Parenthetical.xml"/>
   </imports>

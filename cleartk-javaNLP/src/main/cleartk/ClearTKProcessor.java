@@ -2,25 +2,22 @@ package main.cleartk;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+
 import org.apache.uima.UIMAException;
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.cas.CAS;
 import org.apache.uima.collection.CollectionReader;
-import org.apache.uima.collection.CollectionReaderDescription;
-import org.apache.uima.resource.*;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
-import org.apache.uima.util.*;
-import org.cleartk.syntax.opennlp.*;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.InvalidXMLException;
+import org.cleartk.syntax.opennlp.PosTaggerAnnotator;
+import org.cleartk.syntax.opennlp.SentenceAnnotator;
 import org.cleartk.token.lemma.choi.LemmaAnnotator;
 import org.cleartk.token.stem.snowball.DefaultSnowballStemmer;
 import org.cleartk.token.tokenizer.TokenAnnotator;
-import org.cleartk.token.type.Sentence;
 import org.cleartk.util.ViewURIFileNamer;
 import org.cleartk.util.ae.UriToDocumentTextAnnotator;
 import org.cleartk.util.cr.UriCollectionReader;
 import org.uimafit.component.xwriter.XWriter;
-import org.uimafit.factory.*;
+import org.uimafit.factory.AggregateBuilder;
+import org.uimafit.factory.AnalysisEngineFactory;
 import org.uimafit.pipeline.SimplePipeline;
 
 public class ClearTKProcessor {
@@ -33,7 +30,8 @@ public class ClearTKProcessor {
 
 	public void executeClearTK() {
 		try {
-			CollectionReader colectionReader = UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory);
+			CollectionReader colectionReader = UriCollectionReader
+					.getCollectionReaderFromDirectory(filesDirectory.getParentFile());
 			AggregateBuilder builder = createBuilder();
 			System.out.println("EMPIEZA");
 			SimplePipeline.runPipeline(colectionReader, builder.createAggregateDescription());

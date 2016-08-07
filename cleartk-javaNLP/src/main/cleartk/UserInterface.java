@@ -214,9 +214,6 @@ public class UserInterface extends JFrame {
 
 		cloud = new Cloud();
 
-		/**
-		 * Progress dialog
-		 */
 		final JDialog dialog = new JDialog(frame, true); // modal
 		dialog.setUndecorated(true);
 		dialog.setAlwaysOnTop(true);
@@ -228,9 +225,6 @@ public class UserInterface extends JFrame {
 		bar.setString("Creating word cloud");
 		dialog.add(bar);
 		dialog.pack();
-		/**
-		 * Termina Progress dialog
-		 **/
 
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap().addGroup(gl_contentPane
@@ -314,10 +308,10 @@ public class UserInterface extends JFrame {
 
 							TreePath[] tpVector = tree.getSelectionPaths();
 							String f;
-
 							for (int i = 0; i < tpVector.length; i++) {
 								f = createFilePath(tpVector[i]);
 								wcc = new WordCloudCreator(f, OUTPUT);
+								wcc.setCas();
 								wcc.updateCloud(selected, cloud);
 							}
 
@@ -346,7 +340,6 @@ public class UserInterface extends JFrame {
 					@Override
 					protected void done() {
 						dialog.dispose();
-						// frame.setVisible(true);
 					}
 				};
 				worker.execute();
