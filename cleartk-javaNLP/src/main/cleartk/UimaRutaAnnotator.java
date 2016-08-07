@@ -21,7 +21,6 @@ public class UimaRutaAnnotator {
 
 	// path : "uima.ruta.annotators.MethodName"
 	public UimaRutaAnnotator(String path, CAS inputCas, Cloud c) {
-		// selected = false;
 		classPath = path;
 		cas = inputCas;
 		cloud = c;
@@ -30,8 +29,12 @@ public class UimaRutaAnnotator {
 	public void addToCloud() throws CASException {
 		Type type = cas.getTypeSystem().getType(classPath);
 		JCas a = cas.getJCas();
+		System.out.println("entro al add cloud");
 		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
-			for (AnnotationFS token : JCasUtil.select(a, Token.class)) {
+			System.out.println("entro al forr de las anotation");
+			System.out.println(annotation.getCoveredText());
+			for (Token token : JCasUtil.select(annotation.getCAS().getJCas(), Token.class)) {
+				System.out.println("entro al forr de los token");
 				System.out.println("ETNREERTE: " + token.getFeatureValue((Feature) new CoveredTextExtractor()));
 				String aux2 = token.getFeatureValue((Feature) new CoveredTextExtractor()).toString();
 				String[] r2 = aux2.split("[.]");
@@ -45,7 +48,7 @@ public class UimaRutaAnnotator {
 						cloud.addTag(r3[0]);
 				}
 			}
-			cloud.addTag(annotation.getCoveredText());
-		} // cloud.addTag("b");
+//			cloud.addTag(annotation.getCoveredText());
+		}  cloud.addTag("b");
 	}
 }

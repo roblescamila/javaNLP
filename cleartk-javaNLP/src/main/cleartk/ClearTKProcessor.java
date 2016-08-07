@@ -30,11 +30,10 @@ public class ClearTKProcessor {
 
 	public void executeClearTK() {
 		try {
-			CollectionReader colectionReader = UriCollectionReader
-					.getCollectionReaderFromDirectory(filesDirectory.getParentFile());
+			CollectionReader collectionReader = UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory);
 			AggregateBuilder builder = createBuilder();
 			System.out.println("EMPIEZA");
-			SimplePipeline.runPipeline(colectionReader, builder.createAggregateDescription());
+			SimplePipeline.runPipeline(collectionReader, builder.createAggregateDescription());
 			System.out.println("FIN");
 		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
 			e.printStackTrace();
@@ -53,6 +52,7 @@ public class ClearTKProcessor {
 		builder.add(PosTaggerAnnotator.getDescription());
 		builder.add(LemmaAnnotator.getDescription());
 		builder.add(DefaultSnowballStemmer.getDescription("English"));
+		//builder.add(AnalysisEngineFactory.createPrimitiveDescription(ASd.class));
 		return builder;
 	}
 }
