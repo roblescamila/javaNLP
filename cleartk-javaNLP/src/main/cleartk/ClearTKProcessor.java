@@ -12,6 +12,7 @@ import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.TypeSystem;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
+import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.*;
 import org.apache.uima.resource.metadata.TypePriorities;
@@ -26,7 +27,9 @@ import org.cleartk.util.ViewURIFileNamer;
 import org.cleartk.util.ae.UriToDocumentTextAnnotator;
 import org.cleartk.util.cr.UriCollectionReader;
 import org.uimafit.component.xwriter.XWriter;
-import org.uimafit.factory.*;
+import org.uimafit.factory.AggregateBuilder;
+import org.uimafit.factory.JCasFactory;
+import org.uimafit.factory.JCasFactory;
 import org.uimafit.pipeline.SimplePipeline;
 
 public class ClearTKProcessor {
@@ -38,29 +41,15 @@ public class ClearTKProcessor {
 		// filesDirectory = input;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UIMAException, IOException {
 		ClearTKProcessor a = new ClearTKProcessor();
 		a.executeClearTK();
 	}
 
-	public void executeClearTK() {
-		try {
-			// CollectionReaderDescription crDescription =
-			// CollectionReaderFactory.createCollectionReader(
-			// XMICollectionReader.class, typeSystemDescription, tp, "input",
-			// filesDirectory);
-
-			// CollectionReader colectionReader =
-			// UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory);
-			System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
-			// String[] typeSystemDescription2 =
-			// TypeSystemDescriptionFactory.scanTypeDescriptors();
-			// for(String a1 :typeSystemDescription)
-			// {
-			// System.out.println(a1);
-			// }
-			// System.out.println(typeSystemDescription2.length);
-			String[] a = { "uima.ruta.annotators.MainTypeSystem", "org.cleartk.token.type.Token"
+	public void executeClearTK() throws UIMAException, IOException {
+			
+			String[] a = { "uima.ruta.annotators.MainTypeSystem", 
+					"org.cleartk.token.type.Token"
 					// ,"org.apache.uima.ruta.type.AnyLine"
 					// ,"org.apache.uima.ruta.type.Line"
 					// ,"org.apache.uima.ruta.type.Paragraph"
@@ -162,28 +151,36 @@ public class ClearTKProcessor {
 
 			// a[0] = "uima.ruta.annotators.MainTypeSystem";
 			// a[1] = "org.cleartk.token.type.Token";
-
-			JCas jcas = JCasFactory.createJCas(a);
-			TypeSystem a2 = jcas.getTypeSystem();
-			Iterator<org.apache.uima.cas.Type> types2 = a2.getTypeIterator();
-			Vector<org.apache.uima.cas.Type> tipos2 = new Vector<org.apache.uima.cas.Type>();
-			while (types2.hasNext()) {
-				System.out.println(types2.next().getName());
-			}
-
-			File filesDirectory = new File("input");
-			CollectionReader colectionReader = UriCollectionReader.getCollectionReaderFromDirectory(filesDirectory);
-
-			AggregateBuilder builder = createBuilder();
-			System.out.println("EMPIEZA");
-			SimplePipeline.runPipeline(colectionReader, builder.createAggregateDescription());
+System.out.println("..............");
+			JCas jCas = JCasFactory.createJCas(a);
+	
+	  
+			AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
+			//JCas	jCas = JCasFactory.createJCas();
+			  jCas.setDocumentText("//car cars ");
+			engine.process(jCas);System.out.println("..............");
+			   engine = AnalysisEngineFactory.createEngine(SentenceAnnotator.getDescription());
+			  
+			engine.process(jCas);
+			System.out.println("..............");
+			engine = AnalysisEngineFactory.createEngine(TokenAnnotator.getDescription());
+			engine.process(jCas);
+			System.out.println("..............");
+			engine = AnalysisEngineFactory.createEngine(PosTaggerAnnotator.getDescription());
+			engine.process(jCas)
+			;System.out.println("..............");
+			engine = AnalysisEngineFactory.createEngine(LemmaAnnotator.getDescription());
+			engine.process(jCas);
+			System.out.println("..............");
+			engine = AnalysisEngineFactory.createEngine(DefaultSnowballStemmer.getDescription("English"));
+			engine.process(jCas);
+			System.out.println("..............");
+		
+			
+//			SimplePipeline.runPipeline(colectionReader, builder.createAggregateDescription());
 			System.out.println("FIN");
-		} catch (InvalidXMLException | ResourceInitializationException | IOException e) {
-			e.printStackTrace();
-		} catch (UIMAException e) {
-			e.printStackTrace();
-		}
-	}
+		
+}
 
 	private AggregateBuilder createBuilder() throws UIMAException, IOException {
 		AggregateBuilder builder = new AggregateBuilder();
