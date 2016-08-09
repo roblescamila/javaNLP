@@ -51,21 +51,10 @@ public class ClearTKProcessor {
 		a.executeClearTK();
 	}
 public String[] getTypeSystemDescriptor()
+
 {
 	String[] a = { "uima.ruta.annotators.MainTypeSystem", 
 			"org.cleartk.token.type.Token"
-			// ,"org.apache.uima.ruta.type.AnyLine"
-			// ,"org.apache.uima.ruta.type.Line"
-			// ,"org.apache.uima.ruta.type.Paragraph"
-			// ,"org.apache.uima.ruta.type.WSLine"
-			// ,"org.apache.uima.ruta.type.html.TAG"
-			// ,"org.apache.uima.ruta.type.html.TBODY"
-			// ,"org.apache.uima.ruta.type.html.TD"
-			// ,"org.apache.uima.ruta.type.html.TH"
-			// ,"org.apache.uima.ruta.type.html.TITLE"
-			// ,"org.apache.uima.ruta.type.html.TR"
-			// ,"org.apache.uima.ruta.type.html.U"
-			// ,"org.apache.uima.ruta.type.html.UL"
 			, "org.cleartk.examples.type.UsenetDocument", "org.cleartk.ne.type.Ace2005Document",
 			"org.cleartk.ne.type.Chunk", "org.cleartk.ne.type.NamedEntity",
 			"org.cleartk.ne.type.NamedEntityMention", "org.cleartk.srl.type.Argument",
@@ -78,116 +67,39 @@ public String[] getTypeSystemDescriptor()
 			"org.cleartk.timeml.type.Event", "org.cleartk.timeml.type.TemporalLink",
 			"org.cleartk.timeml.type.Text", "org.cleartk.timeml.type.Time", "org.cleartk.token.type.Sentence",
 			"org.cleartk.token.type.Subtoken", "org.cleartk.token.type.Token"
-			// ,"org.cleartk.type.ne.NamedEntityClass"
-			// ,"org.cleartk.type.test.AuthorInfo"
-			// ,"org.cleartk.type.test.Chunk"
-			// ,"org.cleartk.type.test.DependencyRelation"
-			// ,"org.cleartk.type.test.Header"
-			// ,"org.cleartk.type.test.Language"
-			// ,"org.cleartk.type.test.Lemma"
-			// ,"org.cleartk.type.test.NamedEntityMention"
-			// ,"org.cleartk.type.test.Orthography"
-			// ,"org.cleartk.type.test.POSTag"
-			// ,"org.cleartk.type.test.Sentence"
-			// ,"org.cleartk.type.test.Token"
 			, "org.cleartk.util.type.Parenthetical"
-
-			// ,"uima.ruta.annotators.Constructor.ConstructorName"
-
-			// ,"uima.ruta.annotators.MethodHeader.MethodType"
-
-			// ,"uima.ruta.annotators.MultiLineComment.EndComment"
-			// ,"uima.ruta.annotators.MultiLineComment.IniComment"
-
-			// ,"uima.ruta.annotators.Parameters.EndParameters"
-			// ,"uima.ruta.annotators.Parameters.InitParameters"
-
-			// ,"uima.ruta.annotators.SingleLineComment.InitComment"
-
-			// ,"org.apache.uima.ruta.type.html.A"
-			// ,"org.apache.uima.ruta.type.html.B"
-			// ,"org.apache.uima.ruta.type.html.BIG"
-			// ,"org.apache.uima.ruta.type.html.BODY"
-			// ,"org.apache.uima.ruta.type.html.BR"
-			// ,"org.apache.uima.ruta.type.html.COMMENT"
-			// ,"org.apache.uima.ruta.type.html.DIV"
-			// ,"org.apache.uima.ruta.type.html.EM"
-			// ,"org.apache.uima.ruta.type.html.FONT"
-			// ,"org.apache.uima.ruta.type.html.FORM"
-			// ,"org.apache.uima.ruta.type.html.H1"
-			// ,"org.apache.uima.ruta.type.html.H2"
-			// ,"org.apache.uima.ruta.type.html.H3"
-			// ,"org.apache.uima.ruta.type.html.H4"
-			// ,"org.apache.uima.ruta.type.html.H5"
-			// ,"org.apache.uima.ruta.type.html.H6"
-			// ,"org.apache.uima.ruta.type.html.HEAD"
-			// ,"org.apache.uima.ruta.type.html.HTML"
-			// ,"org.apache.uima.ruta.type.html.I"
-			// ,"org.apache.uima.ruta.type.html.IMG"
-			// ,"org.apache.uima.ruta.type.html.INPUT"
-			// ,"org.apache.uima.ruta.type.html.LI"
-			// ,"org.apache.uima.ruta.type.html.LINK"
-			// ,"org.apache.uima.ruta.type.html.META"
-			// ,"org.apache.uima.ruta.type.html.OL"
-			// ,"org.apache.uima.ruta.type.html.P"
-			// ,"org.apache.uima.ruta.type.html.REMARK"
-			// ,"org.apache.uima.ruta.type.html.SCRIPT"
-			// ,"org.apache.uima.ruta.type.html.SMALL"
-			// ,"org.apache.uima.ruta.type.html.SPAN"
-			// ,"org.apache.uima.ruta.type.html.STYLE"
-			// ,"org.apache.uima.ruta.type.html.TABLE"
 			, "org.cleartk.ne.type.GazetteerNamedEntityMention",
 			"org.cleartk.syntax.constituent.type.TerminalTreebankNode",
 			"org.cleartk.syntax.constituent.type.TopTreebankNode",
 			"org.cleartk.timeml.type.DocumentCreationTime"
 
-			// , "org.cleartk.ne.type.NamedEntityMention[]"
-			// , "org.cleartk.srl.type.Argument[]"
-
-			// ,"uima.tcas.Annotation[]"
-			// ,"org.cleartk.syntax.constituent.type.TreebankNode[]"
-			// ,"org.cleartk.syntax.dependency.type.DependencyRelation[]"
-			// ,"org.cleartk.type.test.AuthorInfo[]"
-			// ,"org.cleartk.type.test.POSTag[]"
-			// ,"org.cleartk.type.test.DependencyRelation[]"
-			// ,"org.cleartk.syntax.constituent.type.TerminalTreebankNode[]"
 	};
 return a;
 }
-	public JCas executeClearTK() throws UIMAException, IOException {
 
-String[] typeSystemDescriptor = this.getTypeSystemDescriptor();
-			JCas jCas = JCasFactory.createJCas(typeSystemDescriptor);
+public Vector<AnalysisEngine> getPipeline() throws InvalidXMLException, ResourceInitializationException, IOException{
+	Vector<AnalysisEngine> aux = new Vector<AnalysisEngine>();
+	aux.add(AnalysisEngineFactory.createEngine("main.descriptors.MainEngine"));
+	 aux.add(AnalysisEngineFactory.createEngine(SentenceAnnotator.getDescription()));
+	 aux.add(AnalysisEngineFactory.createEngine(TokenAnnotator.getDescription()));
+	 aux.add( AnalysisEngineFactory.createEngine(PosTaggerAnnotator.getDescription()));
+	 aux.add(AnalysisEngineFactory.createEngine(LemmaAnnotator.getDescription()));
+	 aux.add(AnalysisEngineFactory.createEngine(DefaultSnowballStemmer.getDescription("English")));
+	 
+	return aux;
 	
-	  
-			AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
-		
-		
-			  
-			jCas.setDocumentText("//MatiPrado \n //mati "); //hay que meter cada documento ver como conviene
-			engine.process(jCas);
-			
-			
-			   engine = AnalysisEngineFactory.createEngine(SentenceAnnotator.getDescription());
-			  
-			engine.process(jCas);
-		
-			engine = AnalysisEngineFactory.createEngine(TokenAnnotator.getDescription());
-			engine.process(jCas);
-		
-			engine = AnalysisEngineFactory.createEngine(PosTaggerAnnotator.getDescription());
-			engine.process(jCas);
-	
-			engine = AnalysisEngineFactory.createEngine(LemmaAnnotator.getDescription());
-			engine.process(jCas);
-		
-			engine = AnalysisEngineFactory.createEngine(DefaultSnowballStemmer.getDescription("English"));
-			engine.process(jCas);
-		
-			engine = AnalysisEngineFactory.createEngine(Tester.getDescription());
-			engine.process(jCas);
-			
-	
+}
+
+public JCas executeClearTK() throws UIMAException, IOException {
+
+	String[] typeSystemDescriptor = this.getTypeSystemDescriptor();
+	JCas jCas = JCasFactory.createJCas(typeSystemDescriptor);
+	jCas.setDocumentText("//MatiPrado \n //mati ");
+	 Vector<AnalysisEngine> engines =  this.getPipeline();
+	 for (AnalysisEngine engine : engines)
+	 {
+		engine.process(jCas); 
+	 }
 
 			System.out.println("FIN");
 			return jCas;
