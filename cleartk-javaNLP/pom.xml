@@ -53,4 +53,13 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>cleartk-javaNLP</id>
+			<name>Repository</name>
+			<url>scp://repo/maven2</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 </project>

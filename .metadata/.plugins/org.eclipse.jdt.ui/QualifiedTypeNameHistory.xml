@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
 <fullyQualifiedTypeName name="org.apache.xerces.util.URI"/>
 <fullyQualifiedTypeName name="java.net.URI"/>
-<fullyQualifiedTypeName name="org.apache.uima.jcas.JCas"/>
 <fullyQualifiedTypeName name="org.apache.uima.fit.factory.JCasFactory"/>
 <fullyQualifiedTypeName name="org.apache.uima.util.CasCreationUtils"/>
 <fullyQualifiedTypeName name="org.apache.uima.fit.factory.TypeSystemDescriptionFactory"/>
@@ -20,4 +19,15 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.apache.uima.cas.Type"/>
+<fullyQualifiedTypeName name="org.apache.uima.jcas.JCas"/>
+<fullyQualifiedTypeName name="org.uimafit.factory.JCasFactory"/>
+<fullyQualifiedTypeName name="org.apache.uima.fit.factory.AnalysisEngineFactory"/>
+<fullyQualifiedTypeName name="org.uimafit.factory.AggregateBuilder"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="org.apache.uima.cas.text.AnnotationFS"/>
+<fullyQualifiedTypeName name="org.apache.uima.fit.util.CasUtil"/>
+<fullyQualifiedTypeName name="org.apache.uima.fit.util.JCasUtil"/>
+<fullyQualifiedTypeName name="org.cleartk.token.type.Token"/>
+<fullyQualifiedTypeName name="org.uimafit.util.JCasUtil"/>
+<fullyQualifiedTypeName name="org.apache.uima.ruta.engine.RutaEngine"/>
 </qualifiedTypeNameHistroy>
