@@ -71,34 +71,34 @@ public class WordCloudCreator {
 	public Cloud updateCloud(boolean arr[], Cloud c) throws CASException {
 
 		if (arr[COMMENT]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", jcas.getCas(), c);
-			UimaRutaAnnotator b = new UimaRutaAnnotator("uima.ruta.annotators.MultiLineComment", jcas.getCas(), c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", jcas, c);
+			UimaRutaAnnotator b = new UimaRutaAnnotator("uima.ruta.annotators.MultiLineComment", jcas, c);
 			a.addToCloud();
 			b.addToCloud();
 		}
 
 		if (arr[CLASSNAME]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.ClassName", jcas.getCas(), c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.ClassName", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[METHODNAME]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.MethodName", jcas.getCas(), c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.MethodName", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[VARNAME]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.VarName", jcas.getCas(), c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.VarName", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[PACKAGE]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Package", jcas.getCas(), c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Package", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[IMPORT]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Import", jcas.getCas(), c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Import", jcas, c);
 			a.addToCloud();
 		}
 

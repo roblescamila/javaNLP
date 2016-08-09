@@ -5,6 +5,8 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.text.AnnotationFS;
+import org.apache.uima.fit.util.CasUtil;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.cleartk.classifier.feature.extractor.CleartkExtractor;
 import org.cleartk.classifier.feature.extractor.CleartkExtractor.Count;
@@ -12,30 +14,27 @@ import org.cleartk.classifier.feature.extractor.CleartkExtractor.Covered;
 import org.cleartk.classifier.feature.extractor.simple.CoveredTextExtractor;
 import org.cleartk.token.type.Token;
 import org.mcavallo.opencloud.Cloud;
-import org.uimafit.util.CasUtil;
-import org.uimafit.util.JCasUtil;
+
 
 public class UimaRutaAnnotator {
 
 	// boolean selected;
 	String classPath;
-	CAS cas;
+	JCas jcas;
 	Cloud cloud;
 
 	// path : "uima.ruta.annotators.MethodName"
-	public UimaRutaAnnotator(String path, CAS cas, Cloud c) {
+	public UimaRutaAnnotator(String path, JCas cas, Cloud c) {
 		classPath = path;
-		cas = cas;
+		jcas = cas;
 		cloud = c;
 	}
 
 	public void addToCloud() throws CASException {
-		Type type = cas.getTypeSystem().getType(classPath);
-		System.out.println("empieza jcas");
-		for (AnnotationFS annotation : CasUtil.select(cas, type)) {
-			// System.out.println("entro al forr de las anotation");
-			// System.out.println(annotation.getCoveredText());
-			for (Token token : JCasUtil.selectCovered(cas.getJCas(), Token.class, annotation)) {
+		Type type = jcas.getTypeSystem().getType(classPath);
+
+		for (AnnotationFS annotation : CasUtil.select(jcas.getCas(), type)) {
+			for (Token token : JCasUtil.selectCovered(jcas, Token.class, annotation)) {
 				System.out.println("entro al forr de los token");
 				System.out.println("Entre: " + token.getLemma());
 				String aux2 = token.getLemma();
@@ -50,8 +49,8 @@ public class UimaRutaAnnotator {
 						cloud.addTag(r3[0]);
 				}
 			}
-			System.out.println("termina jcas");
-			cloud.addTag(annotation.getCoveredText());
+			//System.out.println("termina jcas");
+			//cloud.addTag(annotation.getCoveredText());
 		} // cloud.addTag("b");
 	}
 }
