@@ -100,28 +100,8 @@ public JCas executeClearTK() throws UIMAException, IOException {
 	 {
 		engine.process(jCas); 
 	 }
-
-			System.out.println("FIN");
 			return jCas;
 				}	
 
-	
-	
-	
-	
 
-	private AggregateBuilder createBuilder() throws UIMAException, IOException {
-		AggregateBuilder builder = new AggregateBuilder();
-		builder.add(UriToDocumentTextAnnotator.getDescription());
-		builder.add(AnalysisEngineFactory.createAnalysisEngineDescription("main.descriptors.MainEngine"));
-		builder.add(SentenceAnnotator.getDescription());
-		builder.add(TokenAnnotator.getDescription());
-		builder.add(AnalysisEngineFactory.createPrimitiveDescription(XWriter.class, XWriter.PARAM_OUTPUT_DIRECTORY_NAME,
-				"output", XWriter.PARAM_FILE_NAMER_CLASS_NAME, ViewURIFileNamer.class.getName()));
-		builder.add(PosTaggerAnnotator.getDescription());
-		builder.add(LemmaAnnotator.getDescription());
-		builder.add(DefaultSnowballStemmer.getDescription("English"));
-		builder.add(Tester.getDescription());
-		return builder;
-	}
 }
