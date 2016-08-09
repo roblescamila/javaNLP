@@ -59,12 +59,6 @@ public class UserInterface extends JFrame {
 	private static final String INPUT = "input";
 
 	private JPanel contentPane;
-	private static Vector<String> comments;
-	private static Vector<String> className;
-	private static Vector<String> methodsName;
-	private static Vector<String> realVariableName;
-	private static Vector<String> imports;
-	private static Vector<String> packages;
 	private static Vector<String> filteredWords;
 	private JTextField textField;
 	private WordCloudCreator wcc;

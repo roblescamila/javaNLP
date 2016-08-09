@@ -64,7 +64,7 @@ public class WordCloudCreator {
 		//jcas = JCasFactory.createJCas();
 
 		//jcas.setDocumentText(targetFileStr);
-		ClearTKProcessor nlp = new ClearTKProcessor();
+		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr);
 		nlp.executeClearTK();
 	}
 

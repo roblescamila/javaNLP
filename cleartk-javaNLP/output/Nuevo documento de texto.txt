@@ -1,6 +1,0 @@
-//car1 cars1 carss1
-// car2 cars2 carss2
- //car3 cars3 carss3
- //  car4 cars4 carss4
-// 5
-a
