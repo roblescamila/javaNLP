@@ -65,7 +65,7 @@ public class WordCloudCreator {
 
 		//jcas.setDocumentText(targetFileStr);
 		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr);
-		nlp.executeClearTK();
+		jcas=	nlp.executeClearTK();
 	}
 
 	public Cloud updateCloud(boolean arr[], Cloud c) throws CASException {

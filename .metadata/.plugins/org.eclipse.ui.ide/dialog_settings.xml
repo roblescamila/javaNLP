@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp"/>
 		<item value="C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP"/>
 	</list>
 	<section name="CleanDialogSettings">

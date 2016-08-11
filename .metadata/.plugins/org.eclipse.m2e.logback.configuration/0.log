@@ -2358,3 +2358,367 @@ java.lang.NullPointerException: null
 2016-08-09 18:13:29,770 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
 2016-08-09 18:13:30,402 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-08-09 18:13:30,411 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 16:10:25,702 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-08-10 16:12:20,539 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 16:12:21,211 [Worker-15] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 16:12:22,286 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:12:22,321 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 16:12:23,070 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:12:23,075 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 16:12:25,386 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 16:12:27,346 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:12:27,356 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 16:12:27,360 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:12:27,368 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 16:14:07,286 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-08-10 16:14:09,215 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 16:14:10,912 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:14:10,934 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 16:14:12,389 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:14:12,396 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 16:14:32,828 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:14:32,903 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 16:14:32,925 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:14:32,940 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 16:16:18,245 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-08-10 16:16:21,398 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 16:16:24,330 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:16:24,351 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 16:16:25,731 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:16:25,740 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 16:29:35,050 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:29:35,084 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 16:29:35,087 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 16:29:35,103 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:09:36,629 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:09:36,948 [Worker-16] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:09:37,959 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:09:38,015 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:09:38,767 [Worker-15] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:09:38,863 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:09:38,910 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:09:40,429 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:09:40,482 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:09:40,484 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:09:40,526 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:15:15,853 [Worker-18] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-08-10 17:22:55,382 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:22:55,537 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:22:56,331 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:22:56,438 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:25:11,246 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:25:11,412 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:25:11,417 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:25:11,589 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:25:25,090 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:25:25,258 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:25:25,271 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:25:25,414 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:28:01,919 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:28:02,097 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:28:02,703 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:28:02,816 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:53:47,054 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:53:47,054 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:53:48,529 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:48,604 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:53:48,828 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:53:49,225 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:49,275 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:53:50,720 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/htmlparser/htmlparser/1.6/htmlparser-1.6-sources.jar
+2016-08-10 17:53:50,741 [Worker-4] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.htmlparser:htmlparser:1.6
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.htmlparser:htmlparser:jar:sources:1.6
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:223) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.1.v20141014-1248.jar:na]
+2016-08-10 17:53:50,990 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:51,052 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:53:51,054 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:51,098 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:53:51,337 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1-sources.jar
+2016-08-10 17:53:51,352 [Worker-4] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for commons-logging:commons-logging-api:1.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact commons-logging:commons-logging-api:jar:sources:1.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:223) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.1.v20141014-1248.jar:na]
+2016-08-10 17:53:52,165 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:52,233 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:53:52,236 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:52,296 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:53:53,376 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:53,598 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:53:53,640 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:53:53,800 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:56:31,398 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:56:31,398 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:56:32,823 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:32,931 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:56:32,949 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:33,012 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:56:33,210 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:56:35,684 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:35,738 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:56:35,739 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:35,796 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:56:40,119 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:40,211 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:56:40,215 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:40,309 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:56:45,778 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:45,947 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:56:45,952 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:46,132 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:56:52,947 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:53,093 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-10 17:56:53,106 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:53,251 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:56:54,279 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:54,426 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-10 17:56:54,440 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:56:54,615 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:57:12,729 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:57:12,888 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:57:12,904 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:57:13,050 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:57:14,802 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:57:14,931 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 17:57:14,946 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:57:15,074 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:57:58,610 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 17:57:59,479 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:57:59,581 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:58:00,011 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:58:00,135 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 17:58:06,834 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:58:06,922 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 17:58:07,511 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 17:58:07,646 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:06:11,306 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:06:11,306 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:06:13,089 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:06:13,199 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:06:13,580 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:06:13,951 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:06:14,131 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:06:15,847 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:06:15,920 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 18:06:15,922 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:06:15,985 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:34:32,008 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:34:35,525 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:34:35,670 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:34:35,706 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:34:35,901 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:36:02,931 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:36:03,247 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:36:04,102 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:36:04,367 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:38:01,337 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:38:01,581 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:38:02,405 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:38:02,627 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:38:40,590 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:38:41,932 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:38:41,974 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:38:42,557 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:38:42,564 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:40:37,245 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:40:38,923 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:40:38,986 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 18:40:38,998 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:40:39,057 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:41:15,650 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:41:15,719 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 18:41:15,731 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:41:15,794 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:41:26,690 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:41:26,753 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:41:27,548 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:41:27,594 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:45:27,060 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:45:27,170 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:45:27,980 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:45:28,051 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:45:32,971 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:45:33,040 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:45:33,730 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:45:33,767 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:48:29,368 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:48:29,512 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:48:29,563 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:48:29,627 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:50:42,879 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:50:45,424 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:50:45,461 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:50:45,477 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:50:45,494 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:51:46,706 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:51:46,763 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:51:47,403 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:51:47,437 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:51:53,496 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:51:54,554 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:51:54,591 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:51:55,316 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:51:55,355 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:53:46,938 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:53:46,970 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-10 18:53:46,978 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:53:47,006 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:54:00,684 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:54:03,030 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:54:03,091 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:54:05,806 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:54:05,862 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 18:56:18,962 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 18:56:20,530 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:56:20,626 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 18:56:21,407 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 18:56:21,482 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-10 21:18:24,990 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-10 21:18:38,154 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 21:18:38,327 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-10 21:18:38,386 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-10 21:18:38,474 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 09:17:11,494 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-11 09:17:24,445 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 09:17:24,604 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 09:17:24,754 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 09:17:24,850 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 15:45:36,917 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: cleartk-javaNLP:cleartk-javaNLP:0.0.1 @ C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\pom.xml.
+2016-08-11 15:46:01,480 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 15:46:01,621 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 15:46:01,996 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 15:46:02,121 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:01:55,895 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:01:56,022 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:01:58,207 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:01:58,343 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:21:18,212 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:21:18,409 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:21:19,408 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:21:19,530 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:39:47,290 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:39:47,485 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:39:48,588 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:39:48,735 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:39:52,527 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:39:52,759 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:39:52,803 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:39:52,952 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:40:01,239 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:01,419 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:40:01,462 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:01,589 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:40:11,757 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:11,950 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:40:12,000 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:12,151 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:40:15,325 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:15,513 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:40:15,577 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:15,730 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:40:17,015 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:17,184 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:40:17,231 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:17,380 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:40:28,943 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:29,132 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:40:29,183 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:29,331 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:40:54,002 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:54,184 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:40:54,234 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:40:54,397 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:41:02,727 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:02,907 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:41:02,955 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:03,110 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:41:18,373 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:18,555 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:41:18,608 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:18,762 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:41:23,647 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:23,826 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:41:23,872 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:24,018 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:41:50,106 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:50,285 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:41:50,329 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:41:50,496 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:43:16,858 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:17,041 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:43:17,089 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:17,245 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:43:23,475 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:23,658 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:43:23,705 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:23,853 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:43:37,872 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:38,060 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:43:38,110 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:38,254 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:43:39,883 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:40,064 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:43:40,115 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:43:40,296 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:45:36,143 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:45:36,329 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:45:36,379 [Worker-30] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:45:36,523 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:45:57,541 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:45:57,730 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:45:57,769 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:45:57,894 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:45:59,253 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:45:59,445 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:45:59,493 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:45:59,640 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:47:31,764 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:47:31,951 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:47:31,996 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:47:32,143 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:57:59,799 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:57:59,989 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:58:00,045 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:58:00,190 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:58:35,418 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:58:35,611 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:58:35,657 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:58:35,807 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources
+2016-08-11 17:59:46,378 [Worker-51] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:59:46,565 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 75 resources
+2016-08-11 17:59:46,616 [Worker-51] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:59:46,767 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Cami\Documents\Faca\Materias\4to\Diseño\javanlp\cleartk-javaNLP\src\test\resources

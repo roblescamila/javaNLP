@@ -17,7 +17,6 @@
 <fullyQualifiedTypeName name="org.apache.uima.fit.factory.TypeSystemDescriptionFactory"/>
 <fullyQualifiedTypeName name="org.apache.uima.cas.TypeSystem"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.apache.uima.cas.Type"/>
 <fullyQualifiedTypeName name="org.apache.uima.jcas.JCas"/>
 <fullyQualifiedTypeName name="org.uimafit.factory.JCasFactory"/>
@@ -30,4 +29,16 @@
 <fullyQualifiedTypeName name="org.cleartk.token.type.Token"/>
 <fullyQualifiedTypeName name="org.uimafit.util.JCasUtil"/>
 <fullyQualifiedTypeName name="org.apache.uima.ruta.engine.RutaEngine"/>
+<fullyQualifiedTypeName name="javax.swing.DefaultListModel"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+<fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+<fullyQualifiedTypeName name="java.awt.event.WindowListener"/>
 </qualifiedTypeNameHistroy>

@@ -39,19 +39,20 @@ import org.uimafit.util.JCasUtil;
 
 public class ClearTKProcessor {
 
-	private static String file;
+	private  String file;
 
 	public ClearTKProcessor(String f) {
 		file = f;
+		 // new File("file:///" + input);
+		// filesDirectory = input;
 	}
 
-//	public static void main(String[] args) throws UIMAException, IOException {
-//		ClearTKProcessor a = new ClearTKProcessor();
-//		a.executeClearTK();
-//	}
+	public static void main(String[] args) throws UIMAException, IOException {
+		ClearTKProcessor a = new ClearTKProcessor("//MatiPrado \n //mati ");
+		a.executeClearTK();
+	}
+public String[] getTypeSystemDescriptor()
 
-
-		String[] a = { "uima.ruta.annotators.MainTypeSystem", "org.cleartk.token.type.Token"
 {
 	String[] a = { "uima.ruta.annotators.MainTypeSystem", 
 			"org.cleartk.token.type.Token"
@@ -67,17 +68,15 @@ public class ClearTKProcessor {
 			"org.cleartk.timeml.type.Event", "org.cleartk.timeml.type.TemporalLink",
 			"org.cleartk.timeml.type.Text", "org.cleartk.timeml.type.Time", "org.cleartk.token.type.Sentence",
 			"org.cleartk.token.type.Subtoken", "org.cleartk.token.type.Token"
-				, "org.cleartk.util.type.Parenthetical"
 			, "org.cleartk.util.type.Parenthetical"
 			, "org.cleartk.ne.type.GazetteerNamedEntityMention",
 			"org.cleartk.syntax.constituent.type.TerminalTreebankNode",
 			"org.cleartk.syntax.constituent.type.TopTreebankNode",
 			"org.cleartk.timeml.type.DocumentCreationTime"
 
-		};
-		return a;
-	}
-
+	};
+return a;
+}
 
 public Vector<AnalysisEngine> getPipeline() throws InvalidXMLException, ResourceInitializationException, IOException{
 	Vector<AnalysisEngine> aux = new Vector<AnalysisEngine>();
@@ -96,14 +95,14 @@ public JCas executeClearTK() throws UIMAException, IOException {
 
 	String[] typeSystemDescriptor = this.getTypeSystemDescriptor();
 	JCas jCas = JCasFactory.createJCas(typeSystemDescriptor);
-	jCas.setDocumentText("//MatiPrado \n //mati ");
+	jCas.setDocumentText(file);
 	 Vector<AnalysisEngine> engines =  this.getPipeline();
 	 for (AnalysisEngine engine : engines)
 	 {
 		engine.process(jCas); 
 	 }
-		return jCas;
-	}
+			return jCas;
+				}	
 
 
 }

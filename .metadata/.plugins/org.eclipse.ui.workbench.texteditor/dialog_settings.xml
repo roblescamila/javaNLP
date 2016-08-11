@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ruta" key="selection"/>
+		<item value="Remove" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="remove"/>
+			<item value="fc"/>
+			<item value="openfiledialog"/>
+			<item value="opendialog"/>
+			<item value="JFileChooser"/>
+			<item value="textField"/>
+			<item value="Tex"/>
 			<item value="ruta"/>
-			<item value="createengine"/>
-			<item value="&lt;typeDescription&gt;"/>
-			<item value="NamedEntityMention"/>
-			<item value="AuthorInfo"/>
-			<item value="NamedEntityClass"/>
-			<item value="main"/>
-			<item value="diseño"/>
 		</list>
 		<list key="replacehistory">
 			<item value="annotators"/>
