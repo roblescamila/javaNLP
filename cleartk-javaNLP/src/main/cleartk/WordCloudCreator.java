@@ -1,15 +1,9 @@
 package main.cleartk;
 
-import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
+
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-
-import org.apache.commons.io.FilenameUtils;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.UIMAException;
@@ -32,7 +26,7 @@ import org.apache.uima.util.XMLInputSource;
 import org.mcavallo.opencloud.Cloud;
 import org.xml.sax.SAXException;
 
-public class WordCloudCreator {
+public class WordCloudCreator implements Runnable {
 
 	static final int COMMENT = 0;
 	static final int CLASSNAME = 1;
@@ -45,63 +39,84 @@ public class WordCloudCreator {
 	JCas jcas;
 	File file;
 	FileInputStream fisTargetFile;
-
+	boolean finished;
+	
 	public WordCloudCreator() {
 	}
 
 	public WordCloudCreator(String f) throws IOException, UIMAException {
 		file = new File(f);
 		fisTargetFile = new FileInputStream(file);
-		createCas();
+		finished = false;
+//		createCas();
 	}
 
-	private void createCas() throws IOException,
-			UIMAException {
+	private void createCas() throws IOException, UIMAException {
 		String targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
-//		AnalysisEngine engine = AnalysisEngineFactory.createEngine("main.descriptors.MainEngine");
-//		cas = engine.newCAS();
-//		engine.process(cas);
-		//jcas = JCasFactory.createJCas();
-
-		//jcas.setDocumentText(targetFileStr);
 		ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr);
-		jcas=	nlp.executeClearTK();
+		jcas = nlp.executeClearTK();
 	}
 
 	public Cloud updateCloud(boolean arr[], Cloud c) throws CASException {
 
 		if (arr[COMMENT]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.SingleLineComment", jcas, c);
-			UimaRutaAnnotator b = new UimaRutaAnnotator("uima.ruta.annotators.MultiLineComment", jcas, c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator(
+					"uima.ruta.annotators.SingleLineComment", jcas, c);
+			UimaRutaAnnotator b = new UimaRutaAnnotator(
+					"uima.ruta.annotators.MultiLineComment", jcas, c);
 			a.addToCloud();
 			b.addToCloud();
 		}
 
 		if (arr[CLASSNAME]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.ClassName", jcas, c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator(
+					"uima.ruta.annotators.ClassName", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[METHODNAME]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.MethodName", jcas, c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator(
+					"uima.ruta.annotators.MethodName", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[VARNAME]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.VarName", jcas, c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator(
+					"uima.ruta.annotators.VarName", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[PACKAGE]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Package", jcas, c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator(
+					"uima.ruta.annotators.Package", jcas, c);
 			a.addToCloud();
 		}
 
 		if (arr[IMPORT]) {
-			UimaRutaAnnotator a = new UimaRutaAnnotator("uima.ruta.annotators.Import", jcas, c);
+			UimaRutaAnnotator a = new UimaRutaAnnotator(
+					"uima.ruta.annotators.Import", jcas, c);
 			a.addToCloud();
 		}
 
 		return c;
+	}
+
+	@Override
+	public void run() {
+		String targetFileStr;
+		try {
+			System.out.println("entra a nlp");
+			targetFileStr = IOUtils.toString(fisTargetFile, "UTF-8");
+			ClearTKProcessor nlp = new ClearTKProcessor(targetFileStr);
+			jcas = nlp.executeClearTK();
+			System.out.println("termina nlp");
+			finished = true;
+		} catch (UIMAException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean HasFinished(){
+		return finished;
 	}
 }

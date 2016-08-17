@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -33,6 +35,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import java.util.Vector;
 
 @SuppressWarnings("serial")
@@ -40,11 +43,62 @@ public class FilterWordDialog extends JFrame {
 
 	private JPanel contentPane;
 	private Vector<String> filteredWords;
-
-	public Vector<String> getFilteredWords() {
+	private Vector<String>  reservedWords;
+	private boolean rjw =false;
+	
+	public Vector<String> getFilteredWords() throws IOException {
+	
+		Vector<String> aux = new Vector<String>();
+		if (rjw)
+		{
+			for (String a: reservedWords )
+		{
+			aux.add(a);
+		}
+			for (String a: filteredWords )
+			{
+				aux.add(a);
+			}
+		return aux;
+		}
+		else
+		{
 		return filteredWords;
 	}
+	}
+	
+	
+	public void initReservedWords() throws IOException
+	{reservedWords = new Vector<String>();
+		File fichero = new File("JavaReservedWords.txt");
+		Scanner s = null;
 
+		try {
+			// Leemos el contenido del fichero
+			System.out.println("... Leemos el contenido del fichero ...");
+			s = new Scanner(fichero);
+
+			// Leemos linea a linea el fichero
+			while (s.hasNextLine()) {
+				String linea = s.nextLine(); 	// Guardamos la linea en un String
+				//fSystem.out.println(linea); // Imprimimos la linea
+				reservedWords.add(linea);
+			}
+
+		} catch (Exception ex) {
+			System.out.println("Mensaje: " + ex.getMessage());
+		} finally {
+			// Cerramos el fichero tanto si la lectura ha sido correcta o no
+			try {
+				if (s != null)
+					s.close();
+			} catch (Exception ex2) {
+				System.out.println("Mensaje 2: " + ex2.getMessage());
+			}
+		}
+	
+	}
+	
 	private boolean removeWord(String w) {
 		for (int i = 0; i < filteredWords.size(); i++) {
 			if (filteredWords.elementAt(i).equals(w)) {
@@ -85,6 +139,7 @@ public class FilterWordDialog extends JFrame {
 				try {
 					FilterWordDialog frame = new FilterWordDialog();
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -94,8 +149,9 @@ public class FilterWordDialog extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws IOException 
 	 */
-	public FilterWordDialog() {
+	public FilterWordDialog() throws IOException {
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 406, 517);
 		contentPane = new JPanel();
@@ -104,16 +160,17 @@ public class FilterWordDialog extends JFrame {
 
 		filteredWords = new Vector<String>();
 		JScrollPane scrollPane = new JScrollPane();
-
+		initReservedWords();
 		@SuppressWarnings("rawtypes")
+		final
 		DefaultListModel wordsModel = new DefaultListModel();
 
-		JTextField txtrEntry = new JTextField();
+		final JTextField txtrEntry = new JTextField();
 		txtrEntry.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!filteredWords.contains(txtrEntry.getText())) {
 					wordsModel.addElement(txtrEntry.getText() + "\n");
-					filteredWords.addElement(txtrEntry.getText() + "\n");
+					filteredWords.addElement(txtrEntry.getText());
 					txtrEntry.setText("");
 				}
 			}
@@ -121,10 +178,11 @@ public class FilterWordDialog extends JFrame {
 		txtrEntry.setFont(new Font("Tahoma", Font.PLAIN, 11));
 
 		@SuppressWarnings({ "rawtypes", "unchecked" })
+		final
 		JList list = new JList(wordsModel);
 		scrollPane.setViewportView(list);
 
-		JFrame openFileDialog = new JFrame("Select directory");
+		final JFrame openFileDialog = new JFrame("Select directory");
 
 		JButton btnAddWord = new JButton("Add word");
 		btnAddWord.addActionListener(new ActionListener() {
@@ -138,6 +196,8 @@ public class FilterWordDialog extends JFrame {
 			}
 		});
 
+		
+		
 		JButton btnRemoveWord = new JButton("Remove");
 		btnRemoveWord.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -200,8 +260,23 @@ public class FilterWordDialog extends JFrame {
 		JLabel lblEditListOf = new JLabel("Edit list of filtered words");
 		lblEditListOf.setFont(new Font("Tahoma", Font.PLAIN, 12));
 
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Filter reserved words");
+		final JCheckBox chckbxNewCheckBox = new JCheckBox("Filter reserved words");
 		chckbxNewCheckBox.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JButton btnAccept = new JButton("Accept");
+		btnAccept.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setVisible(false);
+			}
+		});
+		
+		chckbxNewCheckBox.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent arg0) {
+			rjw=chckbxNewCheckBox.isSelected();
+			System.out.println(rjw);
+			}
+		});
+		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -214,12 +289,17 @@ public class FilterWordDialog extends JFrame {
 							.addComponent(btnAddWord, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 						.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 223, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblEditListOf))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnSaveListTo, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnLoadListFrom, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnRemoveWord, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(chckbxNewCheckBox, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(btnSaveListTo, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnLoadListFrom, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnRemoveWord, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
+								.addComponent(chckbxNewCheckBox, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnAccept, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
@@ -238,10 +318,11 @@ public class FilterWordDialog extends JFrame {
 							.addGap(18)
 							.addComponent(chckbxNewCheckBox, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE))
 						.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 388, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(txtrEntry, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnAddWord, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE))
+						.addComponent(btnAddWord, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnAccept, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);

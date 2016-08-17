@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Remove" key="selection"/>
+		<item value="stillRunning" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="remove"/>
-			<item value="fc"/>
-			<item value="openfiledialog"/>
-			<item value="opendialog"/>
-			<item value="JFileChooser"/>
-			<item value="textField"/>
-			<item value="Tex"/>
-			<item value="ruta"/>
+			<item value="stillrunning"/>
+			<item value="createCloud"/>
+			<item value=" private void createCloud(Vector&lt;WordCloudCreator&gt; wccs,"/>
+			<item value="paintcloud"/>
+			<item value="wait"/>
+			<item value="pool"/>
+			<item value="poo"/>
+			<item value="notify"/>
 		</list>
 		<list key="replacehistory">
 			<item value="annotators"/>
@@ -25,7 +25,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="998" key="DIALOG_X_ORIGIN"/>
-		<item value="90" key="DIALOG_Y_ORIGIN"/>
+		<item value="710" key="DIALOG_X_ORIGIN"/>
+		<item value="87" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

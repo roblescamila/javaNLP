@@ -32,11 +32,11 @@ public class UimaRutaAnnotator {
 
 	public void addToCloud() throws CASException {
 		Type type = jcas.getTypeSystem().getType(classPath);
-
+	//	System.out.println(type.getName());
 		for (AnnotationFS annotation : CasUtil.select(jcas.getCas(), type)) {
+	//		System.out.println("tengo uan anotation");
 			for (Token token : JCasUtil.selectCovered(jcas, Token.class, annotation)) {
-				System.out.println("entro al forr de los token");
-				System.out.println("Entre: " + token.getLemma());
+	//System.out.println("Encontre: "+ token.getCoveredText()+ " lo tomo como "  +token.getLemma());
 				String aux2 = token.getLemma();
 				String[] r2 = aux2.split("[.]");
 				for (String s : r2) {
@@ -49,8 +49,7 @@ public class UimaRutaAnnotator {
 						cloud.addTag(r3[0]);
 				}
 			}
-			//System.out.println("termina jcas");
-			//cloud.addTag(annotation.getCoveredText());
-		} // cloud.addTag("b");
+			
+		} 
 	}
 }

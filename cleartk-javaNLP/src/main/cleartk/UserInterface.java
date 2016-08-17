@@ -1,5 +1,6 @@
 package main.cleartk;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.EventQueue;
 import java.awt.Toolkit;
@@ -100,25 +101,46 @@ public class UserInterface extends JFrame {
 			}
 		});
 	}
-
-	private void paintCloud(JPanel panel, JSpinner spinner) {
+public void setColor(int i, JLabel l)
+{
+	if (i % 2 ==0)
+	{
+		l.setForeground(Color.GRAY);
+		l.setBackground(Color.GRAY);
+	}
+	else
+	{
+		l.setForeground(Color.black);
+		l.setBackground(Color.black);
+	}
+}
+	private void paintCloud(JPanel panel, JSpinner spinner) throws IOException {
+	
 		panel.removeAll();
 		panel.repaint();
-
-		// for (String remove :filteredWords )
-		// { System.out.println(remove);
-		// cloud.removeTag(remove);
-		// }
-		for (Tag tag : cloud.tags()) {
+		int i = 0;
+		filteredWords = fwd.getFilteredWords();
+	    Cloud aux = new Cloud();
+		for (Tag a:cloud.tags())
+		{
+			aux.addTag(a);
+		}
+		 for (String remove :filteredWords )
+		 { 
+		 aux.removeTag(remove);
+		}
+		for (Tag tag : aux.tags()) {
 			if (tag.getScoreInt() > (int) (((SpinnerNumberModel) spinner
 					.getModel()).getNumber())) {
-				System.out.println("Meto :" + tag.getName() + " Esta : "
-						+ tag.getScoreInt());
+				//System.out.println("Meto :" + tag.getName() + " Esta : "
+					//	+ tag.getScoreInt());
 				JLabel label = new JLabel(tag.getName());
 				label.setOpaque(false);
 				label.setFont(label.getFont().deriveFont(
 						(float) tag.getWeight() * slider.getValue()));
+			setColor(i,label);
 				panel.add(label);
+				i++;
 			}
 		}
 
@@ -181,8 +203,9 @@ public class UserInterface extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws IOException 
 	 */
-	public UserInterface() {
+	public UserInterface() throws IOException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
 		final DefaultListModel wordsModel = new DefaultListModel();
@@ -192,7 +215,7 @@ public class UserInterface extends JFrame {
 		JMenu mnFile = new JMenu("Options");
 		menuBar.add(mnFile);
 		cloud = new Cloud();
-
+		fwd = new FilterWordDialog();
 		final JFileChooser fc = new JFileChooser();
 		final JFileChooser fcs = new JFileChooser();
 		final JFrame openFileDialog = new JFrame("Select directory");
@@ -221,7 +244,8 @@ public class UserInterface extends JFrame {
 		setContentPane(contentPane);
 
 		final JPanel panel = new JPanel();
-
+		panel.setBackground(Color.white);
+		panel.setForeground(Color.DARK_GRAY);
 		final JScrollPane scrollPane = new JScrollPane();
 
 		JPanel panel_2 = new JPanel();
@@ -275,9 +299,8 @@ public class UserInterface extends JFrame {
 		JButton btnNewButton = new JButton("Filtered words");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				fwd = new FilterWordDialog();
 				fwd.setVisible(true);
-				filteredWords = fwd.getFilteredWords();
+			
 			}
 		});
 
@@ -486,10 +509,26 @@ public class UserInterface extends JFrame {
 
 		slider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent arg0) {
-				paintCloud(panel, spinner);
+				try {
+					paintCloud(panel, spinner);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 
+		spinner.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent arg0) {
+				try {
+					paintCloud(panel, spinner);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
 		slider.setPaintLabels(true);
 		slider.setName("Word size");
 		slider.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -504,15 +543,16 @@ public class UserInterface extends JFrame {
 					protected Void doInBackground() throws UIMAException,
 							SAXException {
 						try {
-							// frame.setVisible(true);
-							 int[] aux;
-							 aux = wordList.getSelectedIndices();
-							 filteredWords = new Vector<String>();
-							 for (int a : aux) {
-							 String palabra = (String)
-							 wordsModel.getElementAt(a);
-							 filteredWords.addElement(palabra);
-							 }
+//							// frame.setVisible(true);
+//							 int[] aux;
+//							 aux = wordList.getSelectedIndices();
+//							 filteredWords = new Vector<String>();
+//							 for (int a : aux) {
+//							 String palabra = (String)
+//							 wordsModel.getElementAt(a);
+//							 filteredWords.addElement(palabra);
+//							 System.out.println(palabra);
+//							 }
 
 							boolean selected[] = { rdbtnComments.isSelected(),
 									rdbtnClasses.isSelected(),
@@ -522,7 +562,7 @@ public class UserInterface extends JFrame {
 									rdbtnImports.isSelected() };
 
 							TreePath[] tpVector = tree.getSelectionPaths();
-
+   
 							if (!this.allFalse(selected)) {
 								for (int i = 0; i < tpVector.length; i++) {
 									String f;
@@ -547,12 +587,11 @@ public class UserInterface extends JFrame {
 					public boolean allFalse(boolean[] selected) {
 						for (Boolean a : selected) {
 							if (a == true) {
-								System.out.print("no son todos falsos");
-
+								
 								return false;
 							}
 						}
-						System.out.print(" son todos falsos");
+					
 						return true;
 
 					}
