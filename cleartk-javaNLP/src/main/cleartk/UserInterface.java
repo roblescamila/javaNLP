@@ -535,6 +535,183 @@ public void setColor(int i, JLabel l)
 		panel_2.add(slider);
 		contentPane.setLayout(gl_contentPane);
 
+		// SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
+		// @Override
+		// protected Void doInBackground() throws UIMAException,
+		// SAXException, InterruptedException {
+		// try {
+		// // boolean selected[] = { rdbtnComments.isSelected(),
+		// // rdbtnClasses.isSelected(),
+		// // rdbtnMethod.isSelected(),
+		// // rdbtnVariables.isSelected(),
+		// // rdbtnPackages.isSelected(),
+		// // rdbtnImports.isSelected() };
+		//
+		// // TreePath[] tpVector = tree.getSelectionPaths();
+		// // runBackgroundNlp(selected, wccs);
+		//
+		// TreePath[] tpVector = tree.getSelectionPaths();
+		//
+		// if (!this.allFalse(selected)) {
+		// Runnable thobjects[] = new Runnable[tpVector.length];
+		// Executor pool = Executors
+		// .newFixedThreadPool(tpVector.length);
+		//
+		// for (int i = 0; i < tpVector.length; i++) {
+		// String f;
+		// f = createFilePath(tpVector[i]);
+		// wcc = new WordCloudCreator(f);
+		// wccs.add(wcc);
+		// thobjects[i] = wcc;
+		// pool.execute(thobjects[i]);
+		// }
+		//
+		// }
+		//
+		// // createCloud(wccs, selected);
+		// // for (WordCloudCreator wc : wccs) {
+		// // wc.updateCloud(selected, cloud);
+		// // }
+		//
+		// // paintCloud(panel, spinner);
+		//
+		// // }
+		// } catch (InvalidXMLException
+		// | ResourceInitializationException | IOException e) {
+		// e.printStackTrace();
+		// } catch (AnalysisEngineProcessException e) {
+		// e.printStackTrace();
+		// } catch (CASException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
+		// }
+		// //
+		// private void runBackgroundNlp(boolean selected[],
+		// Vector<WordCloudCreator> wccs) throws UIMAException, IOException {
+		// TreePath[] tpVector = tree.getSelectionPaths();
+		//
+		// if (!this.allFalse(selected)) {
+		// Runnable thobjects[] = new Runnable[tpVector.length];
+		// Executor pool = Executors
+		// .newFixedThreadPool(tpVector.length);
+		//
+		// for (int i = 0; i < tpVector.length; i++) {
+		// String f;
+		// f = createFilePath(tpVector[i]);
+		// wcc = new WordCloudCreator(f);
+		// wccs.add(wcc);
+		// thobjects[i] = wcc;
+		// pool.execute(thobjects[i]);
+		// }
+		// }
+		// }
+
+		// private boolean allFalse(boolean[] selected) {
+		// for (Boolean a : selected) {
+		// if (a) {
+		// return false;
+		// }
+		// }
+		// System.out.print("no seleccionaste nada gil");
+		// return true;
+		// }
+		//
+		// @Override
+		// protected void done() {
+		// dialog.dispose();
+		// // createCloud(wccs, selected);
+		// // paintCloud(panel, spinner);
+		// }
+		// };
+//
+//		btnNewButton_1.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent arg0) {
+//
+//				boolean selected[] = { rdbtnComments.isSelected(),
+//						rdbtnClasses.isSelected(), rdbtnMethod.isSelected(),
+//						rdbtnVariables.isSelected(),
+//						rdbtnPackages.isSelected(), rdbtnImports.isSelected() };
+//
+//				// worker.execute();
+//				// dialog.setVisible(true); // will block but with a responsive
+//				// GUI
+//				try {
+//					runBackgroundNlp(selected, wccs);
+//					createCloud(wccs, selected);
+//					paintCloud(panel, spinner);
+//				} catch (CASException | InterruptedException e) {
+//					e.printStackTrace();
+//				} catch (UIMAException e) {
+//					e.printStackTrace();
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//
+//		mntmResetCloud.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				cloud.clear();
+//				panel.removeAll();
+//				panel.repaint();
+//			}
+//		});
+//
+//	}
+//
+//	private boolean allFalse(boolean[] selected) {
+//		for (Boolean a : selected) {
+//			if (a) {
+//				return false;
+//			}
+//		}
+//		System.out.print("no seleccionaste nada gil");
+//		return true;
+//	}
+//
+//	private synchronized void runBackgroundNlp(boolean selected[],
+//			Vector<WordCloudCreator> wccs) throws UIMAException, IOException {
+//		TreePath[] tpVector = tree.getSelectionPaths();
+//
+//		if (!this.allFalse(selected)) {
+//			Runnable thobjects[] = new Runnable[tpVector.length];
+//			Executor pool = Executors.newFixedThreadPool(tpVector.length);
+//
+//			for (int i = 0; i < tpVector.length; i++) {
+//				String f;
+//				f = createFilePath(tpVector[i]);
+//				wcc = new WordCloudCreator(f);
+//				wccs.add(wcc);
+//				thobjects[i] = wcc;
+//				pool.execute(thobjects[i]);
+//			}
+//			notifyAll();
+//		}
+//	}
+//
+//	private synchronized void createCloud(Vector<WordCloudCreator> wccs,
+//			boolean selected[]) throws CASException, InterruptedException {
+//		System.out.println("quiere dibujar pero espera");
+//		while (stillRunning(wccs))
+//			wait();
+//		System.out.println("vuelve del wait");
+//		for (WordCloudCreator wc : wccs) {
+//			wc.updateCloud(selected, cloud);
+//		}
+//		System.out.println("arma, queda dibujar");
+//		notifyAll();
+//	}
+//
+//	private boolean stillRunning(Vector<WordCloudCreator> wccs) {
+//		for (WordCloudCreator w : wccs) {
+//			if (!w.HasFinished()) {
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+	
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
